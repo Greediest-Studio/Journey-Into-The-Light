@@ -1,0 +1,10 @@
+{
+  "parent": "block/grass",
+  "textures": {
+    "particle": "journey:blocks/corbastone",
+    "bottom": "journey:blocks/corbastone",
+    "top": "journey:blocks/corbagrass_top",
+    "side": "journey:blocks/corbagrass_side",
+    "overlay": "journey:blocks/corbagrass_side_overlay"
+  }
+}

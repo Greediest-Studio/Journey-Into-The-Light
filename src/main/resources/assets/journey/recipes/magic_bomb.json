@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ddd",
+    "did",
+    "ddd"
+  ],
+  "key": {
+    "d": {
+      "item": "journey:magic_dust"
+    },
+    "i": {
+      "item": "journey:crystalball"
+    }
+  },
+  "result": {
+    "item": "journey:magic_bomb"
+  }
+}

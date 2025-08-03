@@ -1,0 +1,456 @@
+{
+  "pools": [
+    {
+      "name": "main",
+      "rolls": {
+        "min": 9,
+        "max": 16
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "journey:heart_stone",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "journey:xp_catalyst",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ],
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "journey:essence_catalyst",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "journey:loot_pouch_gold",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "journey:loot_pouch_diamond",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 8
+              }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:ender_pearl",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 5
+              }
+            }
+          ],
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_ingot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 24
+              }
+            }
+          ],
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gold_ingot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 16
+              }
+            }
+          ],
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gold_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 5
+              }
+            }
+          ],
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "journey:sapphire",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "minecraft:golden_horse_armor",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond_horse_armor",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "minecraft:book",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond_helmet",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 1,
+                "max": 10
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond_boots",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 1,
+                "max": 10
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond_pickaxe",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 1,
+                "max": 10
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond_shovel",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 4,
+                "max": 16
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "journey:sapphireshovel",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 1,
+                "max": 10
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "journey:sapphirehoe",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 4,
+                "max": 16
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "journey:sapphirepickaxe",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 4,
+                "max": 16
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "journey:sapphirelegs",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 4,
+                "max": 16
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "journey:sapphirebody",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 4,
+                "max": 16
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "journey:shadiumboots",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 4,
+                "max": 16
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "journey:luniumboots",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 4,
+                "max": 16
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "journey:luniumhelmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 4,
+                "max": 16
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "journey:shadiumhelmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "treasure": true,
+              "levels": {
+                "min": 4,
+                "max": 16
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "entryName": "golden_apple",
+          "name": "minecraft:golden_apple",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "entryName": "god_apple",
+          "name": "minecraft:golden_apple",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gold_nugget",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 32
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

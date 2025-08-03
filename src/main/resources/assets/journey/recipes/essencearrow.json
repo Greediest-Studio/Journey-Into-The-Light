@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "d",
+    "i",
+    "g"
+  ],
+  "key": {
+    "d": {
+      "item": "minecraft:iron_ingot"
+    },
+    "i": {
+      "item": "journey:stonestick"
+    },
+    "g": {
+      "item": "journey:rocfeather"
+    }
+  },
+  "result": {
+    "item": "journey:essencearrow",
+    "count": 4
+  }
+}

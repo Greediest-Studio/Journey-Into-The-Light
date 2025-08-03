@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "dd",
+    "dd"
+  ],
+  "key": {
+    "d": {
+      "item": "journey:carvedbloodrock"
+    }
+  },
+  "result": {
+    "item": "journey:bloodpillar",
+    "count": 4
+  }
+}

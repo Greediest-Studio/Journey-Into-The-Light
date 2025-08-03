@@ -1,0 +1,9 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"particle": "journey:blocks/depthsDirt",
+		"bottom": "journey:blocks/depthsDirt",
+		"top": "journey:blocks/depthsGrass_top",
+		"side": "journey:blocks/depthsGrass_side"
+	}
+}

@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "journey:eucaStone" },
+            { "model": "journey:eucaStone_mirrored" },
+            { "model": "journey:eucaStone", "y": 180 },
+            { "model": "journey:eucaStone_mirrored", "y": 180 }
+        ]
+    }
+}

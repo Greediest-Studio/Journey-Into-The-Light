@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "axis=z": { "model": "journey:boilingPortal_ew" },
+        "axis=x": { "model": "journey:boilingPortal_ns" }
+    }
+}

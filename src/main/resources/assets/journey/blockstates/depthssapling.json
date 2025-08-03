@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"stage=0": {
+			"model": "journey:sapling/depthssapling"
+		},
+		"stage=1": {
+			"model": "journey:sapling/depthssapling"
+		}
+	}
+}

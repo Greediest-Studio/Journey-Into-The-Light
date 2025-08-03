@@ -1,0 +1,13 @@
+{
+    
+	"parent": "block/cube_column",
+    
+	"textures": {
+        
+		"end": "journey:blocks/sizzlerwoodleaves_top",
+        
+		"side": "journey:blocks/sizzlerwoodleaves_side"
+    
+	}
+
+}

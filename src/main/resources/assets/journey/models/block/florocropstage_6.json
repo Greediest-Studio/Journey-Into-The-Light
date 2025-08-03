@@ -1,0 +1,6 @@
+{
+	"parent": "block/crop",
+	"textures": {
+		"crop": "journey:blocks/floroCropStage_6"
+	}
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "journey:orbaditepickaxe"
+    },
+    {
+      "item": "journey:orbaditeshovel"
+    },
+    {
+      "item": "journey:orbaditehoe"
+    },
+    {
+      "item": "journey:orbaditeaxe"
+    }
+  ],
+  "result": {
+    "item": "journey:orbaditemultitool"
+  }
+}

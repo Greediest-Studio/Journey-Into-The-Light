@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "journey:celestiumpickaxe"
+    },
+    {
+      "item": "journey:celestiumshovel"
+    },
+    {
+      "item": "journey:celestiumhoe"
+    },
+    {
+      "item": "journey:celestiumaxe"
+    }
+  ],
+  "result": {
+    "item": "journey:celestiummultitool"
+  }
+}

@@ -1,0 +1,9 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"particle": "journey:blocks/terranianGrass_top",
+		"bottom": "journey:blocks/terranianDirt",
+		"top": "journey:blocks/terranianGrass_top",
+		"side": "journey:blocks/terranianGrass"
+	}
+}

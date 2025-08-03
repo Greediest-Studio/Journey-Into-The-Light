@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "journey:blocks/ancient_stone_runic_1",
+    "end": "journey:blocks/ancient_stone_top"
+  }
+}

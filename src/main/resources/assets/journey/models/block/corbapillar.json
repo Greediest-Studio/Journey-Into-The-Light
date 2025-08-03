@@ -1,0 +1,9 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"particle": "journey:blocks/corbaPillar_top",
+		"bottom": "journey:blocks/corbaPillar_top",
+		"top": "journey:blocks/corbaPillar_top",
+		"side": "journey:blocks/corbaPillar_side"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"particle": "journey:blocks/cloudiaDirt",
+		"bottom": "journey:blocks/cloudiaDirt",
+		"top": "journey:blocks/cloudiaGrass_top",
+		"side": "journey:blocks/cloudiaGrass_side"
+	}
+}

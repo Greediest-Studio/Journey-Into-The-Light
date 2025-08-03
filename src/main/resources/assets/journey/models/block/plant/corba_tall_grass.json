@@ -1,0 +1,6 @@
+{
+  "parent": "block/tinted_cross",
+  "textures": {
+    "cross": "journey:blocks/plant/corba_tall_grass"
+  }
+}

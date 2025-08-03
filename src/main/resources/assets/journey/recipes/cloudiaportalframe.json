@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "iii",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "journey:cloudiaportalgem"
+    }
+  },
+  "result": {
+    "item": "journey:cloudiaportalframe",
+    "count": 10
+  }
+}

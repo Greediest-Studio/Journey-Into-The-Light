@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "journey:rubble" },
+            { "model": "journey:rubble_mirrored" },
+            { "model": "journey:rubble", "y": 180 },
+            { "model": "journey:rubble_mirrored", "y": 180 }
+        ]
+    }
+}

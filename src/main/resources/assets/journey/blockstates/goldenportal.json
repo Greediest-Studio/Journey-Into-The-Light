@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "axis=z": { "model": "journey:goldenPortal_ew" },
+        "axis=x": { "model": "journey:goldenPortal_ns" }
+    }
+}

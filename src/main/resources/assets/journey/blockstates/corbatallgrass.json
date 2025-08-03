@@ -1,0 +1,7 @@
+{
+	"variants": {
+      "normal": {
+        "model": "journey:plant/corba_tall_grass"
+      }
+    }
+}

@@ -1,0 +1,11 @@
+{
+	"variants": {
+        "normal": [
+            { "model": "journey:airrootmelon" },
+            { "model": "journey:airrootmelon", "y": 90 },
+            { "model": "journey:airrootmelon", "y": 180 },
+            { "model": "journey:airrootmelon", "y": 270 }
+        ]
+
+	}
+}

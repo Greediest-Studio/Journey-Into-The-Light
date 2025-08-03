@@ -1,0 +1,6 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "journey:items/fluffyBow_0"
+    }
+}
