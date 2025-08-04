@@ -1,6 +1,5 @@
 package net.journey.recipe;
 
-import net.journey.enums.EnumSummoningRecipes;
 import net.journey.init.items.JourneyItems;
 import net.minecraft.item.ItemStack;
 
@@ -25,13 +24,13 @@ public class SummoningRecipeRegistry {
     private static void registerVanillaRecipes() {
 
         RECIPES.add(new SummoningRecipe(
-                EnumSummoningRecipes.BLAZIER.getTopLeftIngredient().getItem(),
-                EnumSummoningRecipes.BLAZIER.getMiddleLeftIngredient().getItem(),
-                EnumSummoningRecipes.BLAZIER.getBottomLeftIngredient().getItem(),
-                EnumSummoningRecipes.BLAZIER.getMiddleIngredient().getItem(),
-                EnumSummoningRecipes.BLAZIER.getTopRightIngredient().getItem(),
-                EnumSummoningRecipes.BLAZIER.getMiddleRightIngredient().getItem(),
-                EnumSummoningRecipes.BLAZIER.getBottomRightIngredient().getItem(),
+                JourneyItems.boilPowder,
+                JourneyItems.boilPowder,
+                JourneyItems.boilPowder,
+                JourneyItems.blazingFireball,
+                JourneyItems.boilPowder,
+                JourneyItems.boilPowder,
+                JourneyItems.boilPowder,
                 new ItemStack(JourneyItems.blazierOrb)
         ));
 
