@@ -12,7 +12,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.slayer.api.SlayerAPI;
 
-public class SummoningRecipeCategory implements IRecipeCategory<SummoningRecipeWrapper> {
+import java.util.List;
+
+public class SummoningRecipeCategory implements IRecipeCategory<DynamicSummoningRecipeWrapper> {
 
     private static ResourceLocation textureResource;
     private final IDrawable background;
@@ -47,30 +49,26 @@ public class SummoningRecipeCategory implements IRecipeCategory<SummoningRecipeW
     }
 
     @Override
-    public void setRecipe(IRecipeLayout recipeLayout, SummoningRecipeWrapper recipeWrapper, IIngredients ingredients) {
+    public void setRecipe(IRecipeLayout recipeLayout, DynamicSummoningRecipeWrapper recipeWrapper, IIngredients ingredients) {
+        // 布局逻辑保持不变
         IGuiItemStackGroup guiStacks = recipeLayout.getItemStacks();
-        guiStacks.init(0, true, 20, 13);
-        guiStacks.init(1, true, 20, 31);
-        guiStacks.init(2, true, 20, 49);
+        guiStacks.init(0, true, 20, 13); // 左上
+        guiStacks.init(1, true, 20, 31); // 左中
+        guiStacks.init(2, true, 20, 49); // 左下
 
-        guiStacks.init(3, true, 56, 31);
+        guiStacks.init(3, true, 56, 31); // 中心
 
-        guiStacks.init(4, true, 93, 13);
-        guiStacks.init(5, true, 93, 31);
-        guiStacks.init(6, true, 93, 49);
+        guiStacks.init(4, true, 93, 13); // 右上
+        guiStacks.init(5, true, 93, 31); // 右中
+        guiStacks.init(6, true, 93, 49); // 右下
 
-        guiStacks.init(7, false, 138, 31);
+        guiStacks.init(7, false, 138, 31); // 输出
 
-        guiStacks.set(0, ingredients.getInputs(VanillaTypes.ITEM).get(0));
-        guiStacks.set(1, ingredients.getInputs(VanillaTypes.ITEM).get(1));
-        guiStacks.set(2, ingredients.getInputs(VanillaTypes.ITEM).get(2));
-
-        guiStacks.set(3, ingredients.getInputs(VanillaTypes.ITEM).get(3));
-
-        guiStacks.set(4, ingredients.getInputs(VanillaTypes.ITEM).get(4));
-        guiStacks.set(5, ingredients.getInputs(VanillaTypes.ITEM).get(5));
-        guiStacks.set(6, ingredients.getInputs(VanillaTypes.ITEM).get(6));
-
+        // 自动适配任何配方
+        List<List<ItemStack>> inputs = ingredients.getInputs(VanillaTypes.ITEM);
+        for (int i = 0; i < 7; i++) {
+            guiStacks.set(i, inputs.get(i));
+        }
         guiStacks.set(7, ingredients.getOutputs(VanillaTypes.ITEM).get(0));
     }
 }

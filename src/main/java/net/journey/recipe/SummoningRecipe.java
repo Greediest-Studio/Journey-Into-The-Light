@@ -34,5 +34,11 @@ public class SummoningRecipe {
     public ItemStack getOutput() {
         return output.copy();
     }
+
+    public Item getInput(int slot) {
+        if (slot < 0 || slot >= 7)
+            throw new IllegalArgumentException(slot + "出问题了");
+        return inputs[slot];
+    }
 }
 
