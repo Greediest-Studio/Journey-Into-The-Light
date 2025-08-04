@@ -208,7 +208,6 @@ public class BlockNetherFurnace extends BlockModContainer {
     @SideOnly(Side.CLIENT)
     static final class SwitchEnumFacing {
         static final int[] FACING_LOOKUP = new int[EnumFacing.values().length];
-        private static final String __OBFID = "CL_00002111";
 
         static {
             try {

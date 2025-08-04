@@ -373,7 +373,6 @@ public class EntityHellwing extends JEntityMob {
 	}
 
 	class AIFireballAttack extends EntityAIBase {
-		private static final String __OBFID = "CL_00002225";
 		private final EntityHellwing field_179469_a = EntityHellwing.this;
 		private int field_179467_b;
 		private int field_179468_c;

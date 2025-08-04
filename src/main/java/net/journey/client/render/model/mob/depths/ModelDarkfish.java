@@ -13,7 +13,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 
 public class ModelDarkfish extends ModelBase {
-    private static final String __OBFID = "CL_00002628";
     private ModelRenderer lavasnakeBody;
     private ModelRenderer lavasnakeEye;
     private ModelRenderer[] lavasnakeTail;
