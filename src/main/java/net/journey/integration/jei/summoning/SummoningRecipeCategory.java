@@ -50,7 +50,7 @@ public class SummoningRecipeCategory implements IRecipeCategory<DynamicSummoning
 
     @Override
     public void setRecipe(IRecipeLayout recipeLayout, DynamicSummoningRecipeWrapper recipeWrapper, IIngredients ingredients) {
-        // 布局逻辑保持不变
+
         IGuiItemStackGroup guiStacks = recipeLayout.getItemStacks();
         guiStacks.init(0, true, 20, 13); // 左上
         guiStacks.init(1, true, 20, 31); // 左中
@@ -64,7 +64,6 @@ public class SummoningRecipeCategory implements IRecipeCategory<DynamicSummoning
 
         guiStacks.init(7, false, 138, 31); // 输出
 
-        // 自动适配任何配方
         List<List<ItemStack>> inputs = ingredients.getInputs(VanillaTypes.ITEM);
         for (int i = 0; i < 7; i++) {
             guiStacks.set(i, inputs.get(i));

@@ -36,7 +36,6 @@ public class DynamicSummoningRecipeWrapper implements IRecipeWrapper {
 
     @Override
     public void drawInfo(Minecraft minecraft, int recipeWidth, int recipeHeight, int mouseX, int mouseY) {
-        // 可选：添加自定义绘制
     }
 
     @Override
