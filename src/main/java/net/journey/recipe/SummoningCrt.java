@@ -34,6 +34,15 @@ public class SummoningCrt {
         SummoningRecipeRegistry.registerRecipe(recipe);
     }
 
+    @ZenMethod
+    public static void removeRecipe(IItemStack output) {
+        if (output == null || output.isEmpty()) {
+            throw new IllegalArgumentException("输出物品不能为空");
+        }
+        ItemStack outputStack = CraftTweakerMC.getItemStack(output);
+        SummoningRecipeRegistry.removeRecipeByOutput(outputStack);
+    }
+
     private static Item asItem(IIngredient ingredient) {
         List<IItemStack> items = ingredient.getItems();
 

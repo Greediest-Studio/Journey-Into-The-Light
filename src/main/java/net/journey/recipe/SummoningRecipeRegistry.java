@@ -21,6 +21,11 @@ public class SummoningRecipeRegistry {
         return new ArrayList<>(RECIPES);
     }
 
+    public static void removeRecipeByOutput(ItemStack output) {
+        if (output.isEmpty()) return;
+        RECIPES.removeIf(recipe -> ItemStack.areItemsEqual(recipe.getOutput(), output));
+    }
+
     private static void registerVanillaRecipes() {
 
         RECIPES.add(new SummoningRecipe(
