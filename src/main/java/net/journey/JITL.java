@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class JITL {
 	public static final String MOD_NAME = "Journey Into the Light";
 	public static final String MOD_ID = "journey";
-	public static final String MOD_VERSION = "GRADLETOKEN_VERSION"; //will be automatically changed during build task
+	public static final String MOD_VERSION = "GRADLETOKEN_VERSION";
 	public static final String DEPENDENCIES = "required-after:baubles@[1.5.2,);";
 	public static final String UPDATE_URL = "https://raw.githubusercontent.com/TheSlayerMC/Journey-Into-The-Light/master/update.json";
 
