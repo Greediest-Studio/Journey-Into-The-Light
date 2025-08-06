@@ -107,15 +107,6 @@ entity.journey.roc.name=岩鸟
 entity.journey.woodpecker.name=啄木鸟
 entity.journey.cloudflyer.name=穿云者
 
-msg.journey.current_version=当前版本：%s
-msg.journey.cant_get_version=无法下载最新版本，请检查你的网络连接
-msg.journey.up_to_date=你所使用的是最新版本
-msg.journey.update_available=有可用更新！最新版本：%s
-msg.journey.update_link.base=你可以在%s获得
-msg.journey.update_link.link_word=此处
-msg.journey.twitter_link=关注我的推特%s来获得最新爆料。
-msg.journey.error_msg=请将该问题提交至作者%s
-
 msg.journey.summon.no_space=没有足够空间使boss刷出！
 msg.journey.summon.wrong_dimension=只能在%s维度使用
 msg.journey.summon.blazier=你这是在玩火.......现在回头还不迟

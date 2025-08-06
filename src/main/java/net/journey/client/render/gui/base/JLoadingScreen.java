@@ -98,8 +98,7 @@ public class JLoadingScreen extends GuiScreen {
 				this.mc.getTextureManager().bindTexture(TITLE_PANORAMA_PATHS[k]);
 				bufferbuilder.begin(7, DefaultVertexFormats.POSITION_TEX_COLOR);
 				int l = 255 / (j + 1);
-				float f3 = 0.0F;
-				bufferbuilder.pos(-1.0D, -1.0D, 1.0D).tex(0.0D, 0.0D).color(255, 255, 255, l).endVertex();
+                bufferbuilder.pos(-1.0D, -1.0D, 1.0D).tex(0.0D, 0.0D).color(255, 255, 255, l).endVertex();
 				bufferbuilder.pos(1.0D, -1.0D, 1.0D).tex(1.0D, 0.0D).color(255, 255, 255, l).endVertex();
 				bufferbuilder.pos(1.0D, 1.0D, 1.0D).tex(1.0D, 1.0D).color(255, 255, 255, l).endVertex();
 				bufferbuilder.pos(-1.0D, 1.0D, 1.0D).tex(0.0D, 1.0D).color(255, 255, 255, l).endVertex();

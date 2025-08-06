@@ -13,13 +13,12 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
-@Mod(name = JITL.MOD_NAME, modid = JITL.MOD_ID, version = JITL.MOD_VERSION, dependencies = JITL.DEPENDENCIES, updateJSON = JITL.UPDATE_URL)
+@Mod(name = JITL.MOD_NAME, modid = JITL.MOD_ID, version = JITL.MOD_VERSION, dependencies = JITL.DEPENDENCIES)
 public class JITL {
 	public static final String MOD_NAME = "Journey Into the Light";
 	public static final String MOD_ID = "journey";
 	public static final String MOD_VERSION = "GRADLETOKEN_VERSION";
 	public static final String DEPENDENCIES = "required-after:baubles@[1.5.2,);";
-	public static final String UPDATE_URL = "https://raw.githubusercontent.com/TheSlayerMC/Journey-Into-The-Light/master/update.json";
 
 	public static final String ABBREV = "jitl";
 
@@ -32,7 +31,8 @@ public class JITL {
 
 	@Instance(JITL.MOD_ID)
 	public static JITL instance;
-	@SidedProxy(clientSide = "net.journey.proxy.ClientProxy", serverSide = "net.journey.proxy.CommonProxy")
+	@SidedProxy(clientSide = "net.journey.proxy.ClientProxy",
+			    serverSide = "net.journey.proxy.CommonProxy")
 	public static CommonProxy proxy;
 
 	@EventHandler
