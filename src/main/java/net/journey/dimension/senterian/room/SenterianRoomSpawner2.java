@@ -1310,13 +1310,15 @@ public class SenterianRoomSpawner2 extends SenterianRoomBase {
         this.setBlock(world, i + 15, j + 4, k + 14, JourneyBlocks.senterianFloor);
         this.setBlock(world, i + 15, j + 4, k + 15, JourneyBlocks.senterianFloor);
 
-        TileEntityMobSpawner spawner2 = (TileEntityMobSpawner) w.getTileEntity(new BlockPos(i + 14, j + 1, k + 1));
-        if (spawner2 != null)
-            spawner2.getSpawnerBaseLogic().setEntityId(new ResourceLocation(mobs.get(rand.nextInt(mobs.size()))));
+        if (w.getTileEntity(new BlockPos(i + 14, j + 1, k + 1)) instanceof TileEntityMobSpawner) {
+            TileEntityMobSpawner spawner = (TileEntityMobSpawner) w.getTileEntity(new BlockPos(i + 14, j + 1, k + 1));
+            if (spawner != null) spawner.getSpawnerBaseLogic().setEntityId(new ResourceLocation(mobs.get(rand.nextInt(mobs.size()))));
+        }
 
-        TileEntityMobSpawner spawner1 = (TileEntityMobSpawner) w.getTileEntity(new BlockPos(i + 1, j + 1, k + 14));
-        if (spawner1 != null)
-            spawner1.getSpawnerBaseLogic().setEntityId(new ResourceLocation(mobs.get(rand.nextInt(mobs.size()))));
+        if (w.getTileEntity(new BlockPos(i + 1, j + 1, k + 14)) instanceof TileEntityMobSpawner) {
+            TileEntityMobSpawner spawner = (TileEntityMobSpawner) w.getTileEntity(new BlockPos(i + 1, j + 1, k + 14));
+            if (spawner != null) spawner.getSpawnerBaseLogic().setEntityId(new ResourceLocation(mobs.get(rand.nextInt(mobs.size()))));
+        }
         return true;
     }
 }
