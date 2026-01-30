@@ -1,13 +1,10 @@
 package net.journey.util.gen.lang;
 
 import net.journey.JITL;
-import net.journey.enums.EnumArmor;
 import net.journey.util.SideExecutor;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -63,45 +60,9 @@ public class LangGeneratorFacade {
 		SideExecutor.runWhenOn(Side.CLIENT, () -> addLangEntry(LangSection.CREATIVE_TABS, creativeTab, enName));
 	}
 
-	public static void addArmorEntry(ItemArmor item, EnumArmor type) {
-		if (!exists()) return;
-		EntityEquipmentSlot equipmentSlot = item.armorType;
-
-		String suffix;
-		switch (equipmentSlot) {
-			case HEAD:
-				suffix = "%material% Helmet";
-				break;
-			case CHEST:
-				suffix = "%material% Chestplate";
-				break;
-			case LEGS:
-				suffix = "%material% Leggings";
-				break;
-			case FEET:
-				suffix = "%material% Boots";
-				break;
-			default:
-				throw new IllegalStateException("Unsupported equipment slot: " + equipmentSlot);
-		}
-
-		addArmorEntry(item, type, suffix);
-	}
-
 	/**
 	 * @param nameSuffix represents full or base localized name that may contain %material% mark which will be replaced with provided material name.
 	 */
-	public static void addArmorEntry(ItemArmor item, EnumArmor type, String nameSuffix) {
-		if (!exists()) return;
-		ArmorData armorData = new ArmorData(item, type);
-		String name = nameSuffix.replace("%material%", type.getFinalName());
-		SideExecutor.runWhenOn(Side.CLIENT, () -> addLangEntry(LangSection.ARMOR, armorData, name));
-	}
-
-	public static void addMiscEntry(String key, String name) {
-		if (!exists()) return;
-		SideExecutor.runWhenOn(Side.CLIENT, () -> addLangEntry(LangSection.MISC, key, name));
-	}
 
 	public static void save() {
 		if (exists()) generator.save();

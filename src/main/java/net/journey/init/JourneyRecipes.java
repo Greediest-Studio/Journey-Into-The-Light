@@ -142,58 +142,50 @@ public class JourneyRecipes {
 		addDefaultRecipes(JourneyBlocks.celestiumOre, JourneyItems.celestiumIngot, JourneyBlocks.celestiumBlock,
 				JourneyArmory.celestiumAxe, JourneyArmory.celestiumPickaxe, JourneyArmory.celestiumShovel,
 				JourneyArmory.celestiumHoe, JourneyWeapons.celestiumSword, JourneyArmory.celestiumMultiTool,
-				JourneyArmory.celestiumHelmet, JourneyArmory.celestiumChest, JourneyArmory.celestiumLegs,
-				JourneyArmory.celestiumBoots, JourneyItems.celestiumDust);
+				JourneyItems.celestiumDust);
 		addDefaultRecipes(JourneyBlocks.hellstoneOre, JourneyItems.hellstoneIngot, JourneyBlocks.hellstoneBlock,
 				JourneyArmory.hellstoneAxe, JourneyArmory.hellstonePickaxe, JourneyArmory.hellstoneShovel,
 				JourneyArmory.hellstoneHoe, JourneyWeapons.hellstoneSword, JourneyArmory.hellstoneMultiTool,
-				JourneyArmory.hellstoneHelmet, JourneyArmory.hellstoneChest, JourneyArmory.hellstoneLegs,
-				JourneyArmory.hellstoneBoots, JourneyItems.hellstoneDust);
+				JourneyItems.hellstoneDust);
 		addDefaultRecipes(JourneyBlocks.flairiumOre, JourneyItems.flairiumIngot, JourneyBlocks.flairiumBlock,
 				JourneyArmory.flairiumAxe, JourneyArmory.flairiumPickaxe, JourneyArmory.flairiumShovel,
 				JourneyArmory.flairiumHoe, JourneyWeapons.flairiumSword, JourneyArmory.flairiumMultiTool,
-				JourneyArmory.flairiumHelmet, JourneyArmory.flairiumChest, JourneyArmory.flairiumLegs,
-				JourneyArmory.flairiumBoots, JourneyItems.flairiumDust);
+				JourneyItems.flairiumDust);
 		addDefaultRecipes(JourneyBlocks.desOre, JourneyItems.desIngot, JourneyBlocks.desBlock, JourneyArmory.desAxe,
 				JourneyArmory.desPickaxe, JourneyArmory.desShovel, JourneyArmory.desHoe, JourneyWeapons.desSword,
-				JourneyArmory.desMultiTool, null, null, null, null, null);
+				JourneyArmory.desMultiTool, null);
 		addDefaultRecipes(JourneyBlocks.shadiumOre, JourneyItems.shadiumIngot, JourneyBlocks.shadiumBlock,
 				JourneyArmory.shadiumAxe, JourneyArmory.shadiumPickaxe, JourneyArmory.shadiumShovel,
 				JourneyArmory.shadiumHoe, JourneyWeapons.shadiumSword, JourneyArmory.shadiumMultiTool,
-				JourneyArmory.shadiumHelmet, JourneyArmory.shadiumChest, JourneyArmory.shadiumLegs,
-				JourneyArmory.shadiumBoots, JourneyItems.shadiumDust);
+				JourneyItems.shadiumDust);
 		addDefaultRecipes(JourneyBlocks.luniumOre, JourneyItems.luniumIngot, JourneyBlocks.luniumBlock, JourneyArmory.luniumAxe,
 				JourneyArmory.luniumPickaxe, JourneyArmory.luniumShovel, JourneyArmory.luniumHoe,
-				JourneyWeapons.luniumSword, JourneyArmory.luniumMultiTool, JourneyArmory.luniumHelmet,
-				JourneyArmory.luniumChest, JourneyArmory.luniumLegs, JourneyArmory.luniumBoots,
+				JourneyWeapons.luniumSword, JourneyArmory.luniumMultiTool,
 				JourneyItems.luniumDust);
 		addDefaultRecipes(JourneyBlocks.sapphireOre, JourneyItems.sapphire, JourneyBlocks.sapphireBlock,
 				JourneyArmory.sapphireAxe, JourneyArmory.sapphirePickaxe, JourneyArmory.sapphireShovel,
 				JourneyArmory.sapphireHoe, JourneyWeapons.sapphireSword, JourneyArmory.sapphireMultiTool,
-				JourneyArmory.sapphireHelmet, JourneyArmory.sapphireChest, JourneyArmory.sapphireLegs,
-				JourneyArmory.sapphireBoots, JourneyItems.sapphireDust);
+				JourneyItems.sapphireDust);
 		addDefaultRecipes(JourneyBlocks.gorbiteOre, JourneyItems.gorbiteGem, JourneyBlocks.gorbiteBlock,
 				JourneyArmory.gorbiteAxe, JourneyArmory.gorbitePickaxe, JourneyArmory.gorbiteShovel,
 				JourneyArmory.gorbiteHoe, JourneyWeapons.gorbiteSword, JourneyArmory.gorbiteMultiTool,
-				JourneyArmory.gorbiteHelmet, JourneyArmory.gorbiteChest, JourneyArmory.gorbiteLegs,
-				JourneyArmory.gorbiteBoots, JourneyItems.gorbiteDust);
+				JourneyItems.gorbiteDust);
 		addDefaultRecipes(JourneyBlocks.orbaditeOre, JourneyItems.orbaditeIngot, JourneyBlocks.orbaditeBlock,
 				JourneyArmory.orbaditeAxe, JourneyArmory.orbaditePickaxe, JourneyArmory.orbaditeShovel,
 				JourneyArmory.orbaditeHoe, JourneyWeapons.orbaditeSword, JourneyArmory.orbaditeMultiTool,
-				JourneyArmory.orbaditeHelmet, JourneyArmory.orbaditeChest, JourneyArmory.orbaditeLegs,
-				JourneyArmory.orbaditeBoots, JourneyItems.orbaditeDust);
+				JourneyItems.orbaditeDust);
 		addDefaultRecipes(JourneyBlocks.koriteOre, JourneyItems.koriteIngot, JourneyBlocks.koriteBlock, JourneyArmory.koriteAxe,
 				JourneyArmory.koritePickaxe, JourneyArmory.koriteShovel, JourneyArmory.koriteHoe,
-				JourneyWeapons.koriteSword, JourneyArmory.koriteMultiTool, null, null, null, null, null);
+				JourneyWeapons.koriteSword, JourneyArmory.koriteMultiTool, null);
 		addDefaultRecipes(JourneyBlocks.storonOre, JourneyItems.storonIngot, JourneyBlocks.storonBlock, JourneyArmory.storonAxe,
 				JourneyArmory.storonPickaxe, JourneyArmory.storonShovel, JourneyArmory.storonHoe,
-				JourneyWeapons.storonSword, JourneyArmory.storonMultiTool, null, null, null, null, null);
+				JourneyWeapons.storonSword, JourneyArmory.storonMultiTool, null);
 		addDefaultRecipes(JourneyBlocks.mekyumOre, JourneyItems.mekyumIngot, JourneyBlocks.mekyumBlock, JourneyArmory.mekyumAxe,
 				JourneyArmory.mekyumPickaxe, JourneyArmory.mekyumShovel, JourneyArmory.mekyumHoe,
-				JourneyWeapons.mekyumSword, JourneyArmory.mekyumMultiTool, null, null, null, null, null);
+				JourneyWeapons.mekyumSword, JourneyArmory.mekyumMultiTool, null);
 		addDefaultRecipes(null, JourneyItems.soulstone, JourneyBlocks.nethicGemstoneBlock, JourneyArmory.nethicAxe,
 				JourneyArmory.nethicPickaxe, JourneyArmory.nethicShovel, null,
-				null, null, null, null, null, null, null);
+				null, null, null);
 
 		addShapedRecipe(new ItemStack(JourneyWeapons.demonicBomb, 16),
 				"ddd", "did", "ddd", 'd', JourneyItems.demonicDust, 'i', JourneyItems.crystalBall);
@@ -292,7 +284,7 @@ public class JourneyRecipes {
 	}
 
 	private static void addDefaultRecipes(Block ore, @NotNull Item ingot, Block block, Item axe, Item pick, Item shovel, Item hoe, Item sword,
-	                                      Item multiTool, Item helmet, Item chest, Item legs, Item boots, Item dust) {
+										  Item multiTool, Item dust) {
 		Preconditions.checkNotNull(ingot);
 
 		if (JITL.IN_JOURNEY_DEV) {
@@ -303,10 +295,6 @@ public class JourneyRecipes {
 			if (sword != null)
 				addShapedRecipe(new ItemStack(sword), "b", "b", "s", 'b', block, 's', JourneyItems.obsidianRod);
 			if (block != null) add3x3CompactingRecipes(block, ingot, true);
-			if (helmet != null) addHelmetRecipe(helmet, ingot);
-			if (chest != null) addChestplateRecipe(chest, ingot);
-			if (legs != null) addLeggingsRecipe(legs, ingot);
-			if (boots != null) addBootsRecipe(boots, ingot);
 			if (multiTool != null) addShapelessRecipe(new ItemStack(multiTool), pick, shovel, hoe, axe);
 		}
 

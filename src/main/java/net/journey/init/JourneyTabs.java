@@ -20,7 +20,6 @@ public class JourneyTabs extends CreativeTabs {
     public static final JourneyTabs TOOLS = new JourneyTabs("Tools", () -> new ItemStack(JourneyArmory.multiToolOfEternalSmelting));
     public static final JourneyTabs WEAPONS = new JourneyTabs("Weapons", () -> new ItemStack(JourneyWeapons.coreMender));
     public static final JourneyTabs UTIL = new JourneyTabs("Utilities", () -> new ItemStack(JourneyItems.flameCoin));
-    public static final JourneyTabs ARMOR = new JourneyTabs("Armor", () -> new ItemStack(JourneyArmory.blazehornHelmet));
     public static final JourneyTabs SPAWNERS = new JourneyTabs("Spawners", () -> new ItemStack(JourneyItems.sentryKingOrb));
     public static final JourneyTabs CROPS = new JourneyTabs("Crops", () -> new ItemStack(JourneyConsumables.hongoShroom));
     public static final JourneyTabs INTERACTIVE_BLOCKS = new JourneyTabs("Interactive Blocks", () -> new ItemStack(JourneyBlocks.summoningTable));

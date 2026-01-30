@@ -624,7 +624,6 @@ public class JourneyItems {
 		deathCap = Registrar.regAndSetupItem("death_cap", "Death Cap", new ItemDeathCap(), JourneyTabs.UTIL);
 		demonicSkull = Registrar.regAndSetupItem("demonic_skull", "Demonic Skull", new JItem());
 		essenceBuckler = Registrar.regAndSetupItem("essence_buckler", "Essence Buckler", new JItem());
-		essenceCatalyst = Registrar.regAndSetupItem("essence_catalyst", "Essence Catalyst", new ItemAddEssence(10), JourneyTabs.UTIL);
 		fieryStabber = Registrar.regAndSetupItem("fiery_stabber", "Fiery Stabber", new JItem());
 		glacialBlade = Registrar.regAndSetupItem("glacial_blade", "Glacial Blade", new JItem());
 		glossyEye = Registrar.regAndSetupItem("glossy_eye", "Glossy Eye", new JItem());

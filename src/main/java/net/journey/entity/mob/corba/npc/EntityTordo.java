@@ -45,14 +45,6 @@ public class EntityTordo extends EntityModVillager {
         list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 15), new ItemStack(JourneyItems.overseeingEye, 15), new ItemStack(JourneyWeapons.healersBlade, 1)));
         list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 32), new ItemStack(JourneyItems.collectorRock, 32), new ItemStack(JourneyWeapons.treeHugger, 1)));
         list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 32), new ItemStack(JourneyItems.collectorRock, 64), new ItemStack(JourneyArmory.multiToolOfEternalSmelting, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.enchantedLeaf, 32), new ItemStack(JourneyItems.corbaStick, 10), new ItemStack(JourneyArmory.treehuggersHelmet, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.enchantedLeaf, 32), new ItemStack(JourneyItems.corbaStick, 10), new ItemStack(JourneyArmory.treehuggersChest, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.enchantedLeaf, 32), new ItemStack(JourneyItems.corbaStick, 10), new ItemStack(JourneyArmory.treehuggersLegs, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.enchantedLeaf, 32), new ItemStack(JourneyItems.corbaStick, 10), new ItemStack(JourneyArmory.treehuggersBoots, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 10), new ItemStack(JourneyItems.overseeingEye, 32), new ItemStack(JourneyArmory.leapersHelmet, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 10), new ItemStack(JourneyItems.overseeingEye, 32), new ItemStack(JourneyArmory.leapersChest, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 10), new ItemStack(JourneyItems.overseeingEye, 32), new ItemStack(JourneyArmory.leapersLegs, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 10), new ItemStack(JourneyItems.overseeingEye, 32), new ItemStack(JourneyArmory.leapersBoots, 1)));
 
     }
 }

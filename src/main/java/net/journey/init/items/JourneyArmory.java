@@ -1,9 +1,7 @@
 package net.journey.init.items;
 
-import net.journey.enums.EnumArmor;
 import net.journey.init.JourneyTabs;
 import net.journey.init.Registrar;
-import net.journey.items.ItemModArmor;
 import net.journey.items.tool.ItemBonemealHoe;
 import net.journey.items.tool.ItemMultiTool;
 import net.journey.util.JourneyToolMaterial;
@@ -15,8 +13,6 @@ import net.slayer.api.item.ItemModPickaxe;
 import net.slayer.api.item.ItemModShovel;
 
 public class JourneyArmory {
-
-    public static final EntityEquipmentSlot HEAD = EntityEquipmentSlot.HEAD, BODY = EntityEquipmentSlot.CHEST, LEGS = EntityEquipmentSlot.LEGS, BOOTS = EntityEquipmentSlot.FEET;
 
     public static Item hellstoneMultiTool;
     public static Item shadiumMultiTool;
@@ -98,80 +94,6 @@ public class JourneyArmory {
     public static Item multiToolOfEternalSmelting;
     public static Item slimyPickaxe;
     public static Item pickaxeOfGoodFortune;
-
-    public static Item maskOfHellmetal;
-
-    public static Item hellstoneHelmet;
-    public static Item hellstoneChest;
-    public static Item hellstoneLegs;
-    public static Item hellstoneBoots;
-
-    public static Item flairiumHelmet;
-    public static Item flairiumChest;
-    public static Item flairiumLegs;
-    public static Item flairiumBoots;
-
-    public static Item celestiumHelmet;
-    public static Item celestiumChest;
-    public static Item celestiumLegs;
-    public static Item celestiumBoots;
-
-    public static Item luniumHelmet;
-    public static Item luniumChest;
-    public static Item luniumLegs;
-    public static Item luniumBoots;
-
-    public static Item shadiumHelmet;
-    public static Item shadiumChest;
-    public static Item shadiumLegs;
-    public static Item shadiumBoots;
-
-    public static Item sapphireHelmet;
-    public static Item sapphireChest;
-    public static Item sapphireLegs;
-    public static Item sapphireBoots;
-
-    public static Item gorbiteHelmet;
-    public static Item gorbiteChest;
-    public static Item gorbiteLegs;
-    public static Item gorbiteBoots;
-
-    public static Item orbaditeHelmet;
-    public static Item orbaditeChest;
-    public static Item orbaditeLegs;
-    public static Item orbaditeBoots;
-
-    public static Item leapersHelmet;
-    public static Item leapersChest;
-    public static Item leapersLegs;
-    public static Item leapersBoots;
-
-    public static Item snakeskinHelmet;
-    public static Item snakeskinChest;
-    public static Item snakeskinLegs;
-    public static Item snakeskinBoots;
-
-    public static Item treehuggersHelmet;
-    public static Item treehuggersChest;
-    public static Item treehuggersLegs;
-    public static Item treehuggersBoots;
-
-    public static Item charskullHelmet;
-    public static Item charskullChest;
-    public static Item charskullLegs;
-    public static Item charskullBoots;
-
-    public static Item crystalFlakeHelmet;
-    public static Item crystalFlakeChest;
-    public static Item crystalFlakeLegs;
-    public static Item crystalFlakeBoots;
-
-    public static Item frostbittenHelmet;
-    public static Item frostbittenChest;
-    public static Item frostbittenLegs;
-    public static Item frostbittenBoots;
-
-    public static Item blazehornHelmet;
 
     public static void init() {
         hellstoneMultiTool = Registrar.regAndSetupItem("hellstoneMultiTool", "Bloodcrust Multi Tool", new ItemMultiTool(JourneyToolMaterial.HELLSTONE_MULTI_TOOL, 1750), JourneyTabs.TOOLS);
