@@ -41,8 +41,6 @@ public class EntityTordo extends EntityModVillager {
 
     @Override
     public void addRecipies(MerchantRecipeList list) {
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 15), new ItemStack(JourneyItems.overseeingEye, 15), new ItemStack(JourneyWeapons.healersBlade, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 32), new ItemStack(JourneyItems.collectorRock, 32), new ItemStack(JourneyWeapons.treeHugger, 1)));
 
     }
 }

@@ -58,21 +58,10 @@ public class JourneyItems {
 	public static ToolMaterial hellstone = addToolMaterial(1432, 15F, 8.5F, true);
 	public static ToolMaterial nethic = addToolMaterial(481, 21F, 8.0F, true);
 	public static ToolMaterial celestium = addToolMaterial(1621, 18F, 11.5F, true);
-	public static ToolMaterial mekyum = addToolMaterial(1621, 18F, 11.5F, true);
-	public static ToolMaterial storon = addToolMaterial(1621, 18F, 11.5F, true);
-	public static ToolMaterial korite = addToolMaterial(1621, 18F, 11.5F, true);
-	public static ToolMaterial flairium = addToolMaterial(2130, 21F, 14.5F, true);
-	public static ToolMaterial des = addToolMaterial(2130, 21F, 13F, true);
-	public static ToolMaterial orbadite = addToolMaterial(3142, 28F, 16.5F, true);
-	public static ToolMaterial gorbite = addToolMaterial(3142, 28F, 16.5F, true);
-	public static ToolMaterial hoeoflife = addToolMaterial(126, 28F, 5F, true);
-	public static ToolMaterial hoeofearth = addToolMaterial(512, 28F, 7F, true);
 	public static ToolMaterial hellstoneMulti = addToolMaterial(3000, 10F, 6.5F, false);
 	public static ToolMaterial flairiumMulti = addToolMaterial(3000, 16F, 12.5F, false);
 	public static ToolMaterial luniumMulti = addToolMaterial(3000, 7F, 6.5F, false);
 	public static ToolMaterial celestiumMulti = addToolMaterial(3000, 13F, 9.5F, false);
-	public static ToolMaterial mekyumMulti = addToolMaterial(3000, 13F, 9.5F, false);
-	public static ToolMaterial storonMulti = addToolMaterial(3000, 13F, 9.5F, false);
 	public static ToolMaterial koriteMulti = addToolMaterial(3000, 13F, 9.5F, false);
 	public static ToolMaterial shadiumMulti = addToolMaterial(3000, 9F, 6.5F, false);
 	public static ToolMaterial sapphireMulti = addToolMaterial(3000, 7F, 6.0F, false);
@@ -80,8 +69,6 @@ public class JourneyItems {
 	public static ToolMaterial gorbiteMulti = addToolMaterial(3000, 20F, 14.5F, false);
 	public static ToolMaterial desMulti = addToolMaterial(3000, 16F, 11F, false);
 	public static ToolMaterial smeltingMulti = addToolMaterial(3000, 8F, 5F, false);
-	public static ToolMaterial SLIMY_PICK_MATERIAL = addToolMaterial(3000, 2F, 3F, true);
-	public static ToolMaterial BEDROCK_SHOVEL_MATERIAL = addToolMaterial(1000, 4F, 5.5F, false);
 
 	//TODO MATERIALS
 	public static ToolMaterial woodMulti = addToolMaterial(60, 2F, 5F, false);
@@ -166,7 +153,6 @@ public class JourneyItems {
     public static Item overseeingTablet;
     public static Item overseeingEye;
     public static Item darkCrystal;
-    public static Item blankKnowledge;
     public static Item darkOrb;
     public static Item depthsFlake;
     public static Item beastlyStomach;
@@ -253,11 +239,6 @@ public class JourneyItems {
     public static Item spawnerBar;
 
     public static Item flameCoin;
-    public static Item essenceDetractor;
-    public static Item essenceAttractor;
-
-    public static Item rockChunk;
-    public static Item rockShard;
     public static Item slugSlime;
 
     public static Item eucaPortalGem;
@@ -283,7 +264,6 @@ public class JourneyItems {
     public static Item weakEssencePotion;
     public static Item strongEssencePotion;
     public static Item essenceArrow;
-    public static Item tippedEssenceArrow;
     public static Item greenGem;
     public static Item purpleGem;
     public static Item blueGem;

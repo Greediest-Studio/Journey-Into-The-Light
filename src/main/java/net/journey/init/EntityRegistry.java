@@ -46,10 +46,6 @@ import net.journey.entity.projectile.arrow.*;
 import net.journey.entity.projectile.launcher.*;
 import net.journey.entity.projectile.piercer.*;
 import net.journey.entity.projectile.staff.*;
-import net.journey.entity.projectile.throwable.EntityDemonicBomb;
-import net.journey.entity.projectile.throwable.EntityFireBomb;
-import net.journey.entity.projectile.throwable.EntityMagicBomb;
-import net.journey.entity.projectile.throwable.EntityMagicPot;
 import net.journey.entity.util.EntityBossCrystal;
 import net.journey.entity.util.EntitySentacoin;
 import net.journey.entity.util.EntitySentacoinBag;
@@ -117,17 +113,13 @@ public class EntityRegistry {
 				SlayerAPI.buildProjectileEntry(EntityFrostyPiercer.class, "frostypiercer"),
 				SlayerAPI.buildProjectileEntry(EntitySunsetPiercer.class, "sunsetpiercer"),
 				SlayerAPI.buildProjectileEntry(EntitySkyPiercer.class, "skypiercer"),
-				SlayerAPI.buildProjectileEntry(EntityMagicPot.class, "magicpot"),
 				SlayerAPI.buildProjectileEntry(EntityBubbleProjectile.class, "bubbleprojectile"),
 				SlayerAPI.buildProjectileEntry(EntityDetractor.class, "detractor"),
 				SlayerAPI.buildProjectileEntry(EntityRock.class, "rock"),
 				SlayerAPI.buildProjectileEntry(EntityOvergrown.class, "overgrown"),
 				SlayerAPI.buildProjectileEntry(EntityShimmererProjectile.class, "shimmererprojectile"),
-				SlayerAPI.buildProjectileEntry(EntityDemonicBomb.class, "demonicbomb"),
-				SlayerAPI.buildProjectileEntry(EntityFireBomb.class, "firebomb"),
 				SlayerAPI.buildProjectileEntry(EntityFloroDirtProjectile.class, "florowater"),
 				SlayerAPI.buildProjectileEntry(EntityFrozenSnowball.class, "frozensnowball"),
-				SlayerAPI.buildProjectileEntry(EntityMagicBomb.class, "magicbomb"),
 				SlayerAPI.buildProjectileEntry(EntityEssenceShuriken.class, "essence_shuriken"),
 				SlayerAPI.buildProjectileEntry(EntityWithic.class, "withic"),
 				SlayerAPI.buildProjectileEntry(EntityEarthen.class, "earthen"),

@@ -84,8 +84,6 @@ public class JourneyRecipes {
 		addShapedRecipe(JourneyItems.reinforcedCrystalIngot, "ddd", "did", "ddd", 'd', JourneyItems.stoneClump, 'i', JourneyItems.caveCrystal);
 		addShapedRecipe(JourneyItems.crystalBall, "idi", "iii", 'i', JourneyItems.magicDust, 'd', Items.ENDER_PEARL);
 		addShapedRecipe(new ItemStack(JourneyBlocks.senterianPortalFrame, 4), "iii", "iii", 'i', JourneyBlocks.ANCIENT_STONE);
-		addShapedRecipe(new ItemStack(JourneyWeapons.demonicBomb, 16), "ddd", "did", "ddd", 'd', JourneyItems.demonicDust, 'i', JourneyItems.crystalBall);
-		addShapedRecipe(JourneyWeapons.magicBomb, "ddd", "did", "ddd", 'd', JourneyItems.magicDust, 'i', JourneyItems.crystalBall);
 		addShapedRecipe(new ItemStack(JourneyItems.stoneClump, 4), "ddd", "ddd", "ddd", 'd', JourneyItems.caveDust);
 		addShapedRecipe(new ItemStack(JourneyItems.stoneStick, 16), "d", "d", "d", 'd', Blocks.STONE);
 		addShapedRecipe(new ItemStack(JourneyItems.stoneClump, 16), "ddd", "ddd", "ddd", 'd', Blocks.STONE);
@@ -158,11 +156,6 @@ public class JourneyRecipes {
 				null);
 		addDefaultRecipes(null, JourneyItems.soulstone, JourneyBlocks.nethicGemstoneBlock,
 				null);
-
-		addShapedRecipe(new ItemStack(JourneyWeapons.demonicBomb, 16),
-				"ddd", "did", "ddd", 'd', JourneyItems.demonicDust, 'i', JourneyItems.crystalBall);
-
-		addBowRecipe(JourneyWeapons.flameBow, Items.FIRE_CHARGE, Items.STRING);
 
 		add3x3CompactingRecipes(JourneyBlocks.iridiumBlock, JourneyItems.iridium, true);
 		add3x3CompactingRecipes(JourneyBlocks.ashualBlock, JourneyItems.ash, true);

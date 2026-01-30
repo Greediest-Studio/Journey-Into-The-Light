@@ -82,10 +82,6 @@ import net.journey.entity.projectile.arrow.EntityEssenceArrow;
 import net.journey.entity.projectile.launcher.*;
 import net.journey.entity.projectile.piercer.*;
 import net.journey.entity.projectile.staff.*;
-import net.journey.entity.projectile.throwable.EntityDemonicBomb;
-import net.journey.entity.projectile.throwable.EntityFireBomb;
-import net.journey.entity.projectile.throwable.EntityMagicBomb;
-import net.journey.entity.projectile.throwable.EntityMagicPot;
 import net.journey.entity.util.EntityBossCrystal;
 import net.journey.entity.util.EntitySentacoin;
 import net.journey.entity.util.EntitySentacoinBag;
@@ -188,23 +184,8 @@ public class EntityRendering {
         RenderingRegistry.registerEntityRenderingHandler(EntityIceBall.class, new RenderStaffProjectile(Textures.empty, 1F, 1F, 1F));
         RenderingRegistry.registerEntityRenderingHandler(EntityTempleBall.class, new RenderStaffProjectile(Textures.templeBall, 0F, 0F, 0F));
         RenderingRegistry.registerEntityRenderingHandler(EntityLightningBall.class, new RenderStaffProjectile(Textures.empty, 1F, 1F, 1F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityBoilingPiercer.class, new RenderItemProjectile(JourneyWeapons.boilingPiercer));
-        RenderingRegistry.registerEntityRenderingHandler(EntityNethicPiercer.class, new RenderItemProjectile(JourneyWeapons.nethicPiercer));
-        RenderingRegistry.registerEntityRenderingHandler(EntityFrozenPiercer.class, new RenderItemProjectile(JourneyWeapons.frozenPiercer));
-        RenderingRegistry.registerEntityRenderingHandler(EntityEucaPiercer.class, new RenderItemProjectile(JourneyWeapons.eucaPiercer));
-        RenderingRegistry.registerEntityRenderingHandler(EntityDepthsPiercer.class, new RenderItemProjectile(JourneyWeapons.depthsPiercer));
-        RenderingRegistry.registerEntityRenderingHandler(EntityCorbaPiercer.class, new RenderItemProjectile(JourneyWeapons.corbaPiercer));
-        RenderingRegistry.registerEntityRenderingHandler(EntityFrostbittenPiercer.class, new RenderItemProjectile(JourneyWeapons.frostbittenPiercer));
-        RenderingRegistry.registerEntityRenderingHandler(EntityFrostyPiercer.class, new RenderItemProjectile(JourneyWeapons.frostyPiercer));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySunsetPiercer.class, new RenderItemProjectile(JourneyWeapons.sunsetPiercer));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySkyPiercer.class, new RenderItemProjectile(JourneyWeapons.skyPiercer));
-        RenderingRegistry.registerEntityRenderingHandler(EntityMagicPot.class, new RenderItemProjectile(JourneyWeapons.magicPotOfDestruction));
-        RenderingRegistry.registerEntityRenderingHandler(EntityMagicBomb.class, new RenderItemProjectile(JourneyWeapons.magicBomb));
         RenderingRegistry.registerEntityRenderingHandler(EntityFrozenSnowball.class, new RenderItemProjectile(Items.SNOWBALL));
         RenderingRegistry.registerEntityRenderingHandler(EntityEssenceShuriken.class, new RenderItemProjectile(JourneyWeapons.essenceShuriken));
-        RenderingRegistry.registerEntityRenderingHandler(EntityDemonicBomb.class, new RenderItemProjectile(JourneyWeapons.demonicBomb));
-        RenderingRegistry.registerEntityRenderingHandler(EntityFireBomb.class, new RenderItemProjectile(JourneyWeapons.fireBomb));
-        //RenderingRegistry.registerEntityRenderingHandler(EntityRoyalKnife.class, new RenderItemProjectile(JourneyItems.royalKnife));
         
         RenderingRegistry.registerEntityRenderingHandler(EntityPetRobot.class, new RenderSizeable(new ModelRobot(), 0.5F, 0.5F, Textures.robot));
 

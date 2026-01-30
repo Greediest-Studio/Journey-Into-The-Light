@@ -44,11 +44,5 @@ public class EntityFrozenMerchant extends EntityModVillager {
 
     @Override
     public void addRecipies(MerchantRecipeList list) {
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.crystalFlake, 15), new ItemStack(JourneyItems.frostGem, 15), new ItemStack(JourneyWeapons.frostySword, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.crystalFlake, 15), new ItemStack(JourneyItems.frostGem, 15), new ItemStack(JourneyWeapons.frostyBow, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.crystalFlake, 10), new ItemStack(JourneyItems.frostGem, 10), new ItemStack(JourneyWeapons.frostyPiercer, 15)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.frostFlake, 15), new ItemStack(JourneyWeapons.frostySword, 1), new ItemStack(JourneyWeapons.frostbittenSword, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.frostFlake, 15), new ItemStack(JourneyWeapons.frostyBow, 1), new ItemStack(JourneyWeapons.frostbittenBow, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.frostFlake, 10), new ItemStack(JourneyWeapons.frostyPiercer, 10), new ItemStack(JourneyWeapons.frostbittenPiercer, 15)));
     }
 }

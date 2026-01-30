@@ -41,9 +41,5 @@ public class EntityEscapedConvict extends EntityModVillager {
 
     @Override
     public void addRecipies(MerchantRecipeList list) {
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.boilingSkull, 10), new ItemStack(JourneyItems.boilPowder, 64), new ItemStack(JourneyWeapons.charredBow, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.boilingSkull, 10), new ItemStack(JourneyItems.boilPowder, 64), new ItemStack(JourneyWeapons.charredBlade, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.boilingSkull, 32), new ItemStack(JourneyItems.boilPowder, 64), new ItemStack(JourneyWeapons.bloodwieldSword, 1)));
-
     }
 }

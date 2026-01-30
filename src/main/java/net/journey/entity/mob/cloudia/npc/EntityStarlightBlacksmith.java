@@ -41,10 +41,5 @@ public class EntityStarlightBlacksmith extends EntityModVillager {
 
     @Override
     public void addRecipies(MerchantRecipeList list) {
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.fluffyFeather, 15), new ItemStack(JourneyItems.golemChunk, 5), new ItemStack(JourneyWeapons.golemSword, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.fluffyFeather, 15), new ItemStack(JourneyItems.golemChunk, 5), new ItemStack(JourneyWeapons.golemBow, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.luniteChunk, 15), new ItemStack(JourneyItems.golemChunk, 15), new ItemStack(JourneyWeapons.starlightBlade, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.luniteChunk, 15), new ItemStack(JourneyItems.golemChunk, 15), new ItemStack(JourneyWeapons.starlightBow, 1)));
-
     }
 }
