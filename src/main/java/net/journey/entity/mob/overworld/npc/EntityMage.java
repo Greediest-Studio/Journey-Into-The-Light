@@ -68,16 +68,5 @@ public class EntityMage extends EntityModVillager {
     public void addRecipies(MerchantRecipeList list) {
         list.add(new JourneyMerchantRecipe(new ItemStack(Items.STICK, 1), new ItemStack(Items.GOLD_INGOT, 5), new ItemStack(JourneyItems.wandBase)));
         list.add(new JourneyMerchantRecipe(new ItemStack(Items.STICK, 1), new ItemStack(Items.DIAMOND, 2), new ItemStack(JourneyItems.staffBase)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.stoneStick, 1), new ItemStack(JourneyItems.greenGem, 10), new ItemStack(JourneyWeapons.earthenHammer)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.staffBase, 1), new ItemStack(JourneyItems.greenGem, 10), new ItemStack(JourneyWeapons.staffOfGreenpace)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.staffBase, 1), new ItemStack(JourneyItems.hellstoneIngot, 10), new ItemStack(JourneyWeapons.staffOfHellstone)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.staffBase, 1), new ItemStack(JourneyItems.purpleGem, 10), new ItemStack(JourneyWeapons.doomsBringer)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.staffBase, 1), new ItemStack(JourneyItems.yellowGem, 10), new ItemStack(JourneyWeapons.wizardsStar)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.staffBase, 1), new ItemStack(JourneyItems.hellstoneIngot, 5), new ItemStack(JourneyWeapons.chaosCannon)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.staffBase, 1), new ItemStack(JourneyItems.blueGem, 10), new ItemStack(JourneyWeapons.staffOfEnlightenment)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.greenGem, 10), new ItemStack(JourneyWeapons.staffOfGreenpace, 1), new ItemStack(JourneyWeapons.conjuringStaff)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.wandBase, 1), new ItemStack(Blocks.ICE, 32), new ItemStack(JourneyWeapons.iceWand)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.wandBase, 1), new ItemStack(Items.FIRE_CHARGE, 32), new ItemStack(JourneyWeapons.fireWand)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.wandBase, 1), new ItemStack(Items.DIAMOND, 32), new ItemStack(JourneyWeapons.lightningWand)));
     }
 }

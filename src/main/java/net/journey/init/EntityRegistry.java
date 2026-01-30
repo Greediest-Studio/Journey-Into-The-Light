@@ -43,7 +43,6 @@ import net.journey.entity.mob.terrania.npc.EntityTerranianEnchanter;
 import net.journey.entity.mob.terrania.npc.EntityTerranianTrader;
 import net.journey.entity.projectile.*;
 import net.journey.entity.projectile.arrow.*;
-import net.journey.entity.projectile.knife.*;
 import net.journey.entity.projectile.launcher.*;
 import net.journey.entity.projectile.piercer.*;
 import net.journey.entity.projectile.staff.*;
@@ -119,11 +118,6 @@ public class EntityRegistry {
 				SlayerAPI.buildProjectileEntry(EntitySunsetPiercer.class, "sunsetpiercer"),
 				SlayerAPI.buildProjectileEntry(EntitySkyPiercer.class, "skypiercer"),
 				SlayerAPI.buildProjectileEntry(EntityMagicPot.class, "magicpot"),
-				SlayerAPI.buildProjectileEntry(EntityMoltenKnife.class, "moltenknife"),
-				SlayerAPI.buildProjectileEntry(EntityAquaticKnife.class, "aquaticknife"),
-				SlayerAPI.buildProjectileEntry(EntityBloodKnife.class, "bloodknife"),
-				SlayerAPI.buildProjectileEntry(EntityCharredKnife.class, "charredknife"),
-				SlayerAPI.buildProjectileEntry(EntitySizzlingKnife.class, "sizzlingknife"),
 				SlayerAPI.buildProjectileEntry(EntityBubbleProjectile.class, "bubbleprojectile"),
 				SlayerAPI.buildProjectileEntry(EntityDetractor.class, "detractor"),
 				SlayerAPI.buildProjectileEntry(EntityRock.class, "rock"),

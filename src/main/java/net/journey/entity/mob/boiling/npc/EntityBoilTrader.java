@@ -41,9 +41,6 @@ public class EntityBoilTrader extends EntityModVillager {
 
     @Override
     public void addRecipies(MerchantRecipeList list) {
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.ash, 15), new ItemStack(JourneyItems.boilPowder, 64), new ItemStack(JourneyWeapons.flamingBow, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.ash, 15), new ItemStack(JourneyItems.boilPowder, 64), new ItemStack(JourneyWeapons.boilingBlade, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.ash, 10), new ItemStack(JourneyItems.boilPowder, 64), new ItemStack(JourneyWeapons.moltenKnife, 15)));
 
     }
 }

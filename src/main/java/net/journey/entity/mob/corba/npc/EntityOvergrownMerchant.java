@@ -51,10 +51,6 @@ public class EntityOvergrownMerchant extends EntityModVillager {
     public void addRecipies(MerchantRecipeList list) {
         ItemStack scrollStack = new ItemStack(JourneyItems.loreScroll);
         ItemLoreScroll.bindScrollEntry(scrollStack, ScrollRegistry.SENTERIAN_GOSPEL);
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.enchantedLeaf, 64), new ItemStack(JourneyItems.gorbiteGem, 16), new ItemStack(JourneyWeapons.overgrownHammer, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.enchantedLeaf, 64), new ItemStack(JourneyItems.orbaditeIngot, 16), new ItemStack(JourneyWeapons.overgrownStaff, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.enchantedLeaf, 64), new ItemStack(JourneyItems.gorbiteGem, 20), new ItemStack(JourneyWeapons.darkPineSword, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.enchantedLeaf, 48), new ItemStack(JourneyItems.gorbiteGem, 16), new ItemStack(JourneyWeapons.vinestrandBlade, 1)));
         list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.collectorRock, 24), new ItemStack(JourneyItems.overseeingEye, 16), new ItemStack(JourneyItems.elderKey, 1)));
 
         list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.enchantedLeaf, 16), new ItemStack(JourneyItems.orbaditeIngot, 16), scrollStack));

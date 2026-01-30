@@ -29,8 +29,6 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class JourneyItems {
 
-	public static final EntityEquipmentSlot HEAD = EntityEquipmentSlot.HEAD, BODY = EntityEquipmentSlot.CHEST, LEGS = EntityEquipmentSlot.LEGS, BOOTS = EntityEquipmentSlot.FEET;
-
 	//TODO: make a new system. durability, damage, efficiency, etc. should be static values for each tool material, with an alogorithm that changes each value based on tool type.
 	//overworld
 	public static ToolMaterial shadiumSwordMat = addToolMaterial(2210, 13F, 8.5F, true);

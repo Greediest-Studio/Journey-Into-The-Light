@@ -55,12 +55,5 @@ public class EntityRockiteGolem extends EntityModVillager {
 
     @Override
     public void addRecipies(MerchantRecipeList list) {
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.reinforcedStoneIngot, 4), new ItemStack(JourneyWeapons.backBiter, 1), new ItemStack(JourneyWeapons.rockyBattleaxe, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.reinforcedCrystalIngot, 4), new ItemStack(JourneyWeapons.backBiter, 1), new ItemStack(JourneyWeapons.crystalizedBattleaxe, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.reinforcedStoneIngot, 4), new ItemStack(JourneyWeapons.earthenHammer, 1), new ItemStack(JourneyWeapons.rockyHammer, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.reinforcedCrystalIngot, 4), new ItemStack(JourneyWeapons.earthenHammer, 1), new ItemStack(JourneyWeapons.crystallizedHammer, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.reinforcedStoneIngot, 4), new ItemStack(JourneyItems.stoneClump, 1), new ItemStack(JourneyWeapons.rockLauncher, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.reinforcedCrystalIngot, 4), new ItemStack(JourneyWeapons.staffOfEnlightenment, 1), new ItemStack(JourneyWeapons.staffOfDivineStone, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.reinforcedCrystalIngot, 4), new ItemStack(JourneyWeapons.staffOfDivineStone, 1), new ItemStack(JourneyWeapons.staffOfCrystal, 1)));
     }
 } 
