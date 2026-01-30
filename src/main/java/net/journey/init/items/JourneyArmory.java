@@ -141,16 +141,6 @@ public class JourneyArmory {
     public static Item orbaditeLegs;
     public static Item orbaditeBoots;
 
-    public static Item flameHelmet;
-    public static Item flameChest;
-    public static Item flameLegs;
-    public static Item flameBoots;
-
-    public static Item twilightHelmet;
-    public static Item twilightChest;
-    public static Item twilightLegs;
-    public static Item twilightBoots;
-
     public static Item leapersHelmet;
     public static Item leapersChest;
     public static Item leapersLegs;
@@ -171,85 +161,17 @@ public class JourneyArmory {
     public static Item charskullLegs;
     public static Item charskullBoots;
 
-    public static Item bronzedHelmet;
-    public static Item bronzedChest;
-    public static Item bronzedLegs;
-    public static Item bronzedBoots;
-
-    public static Item golditeHelmet;
-    public static Item golditeChest;
-    public static Item golditeLegs;
-    public static Item golditeBoots;
-
-    public static Item corbarkHelmet;
-    public static Item corbarkChest;
-    public static Item corbarkLegs;
-    public static Item corbarkBoots;
-
     public static Item crystalFlakeHelmet;
     public static Item crystalFlakeChest;
     public static Item crystalFlakeLegs;
     public static Item crystalFlakeBoots;
-
-    public static Item darklyHelmet;
-    public static Item darklyChest;
-    public static Item darklyLegs;
-    public static Item darklyBoots;
-
-    public static Item depthsHelmet;
-    public static Item depthsChest;
-    public static Item depthsLegs;
-    public static Item depthsBoots;
-
-    public static Item enlightenerHelmet;
-    public static Item enlightenerChest;
-    public static Item enlightenerLegs;
-    public static Item enlightenerBoots;
-
-    public static Item fireboundHelmet;
-    public static Item fireboundChest;
-    public static Item fireboundLegs;
-    public static Item fireboundBoots;
 
     public static Item frostbittenHelmet;
     public static Item frostbittenChest;
     public static Item frostbittenLegs;
     public static Item frostbittenBoots;
 
-    public static Item hollowHelmet;
-    public static Item hollowChest;
-    public static Item hollowLegs;
-    public static Item hollowBoots;
-
-    public static Item lightstoneHelmet;
-    public static Item lightstoneChest;
-    public static Item lightstoneLegs;
-    public static Item lightstoneBoots;
-
-    public static Item livegreenHelmet;
-    public static Item livegreenChest;
-    public static Item livegreenLegs;
-    public static Item livegreenBoots;
-
-    public static Item starlightHelmet;
-    public static Item starlightChest;
-    public static Item starlightLegs;
-    public static Item starlightBoots;
-
-    public static Item bloodcrustHelmet;
-    public static Item bloodcrustChest;
-    public static Item bloodcrustLegs;
-    public static Item bloodcrustBoots;
-
     public static Item blazehornHelmet;
-    public static Item blazehornChest;
-    public static Item blazehornLegs;
-    public static Item blazehornBoots;
-
-    public static Item bleedrockHelmet;
-    public static Item bleedrockChest;
-    public static Item bleedrockLegs;
-    public static Item bleedrockBoots;
 
     public static void init() {
         hellstoneMultiTool = Registrar.regAndSetupItem("hellstoneMultiTool", "Bloodcrust Multi Tool", new ItemMultiTool(JourneyToolMaterial.HELLSTONE_MULTI_TOOL, 1750), JourneyTabs.TOOLS);
@@ -331,157 +253,5 @@ public class JourneyArmory {
         mekyumHoe = Registrar.regAndSetupItem("mekyumHoe", "Mekyum Hoe", new ItemModHoe(JourneyToolMaterial.KORITE), JourneyTabs.TOOLS);
         hoeOfEternalLife = Registrar.regAndSetupItem("hoeofeternallife", "Hoe Of Eternal Life", new ItemBonemealHoe(JourneyToolMaterial.HOEOFLIFE), JourneyTabs.TOOLS);
         hoeOfEarthLoving = Registrar.regAndSetupItem("hoe_of_earth_loving", "Hoe of Earth Loving", new ItemBonemealHoe(JourneyToolMaterial.HOEOFEARTH), JourneyTabs.TOOLS);
-
-        maskOfHellmetal = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.HELL_METAL, HEAD), "Mask of %material%");
-
-        hellstoneHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.HELLSTONE, HEAD));
-        hellstoneChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.HELLSTONE, BODY));
-        hellstoneLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.HELLSTONE, LEGS));
-        hellstoneBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.HELLSTONE, BOOTS));
-
-        flairiumHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FLAIRIUM, HEAD));
-        flairiumChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FLAIRIUM, BODY));
-        flairiumLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FLAIRIUM, LEGS));
-        flairiumBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FLAIRIUM, BOOTS));
-
-        celestiumHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CELESTIUM, HEAD));
-        celestiumChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CELESTIUM, BODY));
-        celestiumLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CELESTIUM, LEGS));
-        celestiumBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CELESTIUM, BOOTS));
-
-        luniumHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LUNIUM, HEAD));
-        luniumChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LUNIUM, BODY));
-        luniumLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LUNIUM, LEGS));
-        luniumBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LUNIUM, BOOTS));
-
-        shadiumHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SHADIUM, HEAD));
-        shadiumChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SHADIUM, BODY));
-        shadiumLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SHADIUM, LEGS));
-        shadiumBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SHADIUM, BOOTS));
-
-        sapphireHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SAPPHIRE, HEAD));
-        sapphireChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SAPPHIRE, BODY));
-        sapphireLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SAPPHIRE, LEGS));
-        sapphireBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SAPPHIRE, BOOTS));
-
-        gorbiteHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.GORBITE, HEAD));
-        gorbiteChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.GORBITE, BODY));
-        gorbiteLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.GORBITE, LEGS));
-        gorbiteBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.GORBITE, BOOTS));
-
-        orbaditeHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.ORBADITE, HEAD));
-        orbaditeChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.ORBADITE, BODY));
-        orbaditeLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.ORBADITE, LEGS));
-        orbaditeBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.ORBADITE, BOOTS));
-
-        flameHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FLAME, HEAD));
-        flameChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FLAME, BODY));
-        flameLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FLAME, LEGS));
-        flameBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FLAME, BOOTS));
-
-        twilightHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.TWILIGHT, HEAD));
-        twilightChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.TWILIGHT, BODY));
-        twilightLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.TWILIGHT, LEGS));
-        twilightBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.TWILIGHT, BOOTS));
-
-        leapersHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LEAPERS, HEAD));
-        leapersChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LEAPERS, BODY));
-        leapersLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LEAPERS, LEGS));
-        leapersBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LEAPERS, BOOTS));
-
-        snakeskinHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SNAKESKIN, HEAD));
-        snakeskinChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SNAKESKIN, BODY));
-        snakeskinLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SNAKESKIN, LEGS));
-        snakeskinBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.SNAKESKIN, BOOTS));
-
-        treehuggersHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.TREEHUGGERS, HEAD));
-        treehuggersChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.TREEHUGGERS, BODY));
-        treehuggersLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.TREEHUGGERS, LEGS));
-        treehuggersBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.TREEHUGGERS, BOOTS));
-
-        charskullHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CHAR_SKULL, HEAD));
-        charskullChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CHAR_SKULL, BODY));
-        charskullLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CHAR_SKULL, LEGS));
-        charskullBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CHAR_SKULL, BOOTS));
-
-        bronzedHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BRONZED, HEAD));
-        bronzedChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BRONZED, BODY));
-        bronzedLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BRONZED, LEGS));
-        bronzedBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BRONZED, BOOTS));
-
-        golditeHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.GOLDITE, HEAD));
-        golditeChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.GOLDITE, BODY));
-        golditeLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.GOLDITE, LEGS));
-        golditeBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.GOLDITE, BOOTS));
-
-        corbarkHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CORBARK, HEAD));
-        corbarkChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CORBARK, BODY));
-        corbarkLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CORBARK, LEGS));
-        corbarkBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CORBARK, BOOTS));
-
-        crystalFlakeHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CRYSTAL_FLAKE, HEAD));
-        crystalFlakeChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CRYSTAL_FLAKE, BODY));
-        crystalFlakeLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CRYSTAL_FLAKE, LEGS));
-        crystalFlakeBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.CRYSTAL_FLAKE, BOOTS));
-
-        darklyHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.DARKLY, HEAD));
-        darklyChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.DARKLY, BODY));
-        darklyLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.DARKLY, LEGS));
-        darklyBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.DARKLY, BOOTS));
-
-        depthsHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.DEPTHS, HEAD));
-        depthsChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.DEPTHS, BODY));
-        depthsLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.DEPTHS, LEGS));
-        depthsBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.DEPTHS, BOOTS));
-
-        enlightenerHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.ENLIGHTENER, HEAD));
-        enlightenerChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.ENLIGHTENER, BODY));
-        enlightenerLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.ENLIGHTENER, LEGS));
-        enlightenerBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.ENLIGHTENER, BOOTS));
-
-        fireboundHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FIREBOUND, HEAD));
-        fireboundChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FIREBOUND, BODY));
-        fireboundLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FIREBOUND, LEGS));
-        fireboundBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FIREBOUND, BOOTS));
-
-        frostbittenHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FROSTBITTEN, HEAD));
-        frostbittenChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FROSTBITTEN, BODY));
-        frostbittenLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FROSTBITTEN, LEGS));
-        frostbittenBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.FROSTBITTEN, BOOTS));
-
-        hollowHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.HOLLOW, HEAD));
-        hollowChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.HOLLOW, BODY));
-        hollowLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.HOLLOW, LEGS));
-        hollowBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.HOLLOW, BOOTS));
-
-        lightstoneHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LIGHTSTONE, HEAD));
-        lightstoneChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LIGHTSTONE, BODY));
-        lightstoneLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LIGHTSTONE, LEGS));
-        lightstoneBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LIGHTSTONE, BOOTS));
-
-        livegreenHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LIVEGREEN, HEAD));
-        livegreenChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LIVEGREEN, BODY));
-        livegreenLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LIVEGREEN, LEGS));
-        livegreenBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.LIVEGREEN, BOOTS));
-
-        starlightHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.STARLIGHT, HEAD));
-        starlightChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.STARLIGHT, BODY));
-        starlightLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.STARLIGHT, LEGS));
-        starlightBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.STARLIGHT, BOOTS));
-
-        bloodcrustHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLOODCRUST, HEAD));
-        bloodcrustChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLOODCRUST, BODY));
-        bloodcrustLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLOODCRUST, LEGS));
-        bloodcrustBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLOODCRUST, BOOTS));
-
-        blazehornHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLAZEHORN, HEAD));
-        blazehornChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLAZEHORN, BODY));
-        blazehornLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLAZEHORN, LEGS));
-        blazehornBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLAZEHORN, BOOTS));
-
-        bleedrockHelmet = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLEEDROCK, HEAD));
-        bleedrockChest = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLEEDROCK, BODY));
-        bleedrockLegs = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLEEDROCK, LEGS));
-        bleedrockBoots = Registrar.regAndSetupArmor(new ItemModArmor(EnumArmor.BLEEDROCK, BOOTS));
     }
 }

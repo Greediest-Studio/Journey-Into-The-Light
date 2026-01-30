@@ -12,7 +12,6 @@ import net.journey.dimension.base.WorldGenJourney;
 import net.journey.dimension.nether.JNWorldGenerator;
 import net.journey.dimension.nether.biomes.BiomeRegister;
 import net.journey.enums.EnumParticlesClasses;
-import net.journey.eventhandler.ArmorAbilityEvent;
 import net.journey.eventhandler.BowZoomEvent;
 import net.journey.eventhandler.NetherEvent;
 import net.journey.eventhandler.VanillaFixEvent;
@@ -82,9 +81,7 @@ public class CommonProxy {
         Config.postBiomeInit();
         JNWorldGenerator.updateGenSettings();
         SlayerAPI.registerEventListener(new NetherEvent());
-        SlayerAPI.registerEventListener(new ArmorAbilityEvent());
         SlayerAPI.registerEventListener(new VanillaFixEvent());
-        SlayerAPI.registerEventListener(new JourneyEnchantments());
         SlayerAPI.registerEventListener(new JourneyKnowledgeEventListener());
         SlayerAPI.registerEventListener(new BowZoomEvent());
         MinecraftForge.addGrassSeed(new ItemStack(JourneyCrops.tomatoSeeds), 5);

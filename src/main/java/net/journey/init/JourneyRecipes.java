@@ -139,30 +139,6 @@ public class JourneyRecipes {
 		addWoodRecipes(JourneyBlocks.corbaLog, JourneyBlocks.corbaPlank, null, 1, true);
 		addWoodRecipes(JourneyBlocks.frozenLog, JourneyBlocks.frozenPlanks, null, 1, true);//TODO Add stairs
 
-		addShapedRecipe(JourneyArmory.blazehornHelmet, "idi", "d d", 'd', Items.BLAZE_ROD, 'i', JourneyItems.horn);
-		addShapedRecipe(JourneyArmory.blazehornChest, "i i", "did", "idi", 'd', Items.BLAZE_ROD, 'i', JourneyItems.horn);
-		addShapedRecipe(JourneyArmory.blazehornLegs, "idi", "d d", "i i", 'd', Items.BLAZE_ROD, 'i', JourneyItems.horn);
-		addShapedRecipe(JourneyArmory.blazehornBoots, "d d", "i i", 'd', Items.BLAZE_ROD, 'i', JourneyItems.horn);
-
-		addShapedRecipe(JourneyArmory.fireboundHelmet, "idi", "d d", 'd', Items.BLAZE_ROD, 'i', JourneyBlocks.hellstoneBlock);
-		addShapedRecipe(JourneyArmory.fireboundChest, "i i", "did", "idi", 'd', Items.BLAZE_ROD, 'i', JourneyBlocks.hellstoneBlock);
-		addShapedRecipe(JourneyArmory.fireboundLegs, "idi", "d d", "i i", 'd', Items.BLAZE_ROD, 'i', JourneyBlocks.hellstoneBlock);
-		addShapedRecipe(JourneyArmory.fireboundBoots, "d d", "i i", 'd', Items.BLAZE_ROD, 'i', JourneyBlocks.hellstoneBlock);
-
-		addShapedRecipe(JourneyArmory.bloodcrustHelmet, "idi", "d d", 'd', JourneyItems.hellstoneIngot, 'i', JourneyItems.hellcrustIngot);
-		addShapedRecipe(JourneyArmory.bloodcrustChest, "i i", "did", "idi", 'd', JourneyItems.hellstoneIngot, 'i', JourneyItems.hellcrustIngot);
-		addShapedRecipe(JourneyArmory.bloodcrustLegs, "idi", "d d", "i i", 'd', JourneyItems.hellstoneIngot, 'i', JourneyItems.hellcrustIngot);
-		addShapedRecipe(JourneyArmory.bloodcrustBoots, "d d", "i i", 'd', JourneyItems.hellstoneIngot, 'i', JourneyItems.hellcrustIngot);
-
-		addShapedRecipe(JourneyArmory.bleedrockHelmet, "idi", "d d", 'd', JourneyBlocks.lavaRock, 'i', JourneyItems.concentratedBlood);
-		addShapedRecipe(JourneyArmory.bleedrockChest, "i i", "did", "idi", 'd', JourneyBlocks.lavaRock, 'i', JourneyItems.concentratedBlood);
-		addShapedRecipe(JourneyArmory.bleedrockLegs, "idi", "d d", "i i", 'd', JourneyBlocks.lavaRock, 'i', JourneyItems.concentratedBlood);
-		addShapedRecipe(JourneyArmory.bleedrockBoots, "d d", "i i", 'd', JourneyBlocks.lavaRock, 'i', JourneyItems.concentratedBlood);
-		addShapelessRecipe(JourneyArmory.woodMultiTool, Items.WOODEN_PICKAXE, Items.WOODEN_SHOVEL, Items.WOODEN_HOE, Items.WOODEN_AXE);
-		addShapelessRecipe(JourneyArmory.stoneMultiTool, Items.STONE_PICKAXE, Items.STONE_SHOVEL, Items.STONE_HOE, Items.STONE_AXE);
-		addShapelessRecipe(JourneyArmory.ironMultiTool, Items.IRON_PICKAXE, Items.IRON_SHOVEL, Items.IRON_HOE, Items.IRON_AXE);
-		addShapelessRecipe(JourneyArmory.diamondMultiTool, Items.DIAMOND_PICKAXE, Items.DIAMOND_SHOVEL, Items.DIAMOND_HOE, Items.DIAMOND_AXE);
-
 		addDefaultRecipes(JourneyBlocks.celestiumOre, JourneyItems.celestiumIngot, JourneyBlocks.celestiumBlock,
 				JourneyArmory.celestiumAxe, JourneyArmory.celestiumPickaxe, JourneyArmory.celestiumShovel,
 				JourneyArmory.celestiumHoe, JourneyWeapons.celestiumSword, JourneyArmory.celestiumMultiTool,
@@ -218,8 +194,6 @@ public class JourneyRecipes {
 		addDefaultRecipes(null, JourneyItems.soulstone, JourneyBlocks.nethicGemstoneBlock, JourneyArmory.nethicAxe,
 				JourneyArmory.nethicPickaxe, JourneyArmory.nethicShovel, null,
 				null, null, null, null, null, null, null);
-		//addDefaultRecipes(b.ashualOre, i.ash, b.ashualBlock, null, null, null, null,
-		// null, null, null, null, null, null, i.ashDust);
 
 		addShapedRecipe(new ItemStack(JourneyWeapons.demonicBomb, 16),
 				"ddd", "did", "ddd", 'd', JourneyItems.demonicDust, 'i', JourneyItems.crystalBall);

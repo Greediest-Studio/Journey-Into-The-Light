@@ -1,6 +1,5 @@
 package net.journey.items;
 
-import net.journey.client.ArmorDescription;
 import net.journey.enums.EnumArmor;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
@@ -58,7 +57,6 @@ public class ItemModArmor extends ItemArmor implements ISpecialArmor {
 		double roundedDamage = roundPH / 10;
 		list.add(damageReduction == 0.0 ? (Colour.DARK_AQUA + "No Protection") : Colour.AQUA + "Damage Reduction: " + roundedDamage);
 		list.add(!unbreakable ? (item.getMaxDamage() - item.getItemDamage() + " Uses Remaining") : "Unlimited Uses");
-		ArmorDescription.add(item, list);
 	}
 
 	@Override

@@ -1,16 +1,13 @@
 package net.journey;
 
-import net.journey.init.JourneyEnchantments;
 import net.journey.init.Registrar;
 import net.journey.init.TileEntityHandler;
 import net.journey.init.blocks.JourneyBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.registries.IForgeRegistry;
 
 @EventBusSubscriber(modid = JITL.MOD_ID)
 public class Registries {
@@ -35,14 +32,5 @@ public class Registries {
 		JITL.LOGGER.info("Successfully registered " + JourneyBlocks.blocks.size() + " blocks");
 
 		TileEntityHandler.register();
-	}
-
-	@SubscribeEvent
-	public static void registerEnchantments(RegistryEvent.Register<Enchantment> e) {
-		IForgeRegistry<Enchantment> enchant = e.getRegistry();
-
-		enchant.register(JourneyEnchantments.hotTouch);
-
-		JITL.LOGGER.info("Successfully registered 1 Enchantments");
 	}
 }
