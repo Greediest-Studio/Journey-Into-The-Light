@@ -19,7 +19,6 @@ import net.journey.init.*;
 import net.journey.init.blocks.JourneyBlocks;
 import net.journey.init.blocks.JourneyFluids;
 import net.journey.init.common.JourneyCrops;
-import net.journey.init.items.JourneyArmory;
 import net.journey.init.items.JourneyConsumables;
 import net.journey.init.items.JourneyItems;
 import net.journey.init.items.JourneyWeapons;
@@ -76,7 +75,6 @@ public class CommonProxy {
         JourneyBlocks.init();
         JourneyCrops.init();
         JourneyWeapons.init();
-        JourneyArmory.init();
         BiomeRegister.registerBiomes();
         Config.postBiomeInit();
         JNWorldGenerator.updateGenSettings();

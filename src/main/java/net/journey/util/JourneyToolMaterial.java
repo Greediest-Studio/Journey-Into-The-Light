@@ -1,7 +1,5 @@
 package net.journey.util;
 
-import net.journey.init.items.JourneyArmory;
-import net.journey.init.items.JourneyConsumables;
 import net.journey.init.items.JourneyItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -10,22 +8,6 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.slayer.api.SlayerAPI;
 
 public enum JourneyToolMaterial {
-	
-    HELLSTONE(JourneyItems.hellstone, JourneyItems.hellstoneIngot, 12),
-    FLAIRIUM(JourneyItems.flairium, JourneyItems.flairiumIngot, 16),
-    LUNIUM(JourneyItems.lunium, JourneyItems.luniumIngot, 10),
-    CELESTIUM(JourneyItems.celestium, JourneyItems.celestiumIngot, 14),
-    SHADIUM(JourneyItems.shadium, JourneyItems.shadiumIngot, 10),
-    SAPPHIRE(JourneyItems.sapphiretool, JourneyItems.sapphire, 8),
-    ORBADITE(JourneyItems.orbadite, JourneyItems.orbaditeIngot, 24),
-    GORBITE(JourneyItems.gorbite, JourneyItems.gorbiteGem, 24),
-    DES(JourneyItems.des, JourneyItems.desIngot, 20),
-    NETHIC(JourneyItems.nethic, JourneyItems.bleedstone, 20),
-    KORITE(JourneyItems.korite, JourneyItems.koriteIngot, 14),
-    HOEOFLIFE(JourneyItems.hoeoflife, JourneyConsumables.floroPedal, 14),
-    HOEOFEARTH(JourneyItems.hoeofearth, JourneyArmory.hoeOfEarthLoving, 14),
-    SLIMY_PICK(JourneyItems.SLIMY_PICK_MATERIAL, JourneyArmory.slimyPickaxe, 3),
-    BEDROCK_SHOVEL(JourneyItems.BEDROCK_SHOVEL_MATERIAL, JourneyArmory.bedrockShovel, 6),
 
     CHAMPIONS_SWORD(SlayerAPI.addMeleeMaterial(3000, 14, 25)),
     THE_WRAITH(SlayerAPI.addMeleeMaterial(3000, 17, 25)),

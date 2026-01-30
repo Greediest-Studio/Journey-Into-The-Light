@@ -1,12 +1,7 @@
 package net.journey.entity.mob.terrania.npc;
 
 import net.journey.client.handler.GuiHandler;
-import net.journey.entity.JourneyMerchantRecipe;
-import net.journey.init.items.JourneyArmory;
-import net.journey.init.items.JourneyItems;
-import net.journey.init.items.JourneyWeapons;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.village.MerchantRecipeList;
 import net.minecraft.world.World;
 import net.slayer.api.SlayerAPI;

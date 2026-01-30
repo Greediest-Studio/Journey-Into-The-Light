@@ -1,7 +1,6 @@
 package net.journey.init;
 
 import net.journey.init.blocks.JourneyBlocks;
-import net.journey.init.items.JourneyArmory;
 import net.journey.init.items.JourneyConsumables;
 import net.journey.init.items.JourneyItems;
 import net.journey.init.items.JourneyWeapons;
@@ -17,7 +16,6 @@ public class JourneyTabs extends CreativeTabs {
     public static final JourneyTabs BLOCKS = new JourneyTabs("Blocks", () -> new ItemStack(JourneyBlocks.eucaGrass));
     public static final JourneyTabs DECORATION = new JourneyTabs("Decoration", () -> new ItemStack(JourneyBlocks.boilingLamp));
     public static final JourneyTabs ITEMS = new JourneyTabs("Items", () -> new ItemStack(JourneyItems.koriteIngot));
-    public static final JourneyTabs TOOLS = new JourneyTabs("Tools", () -> new ItemStack(JourneyArmory.multiToolOfEternalSmelting));
     public static final JourneyTabs WEAPONS = new JourneyTabs("Weapons", () -> new ItemStack(JourneyWeapons.coreMender));
     public static final JourneyTabs UTIL = new JourneyTabs("Utilities", () -> new ItemStack(JourneyItems.flameCoin));
     public static final JourneyTabs SPAWNERS = new JourneyTabs("Spawners", () -> new ItemStack(JourneyItems.sentryKingOrb));

@@ -2,8 +2,6 @@ package net.journey.entity.mob.boiling.npc;
 
 import net.journey.client.handler.GuiHandler;
 import net.journey.entity.JourneyMerchantRecipe;
-import net.journey.init.items.JourneyArmory;
-import net.journey.init.items.JourneyConsumables;
 import net.journey.init.items.JourneyItems;
 import net.journey.init.items.JourneyWeapons;
 import net.minecraft.entity.player.EntityPlayer;

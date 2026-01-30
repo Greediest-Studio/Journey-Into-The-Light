@@ -2,7 +2,6 @@ package net.journey.entity.mob.corba.npc;
 
 import net.journey.client.handler.GuiHandler;
 import net.journey.entity.JourneyMerchantRecipe;
-import net.journey.init.items.JourneyArmory;
 import net.journey.init.items.JourneyItems;
 import net.journey.init.items.JourneyWeapons;
 import net.minecraft.entity.player.EntityPlayer;
@@ -44,7 +43,6 @@ public class EntityTordo extends EntityModVillager {
     public void addRecipies(MerchantRecipeList list) {
         list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 15), new ItemStack(JourneyItems.overseeingEye, 15), new ItemStack(JourneyWeapons.healersBlade, 1)));
         list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 32), new ItemStack(JourneyItems.collectorRock, 32), new ItemStack(JourneyWeapons.treeHugger, 1)));
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 32), new ItemStack(JourneyItems.collectorRock, 64), new ItemStack(JourneyArmory.multiToolOfEternalSmelting, 1)));
 
     }
 }
