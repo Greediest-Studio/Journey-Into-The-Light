@@ -271,66 +271,6 @@
         },
         {
           "type": "item",
-          "name": "journey:sapphireshovel",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 1,
-                "max": 10
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "name": "journey:sapphirehoe",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 4,
-                "max": 16
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "name": "journey:sapphirepickaxe",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 4,
-                "max": 16
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "name": "journey:sapphirelegs",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 4,
-                "max": 16
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
           "name": "journey:sapphirebody",
           "weight": 1,
           "functions": [

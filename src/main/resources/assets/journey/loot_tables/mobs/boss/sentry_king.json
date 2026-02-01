@@ -41,22 +41,6 @@
       ]
     },
     {
-      "name": "journey:sentry_king_weapons",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "journey:sentrysword",
-          "weight": 1
-        },
-        {
-          "type": "item",
-          "name": "journey:overseerbow",
-          "weight": 1
-        }
-      ]
-    },
-    {
       "name": "journey:sentry_king_eye",
       "rolls": 1,
       "entries": [

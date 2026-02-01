@@ -21,17 +21,6 @@
          ]
       },
       {
-         "name":"journey:nether_beast_sword",
-         "rolls":1,
-         "entries":[
-            {
-               "type":"item",
-               "name":"journey:netherbeastsword",
-               "weight":1
-            }
-         ]
-      },
-      {
          "name":"journey:nether_beast_portal_piece",
          "rolls":1,
          "entries":[

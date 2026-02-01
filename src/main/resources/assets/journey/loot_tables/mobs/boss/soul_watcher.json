@@ -61,28 +61,6 @@
       ]
     },
     {
-      "name": "journey:soul_watcher_bow",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "journey:staringbow",
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "name": "journey:soul_watcher_boots",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "journey:twilightboots",
-          "weight": 1
-        }
-      ]
-    },
-    {
       "name": "journey:soul_watcher_chest",
       "rolls": 1,
       "entries": [

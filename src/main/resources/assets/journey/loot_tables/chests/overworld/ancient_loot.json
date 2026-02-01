@@ -305,21 +305,6 @@
         },
         {
           "type": "item",
-          "name": "journey:sapphiresword",
-          "weight": 3,
-          "functions": [
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 10,
-                "max": 29
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
           "name": "minecraft:diamond_boots",
           "weight": 3,
           "functions": [
@@ -380,21 +365,6 @@
         },
         {
           "type": "item",
-          "name": "journey:shadiumpickaxe",
-          "weight": 3,
-          "functions": [
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 10,
-                "max": 29
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
           "name": "minecraft:diamond_pickaxe",
           "weight": 1,
           "functions": [
@@ -425,36 +395,6 @@
         },
         {
           "type": "item",
-          "name": "journey:sapphireshovel",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 1,
-                "max": 10
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "name": "journey:sapphirehoe",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 4,
-                "max": 16
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
           "entryName": "golden_apple",
           "name": "minecraft:golden_apple",
           "weight": 20
@@ -470,20 +410,6 @@
               "data": 1
             }
           ]
-        },
-        {
-          "type": "item",
-          "name": "journey:magic_pot_of_destruction",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 3,
-                "max": 16
-              }
-            }
-          ],
-          "weight": 13
         },
         {
           "type": "item",

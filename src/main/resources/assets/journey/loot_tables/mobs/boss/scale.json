@@ -39,22 +39,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "journey:scale_weapons",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "journey:bubblesword",
-          "weight": 1
-        },
-        {
-          "type": "item",
-          "name": "journey:scalebow",
-          "weight": 1
-        }
-      ]
     }
   ]
 }

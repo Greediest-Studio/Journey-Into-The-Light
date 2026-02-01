@@ -41,33 +41,6 @@
       ]
     },
     {
-      "name": "journey:logger_weapons",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "journey:naturesblade",
-          "weight": 1
-        },
-        {
-          "type": "item",
-          "name": "journey:loggersbow",
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "name": "journey:logger_helmet",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "journey:hollowhelmet",
-          "weight": 1
-        }
-      ]
-    },
-    {
       "name": "journey:logger_chest",
       "rolls": 1,
       "entries": [

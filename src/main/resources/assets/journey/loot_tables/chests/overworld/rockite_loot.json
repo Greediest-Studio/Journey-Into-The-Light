@@ -315,20 +315,6 @@
               }
             }
           ]
-        },
-        {
-          "type": "item",
-          "name": "journey:magic_pot_of_destruction",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 3,
-                "max": 16
-              }
-            }
-          ],
-          "weight": 13
         }
       ]
     }

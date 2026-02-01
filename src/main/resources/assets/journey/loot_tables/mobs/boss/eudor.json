@@ -39,17 +39,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "journey:eudor_sword",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "journey:kingssword",
-          "weight": 1
-        }
-      ]
     }
   ]
 }
