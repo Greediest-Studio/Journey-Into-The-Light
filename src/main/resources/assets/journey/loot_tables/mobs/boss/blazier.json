@@ -12,39 +12,6 @@
          ]
       },
       {
-         "name":"journey:blazier_legs",
-         "rolls":1,
-         "entries":[
-            {
-               "type":"item",
-               "name":"journey:flamelegs",
-               "weight":1
-            }
-         ]
-      },
-      {
-         "name":"journey:blazier_helmet",
-         "rolls":1,
-         "entries":[
-            {
-               "type":"item",
-               "name":"journey:flamehelmet",
-               "weight":1
-            }
-         ]
-      },
-      {
-         "name":"journey:blazier_boots",
-         "rolls":1,
-         "entries":[
-            {
-               "type":"item",
-               "name":"journey:flameboots",
-               "weight":1
-            }
-         ]
-      },
-      {
          "name":"journey:blazier_shards",
          "rolls":1,
          "entries":[

@@ -59,39 +59,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "journey:soul_watcher_chest",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "journey:twilightbody",
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "name": "journey:soul_watcher_legs",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "journey:twilightlegs",
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "name": "journey:soul_watcher_helm",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "journey:twilighthelmet",
-          "weight": 1
-        }
-      ]
     }
   ]
 }
