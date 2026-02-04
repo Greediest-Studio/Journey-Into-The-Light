@@ -13,11 +13,7 @@ public class JourneyLootTables {
 	public static final ResourceLocation EUCA_SMITH_CHEST = register("chests/eucasmith");
 	public static final ResourceLocation FROZEN_MERCH_CHEST = register("chests/frozenmerchant");
 
-	public static final ResourceLocation LOOT_BASIC = register("loot/loot_basic");
-	public static final ResourceLocation LOOT_GOLD = register("loot/loot_gold");
-	public static final ResourceLocation LOOT_DIAMOND = register("loot/loot_diamond");
 	public static final ResourceLocation LOOT_OVERGROWN = register("loot/loot_overgrown");
-	public static final ResourceLocation LOOT_SEEDS = register("loot/seeds");
 	public static final ResourceLocation LOOT_PRESENT = register("loot/loot_present");
 	public static final ResourceLocation LOOT_SPIRIT_CRYSTAL = register("loot/loot_spirit_crystal");
 

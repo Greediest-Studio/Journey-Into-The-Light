@@ -338,13 +338,6 @@ public class JourneyItems {
 	public static Item tamedRocSpawnEgg;
 	public static Item rocEgg;
 
-	public static ItemLoreScroll loreScroll;
-	public static ItemTestBug debugItem;
-
-	//public static Item obsidianBoat;
-
-	//public static Item infernoshield;
-
 	public static Item dynasterAmulet;
 	public static Item aquaticAmulet;
 	public static Item magmaAmulet;
@@ -519,9 +512,6 @@ public class JourneyItems {
 		smithstoneDust = Registrar.regAndSetupItem("smithstonedust", "Smithstone Dust", new JItem());
 
 		frostyGift = Registrar.regAndSetupItem("frostyGift", "Frosty Gift", new ItemLoot(JourneyLootTables.LOOT_PRESENT), JourneyTabs.UTIL);
-		lootPouch = Registrar.regAndSetupItem("loot_pouch", "Loot Pouch", new ItemLoot(JourneyLootTables.LOOT_BASIC).setTier(0), JourneyTabs.UTIL);
-		lootPouchGold = Registrar.regAndSetupItem("loot_pouch_gold", "Loot Pouch", new ItemLoot(JourneyLootTables.LOOT_GOLD).setTier(1), JourneyTabs.UTIL);
-		lootPouchDiamond = Registrar.regAndSetupItem("loot_pouch_diamond", "Loot Pouch", new ItemLoot(JourneyLootTables.LOOT_DIAMOND).setTier(2), JourneyTabs.UTIL);
 
 		flameCoin = Registrar.regAndSetupItem("flameCoin", "Flame Coin", new ItemFlameCoin(), JourneyTabs.UTIL);
 
@@ -636,10 +626,6 @@ public class JourneyItems {
 
 		rocEgg = Registrar.regAndSetupItem("roc_egg", "Roc Egg", new JItem());
 		tamedRocSpawnEgg = Registrar.regAndSetupItem("roc_spawner_egg", "Incubated Roc Egg", new ItemSpawnerEgg(EntityTamedRoc.class), JourneyTabs.SPAWNERS);
-
-		loreScroll = Registrar.regAndSetupItem("lore_scroll", "Lore Scroll", new ItemLoreScroll());
-
-		debugItem = Registrar.regAndSetupItem("test_bug", "Test Bug", new ItemTestBug(), JourneyTabs.UTIL);
 
 		dynasterAmulet = Registrar.regAndSetupItem("amulet_dynaster", "Amulet of the Dynaster", new ItemDynasterAmulet(), JourneyTabs.UTIL);
 		aquaticAmulet = Registrar.regAndSetupItem("amulet_aquatic", "Amulet of the Depths", new ItemAquaticAmulet(), JourneyTabs.UTIL);

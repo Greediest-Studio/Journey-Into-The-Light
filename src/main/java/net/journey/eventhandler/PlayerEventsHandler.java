@@ -28,18 +28,6 @@ public class PlayerEventsHandler {
 				entity.dropItem(JourneyConsumables.ghastTentacle, 1);
 			}
 		}
-
-		if (Config.enableLootPouchDrops && event.getSource().getTrueSource() instanceof EntityPlayer) {
-			if (random.nextInt(Config.commonLootBagRarity) == 0) {
-				entity.dropItem(JourneyItems.lootPouch, 1);
-			}
-			if (random.nextInt(Config.goldLootBagRarity) == 0) {
-				entity.dropItem(JourneyItems.lootPouchGold, 1);
-			}
-			if (random.nextInt(Config.diamondLootBagRarity) == 0) {
-				entity.dropItem(JourneyItems.lootPouchDiamond, 1);
-			}
-		}
 	}
 
 	@SubscribeEvent

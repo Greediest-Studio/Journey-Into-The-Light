@@ -123,9 +123,6 @@ public class JourneyBlocks {
 
     public static JBlockTNT magicExplosive;
 
-    public static BlockMod ironLootBox;
-    public static BlockMod goldLootBox;
-    public static BlockMod diamondLootBox;
     public static BlockMod overgrownLootBox;
 
     public static BlockAdvancedLoot basePot;
@@ -686,9 +683,6 @@ public class JourneyBlocks {
         purpleGemBlock = new BlockMod("purpleGemBlock", "Purple Gem Block");
         blueGemBlock = new BlockMod("blueGemBlock", "Blue Gem Block");
         yellowGemBlock = new BlockMod("yellowGemBlock", "Yellow Gem Block");
-        ironLootBox = new JBlockRandomLoot(EnumMaterialTypes.WOOD, "iron_loot_box", "Iron Loot Box", JourneyLootTables.LOOT_BASIC, LootType.BOX);
-        goldLootBox = new JBlockRandomLoot(EnumMaterialTypes.WOOD, "gold_loot_box", "Gold Loot Box", JourneyLootTables.LOOT_GOLD, LootType.BOX);
-        diamondLootBox = new JBlockRandomLoot(EnumMaterialTypes.WOOD, "diamond_loot_box", "Diamond Loot Box", JourneyLootTables.LOOT_DIAMOND, LootType.BOX);
         overgrownLootBox = new JBlockRandomLoot(EnumMaterialTypes.WOOD, "overgrown_loot_box", "Overgrown Loot Box", JourneyLootTables.LOOT_OVERGROWN, LootType.BOX);
 
         basePot = new BlockAdvancedLoot(EnumMaterialTypes.GLASS, "pot_base", "Pot", 0.1F, JourneyItems.pottery_shard);

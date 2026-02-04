@@ -48,29 +48,6 @@ public class JWorldGenRuins extends WorldGenerator {
 	}
 
 	/**
-	 * Called if "LOOT_BOX" type is used.
-	 * Returns different loot box types with varying rarities
-	 * AIR is most common
-	 */
-	public IBlockState getRandomLootBox(Random rand) {
-		Block blockToPlace = null;
-
-		if (rand.nextInt(5) == 0) {
-			blockToPlace = JourneyBlocks.ironLootBox;
-		} else if (rand.nextInt(10) == 0) {
-			blockToPlace = JourneyBlocks.goldLootBox;
-		} else if (rand.nextInt(15) == 0) {
-			blockToPlace = JourneyBlocks.diamondLootBox;
-		}
-
-		if (blockToPlace != null) {
-			return blockToPlace.getDefaultState().withProperty(JBlockRandomLoot.FACING, getRandomFacing(rand));
-		} else {
-			return Blocks.AIR.getDefaultState();
-		}
-	}
-
-	/**
 	 * When called, a special block can be set inside of the structure if type isn't LOOT_BOX
 	 *
 	 * @param block the block to be set in the structure
@@ -98,8 +75,6 @@ public class JWorldGenRuins extends WorldGenerator {
 			case SPECIAL_BLOCK:
 			case CONTAINER:
 				return specialBlock.getDefaultState();
-			case LOOT_BOX:
-				return getRandomLootBox(rand);
 			case RUINS:
 				return Blocks.AIR.getDefaultState();
 		}

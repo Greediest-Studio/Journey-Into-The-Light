@@ -54,11 +54,6 @@ public class JERIntegration {
 	private static void initDungeonLoot() {
 		IDungeonRegistry dungeonRegistry = jerAPI.getDungeonRegistry();
 		dungeonRegistry.registerChest("Rockite Dungeon", JourneyLootTables.ROCKITE_CHEST_LOOT);
-
-		//TODO: maybe create custom registry for loot pouches and loot boxes?
-		dungeonRegistry.registerChest("Basic Loot Pouch", JourneyLootTables.LOOT_BASIC);
-		dungeonRegistry.registerChest("Gold Loot Pouch", JourneyLootTables.LOOT_GOLD);
-		dungeonRegistry.registerChest("Diamond Loot Pouch", JourneyLootTables.LOOT_DIAMOND);
 	}
 
 	//TODO: finish JER ore gen

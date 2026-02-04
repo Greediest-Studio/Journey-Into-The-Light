@@ -2,10 +2,7 @@ package net.journey.entity.mob.corba.npc;
 
 import net.journey.client.handler.GuiHandler;
 import net.journey.entity.JourneyMerchantRecipe;
-import net.journey.init.ScrollRegistry;
 import net.journey.init.items.JourneyItems;
-import net.journey.init.items.JourneyWeapons;
-import net.journey.items.interactive.ItemLoreScroll;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.village.MerchantRecipeList;
@@ -49,10 +46,6 @@ public class EntityOvergrownMerchant extends EntityModVillager {
 
     @Override
     public void addRecipies(MerchantRecipeList list) {
-        ItemStack scrollStack = new ItemStack(JourneyItems.loreScroll);
-        ItemLoreScroll.bindScrollEntry(scrollStack, ScrollRegistry.SENTERIAN_GOSPEL);
         list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.collectorRock, 24), new ItemStack(JourneyItems.overseeingEye, 16), new ItemStack(JourneyItems.elderKey, 1)));
-
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.enchantedLeaf, 16), new ItemStack(JourneyItems.orbaditeIngot, 16), scrollStack));
     }
 }
