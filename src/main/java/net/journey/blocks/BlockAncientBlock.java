@@ -29,10 +29,6 @@ public class BlockAncientBlock extends BlockMod {
         Item dropItem = RandHelper.chooseEqual(RANDOM, JourneyItems.ancientPiece1, JourneyItems.ancientPiece2, JourneyItems.ancientPiece3, JourneyItems.ancientPiece4);
 	    int count = RANDOM.nextInt(1) + 1;
 
-        if (RANDOM.nextInt(10) == 0) {
-	        dropItem = JourneyItems.untitledDisc;
-	        count = 1;
-        }
         ItemStack drop = new ItemStack(dropItem, count);
         drops.add(drop);
     }

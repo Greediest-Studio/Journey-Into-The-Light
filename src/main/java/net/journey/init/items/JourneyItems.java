@@ -274,31 +274,10 @@ public class JourneyItems {
     public static Item frostyGift;
     public static Item firestoneClump;
 
-    public static Item underwaterWorldRecord;
-    public static Item blueWaterRecord;
-    public static Item raceStarRecord;
-    public static Item compBeginsRecord;
-    public static Item deepBlueRecord;
-	public static Item raceShoreRecord;
-	public static Item untitledDisc;
-	public static Item bogRecord;
-    public static Item cloudsRecord;
-    public static Item stalactiteRecord;
-    public static Item cavernRecord;
-    public static Item goldRecord;
-	public static Item gateRecord;
-	public static Item journeyRecord;
-	public static Item sizzleRecord;
-	public static Item fireflyRecord;
-	public static Item snowbellsRecord;
-
 	public static Item demonicEye;
 
 	public static Item iridium;
 
-	public static Item lootPouch;
-	public static Item lootPouchGold;
-	public static Item lootPouchDiamond;
 	public static Item balmyTeardrop;
 	public static Item charmOfVineStranding;
 	public static Item charmOfWaterBending;
@@ -307,7 +286,6 @@ public class JourneyItems {
 	public static Item deathCap;
 	public static Item demonicSkull;
 	public static Item essenceBuckler;
-	public static Item essenceCatalyst;
 	public static Item fieryStabber;
 	public static Item glacialBlade;
 	public static Item glossyEye;
@@ -532,24 +510,6 @@ public class JourneyItems {
 		weakEssencePotion = Registrar.regAndSetupItem("weakEssencePotion", "Weak Essence Potion", new ItemEssencePotion(false), JourneyTabs.UTIL);
 		strongEssencePotion = Registrar.regAndSetupItem("strongEssencePotion", "Strong Essence Potion", new ItemEssencePotion(true), JourneyTabs.UTIL);
 		essenceArrow = Registrar.regAndSetupItem("essenceArrow", "Essence Arrow", new ItemEssenceArrow(), JourneyTabs.WEAPONS);
-
-		underwaterWorldRecord = Registrar.regAndSetupItem("underwaterWorldRecord", "Underwater World", new ItemModRecord(JourneySounds.UNDERWATER_WORLD), JourneyTabs.UTIL);
-		blueWaterRecord = Registrar.regAndSetupItem("blueWaterRecord", "Blue Water", new ItemModRecord(JourneySounds.BLUE_WATER), JourneyTabs.UTIL);
-		raceStarRecord = Registrar.regAndSetupItem("raceStarRecord", "Race Star", new ItemModRecord(JourneySounds.RACE_STAR), JourneyTabs.UTIL);
-		compBeginsRecord = Registrar.regAndSetupItem("compBeginsRecord", "Competition Begins", new ItemModRecord(JourneySounds.COMPETITION_BEGINS), JourneyTabs.UTIL);
-		deepBlueRecord = Registrar.regAndSetupItem("deepBlueRecord", "Deep Blue", new ItemModRecord(JourneySounds.DEEP_BLUE), JourneyTabs.UTIL);
-		raceShoreRecord = Registrar.regAndSetupItem("raceShoreRecord", "Race to Shore", new ItemModRecord(JourneySounds.RACE_TO_SHORE), JourneyTabs.UTIL);
-		untitledDisc = Registrar.regAndSetupItem("untitled_discRecord", "untitled_disc", new ItemModRecord(JourneySounds.UNTITLED_DISC), JourneyTabs.UTIL);
-		bogRecord = Registrar.regAndSetupItem("bogRecord", "Bog", new ItemModRecord(JourneySounds.CORBA_1), JourneyTabs.UTIL);
-		cloudsRecord = Registrar.regAndSetupItem("cloudsRecord", "Clouds", new ItemModRecord(JourneySounds.CLOUDIA_1), JourneyTabs.UTIL);
-		stalactiteRecord = Registrar.regAndSetupItem("stalactiteRecord", "Stalactite", new ItemModRecord(JourneySounds.DEPTHS_1), JourneyTabs.UTIL);
-		cavernRecord = Registrar.regAndSetupItem("cavernRecord", "Cavern", new ItemModRecord(JourneySounds.DEPTHS_2), JourneyTabs.UTIL);
-		goldRecord = Registrar.regAndSetupItem("goldRecord", "Gold", new ItemModRecord(JourneySounds.EUCA_1), JourneyTabs.UTIL);
-		gateRecord = Registrar.regAndSetupItem("gateRecord", "Gate", new ItemModRecord(JourneySounds.EUCA_2), JourneyTabs.UTIL);
-		journeyRecord = Registrar.regAndSetupItem("journeyRecord", "Journey Into the Light", new ItemModRecord(JourneySounds.EUCA_3), JourneyTabs.UTIL);
-		sizzleRecord = Registrar.regAndSetupItem("sizzleRecord", "Sizzle", new ItemModRecord(JourneySounds.BOIL_1), JourneyTabs.UTIL);
-		fireflyRecord = Registrar.regAndSetupItem("fireflyRecord", "Firefly", new ItemModRecord(JourneySounds.TERRANIA_1), JourneyTabs.UTIL);
-		snowbellsRecord = Registrar.regAndSetupItem("snowbellsRecord", "Snow Bells", new ItemModRecord(JourneySounds.FROZEN_1), JourneyTabs.UTIL);
 
 		demonicEye = Registrar.regAndSetupItem("demonicEye", "Demonic Eye", new ItemDemonicEye());
 		darkGem = Registrar.regAndSetupItem("darkGem", "Dark Gem", new ItemDarkGem());
