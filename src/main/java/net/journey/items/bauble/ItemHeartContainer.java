@@ -2,6 +2,7 @@ package net.journey.items.bauble;
 
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -43,6 +44,6 @@ public class ItemHeartContainer extends ItemBaubleBase implements IBauble {
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack i, World worldIn, List<String> l, ITooltipFlag flagIn) {
-        l.add(SlayerAPI.Colour.GOLD + "Grants " + hearts + " extra health points");
+        l.add(SlayerAPI.Colour.GOLD + I18n.format("baubleheart.tooltip1") + hearts + I18n.format("baubleheart.tooltip2"));
     }
 }
