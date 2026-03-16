@@ -1,12 +1,15 @@
 package net.journey.dimension.senterian.room;
 
+import net.journey.api.world.gen.BasicInitializers;
 import net.journey.api.world.gen.TECompatibleChunkPrimer;
+import net.journey.init.JourneyLootTables;
 import net.journey.init.blocks.JourneyBlocks;
 import net.minecraft.init.Blocks;
 
 import java.util.Random;
 
 public class SenterianRoomMaze1 extends SenterianRoomBase {
+        private static final TECompatibleChunkPrimer.TileEntityInitializer<?> CHEST_INITIALIZER = new BasicInitializers.JourneyChest(JourneyLootTables.SENTRY_BASE_CHEST_LOOT);
 
 	@Override
 	public boolean generate(TECompatibleChunkPrimer world, Random rand, int i, int j, int k) {
@@ -433,6 +436,7 @@ public class SenterianRoomMaze1 extends SenterianRoomBase {
         this.setBlock(world, i + 5, j + 1, k + 4, Blocks.AIR);
         this.setBlock(world, i + 5, j + 1, k + 5, JourneyBlocks.senterianCarvedRock);
         this.setBlock(world, i + 5, j + 1, k + 6, JourneyBlocks.journeyChest);
+        initTileEntity(world, i + 5, j + 1, k + 6, CHEST_INITIALIZER);
         this.setBlock(world, i + 5, j + 1, k + 7, JourneyBlocks.senterianCarvedRock);
         this.setBlock(world, i + 5, j + 1, k + 8, Blocks.AIR);
         this.setBlock(world, i + 5, j + 1, k + 9, JourneyBlocks.senterianCarvedRock);
@@ -1081,6 +1085,7 @@ public class SenterianRoomMaze1 extends SenterianRoomBase {
         this.setBlock(world, i + 13, j + 1, k + 12, JourneyBlocks.senterianCarvedRock);
         this.setBlock(world, i + 13, j + 1, k + 13, Blocks.AIR);
         this.setBlock(world, i + 13, j + 1, k + 14, JourneyBlocks.journeyChest);
+        initTileEntity(world, i + 13, j + 1, k + 14, CHEST_INITIALIZER);
         this.setBlock(world, i + 13, j + 1, k + 15, JourneyBlocks.senterianCarvedRock);
         this.setBlock(world, i + 13, j + 2, k + 0, JourneyBlocks.senterianCarvedRock);
         this.setBlock(world, i + 13, j + 2, k + 1, Blocks.AIR);

@@ -1,7 +1,9 @@
 package net.journey.dimension.senterian.room;
 
+import net.journey.api.world.gen.BasicInitializers;
 import net.journey.api.world.gen.TECompatibleChunkPrimer;
 import net.journey.blocks.containers.BlockJourneyChest;
+import net.journey.init.JourneyLootTables;
 import net.journey.init.blocks.JourneyBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
@@ -9,6 +11,7 @@ import net.minecraft.util.EnumFacing;
 import java.util.Random;
 
 public class SenterianRoomChest extends SenterianRoomBase {
+    private static final TECompatibleChunkPrimer.TileEntityInitializer<?> CHEST_INITIALIZER = new BasicInitializers.JourneyChest(JourneyLootTables.SENTRY_BASE_CHEST_LOOT);
 
 	public boolean generate(TECompatibleChunkPrimer world, Random rand, int i, int j, int k) {
 		this.setBlock(world, i + 0, j + 0, k + 0, JourneyBlocks.senterianFloor);
@@ -254,7 +257,9 @@ public class SenterianRoomChest extends SenterianRoomBase {
             this.setBlock(world, i + 1, j + 5, k + 0, JourneyBlocks.senterianCarvedRock);
             this.setBlock(world, i + 1, j + 5, k + 1, Blocks.AIR);
             this.setBlock(world, i + 1, j + 5, k + 2, JourneyBlocks.journeyChest.getDefaultState().withProperty(BlockJourneyChest.FACING, EnumFacing.EAST));
+            initTileEntity(world, i + 1, j + 5, k + 2, CHEST_INITIALIZER);
             this.setBlock(world, i + 1, j + 5, k + 3, JourneyBlocks.journeyChest.getDefaultState().withProperty(BlockJourneyChest.FACING, EnumFacing.EAST));
+            initTileEntity(world, i + 1, j + 5, k + 3, CHEST_INITIALIZER);
             this.setBlock(world, i + 1, j + 5, k + 4, Blocks.AIR);
             this.setBlock(world, i + 1, j + 5, k + 5, Blocks.AIR);
             this.setBlock(world, i + 1, j + 5, k + 6, Blocks.AIR);
@@ -2344,7 +2349,9 @@ public class SenterianRoomChest extends SenterianRoomBase {
             this.setBlock(world, i + 14, j + 5, k + 10, Blocks.AIR);
             this.setBlock(world, i + 14, j + 5, k + 11, Blocks.AIR);
             this.setBlock(world, i + 14, j + 5, k + 12, JourneyBlocks.journeyChest.getDefaultState().withProperty(BlockJourneyChest.FACING, EnumFacing.WEST));
+            initTileEntity(world, i + 14, j + 5, k + 12, CHEST_INITIALIZER);
             this.setBlock(world, i + 14, j + 5, k + 13, JourneyBlocks.journeyChest.getDefaultState().withProperty(BlockJourneyChest.FACING, EnumFacing.WEST));
+            initTileEntity(world, i + 14, j + 5, k + 13, CHEST_INITIALIZER);
             this.setBlock(world, i + 14, j + 5, k + 14, Blocks.AIR);
             this.setBlock(world, i + 14, j + 5, k + 15, JourneyBlocks.senterianCarvedRock);
             this.setBlock(world, i + 14, j + 6, k + 0, JourneyBlocks.senterianCarvedRock);

@@ -1,6 +1,8 @@
 package net.journey.dimension.senterian.room;
 
+import net.journey.api.world.gen.BasicInitializers;
 import net.journey.api.world.gen.TECompatibleChunkPrimer;
+import net.journey.init.JourneyLootTables;
 import net.journey.init.blocks.JourneyBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityMobSpawner;
@@ -18,6 +20,7 @@ public class SenterianRoomSpawner2 extends SenterianRoomBase {
     public SenterianRoomSpawner2(World w) {
         this.w = w;
     }
+    private static final TECompatibleChunkPrimer.TileEntityInitializer<?> CHEST_INITIALIZER = new BasicInitializers.JourneyChest(JourneyLootTables.SENTRY_BASE_CHEST_LOOT);
 
 	@Override
 	public boolean generate(TECompatibleChunkPrimer world, Random rand, int i, int j, int k) {
@@ -138,6 +141,7 @@ public class SenterianRoomSpawner2 extends SenterianRoomBase {
         this.setBlock(world, i + 1, j + 1, k + 12, Blocks.AIR);
         this.setBlock(world, i + 1, j + 1, k + 13, Blocks.AIR);
         this.setBlock(world, i + 1, j + 1, k + 14, Blocks.MOB_SPAWNER);
+        initTileEntity(world, i + 1, j + 1, k + 14, new BasicInitializers.Spawner(new ResourceLocation(mobs.get(rand.nextInt(mobs.size())))));
 
         this.setBlock(world, i + 1, j + 1, k + 15, JourneyBlocks.senterianCarvedRock);
         this.setBlock(world, i + 1, j + 2, k + 0, JourneyBlocks.senterianCarvedRock);
@@ -299,6 +303,7 @@ public class SenterianRoomSpawner2 extends SenterianRoomBase {
         this.setBlock(world, i + 3, j + 1, k + 12, Blocks.AIR);
         this.setBlock(world, i + 3, j + 1, k + 13, Blocks.AIR);
         this.setBlock(world, i + 3, j + 1, k + 14, JourneyBlocks.journeyChest);
+        initTileEntity(world, i + 3, j + 1, k + 14, CHEST_INITIALIZER);
         this.setBlock(world, i + 3, j + 1, k + 15, JourneyBlocks.senterianCarvedRock);
         this.setBlock(world, i + 3, j + 2, k + 0, JourneyBlocks.senterianBars);
         this.setBlock(world, i + 3, j + 2, k + 1, Blocks.AIR);
@@ -1006,6 +1011,7 @@ public class SenterianRoomSpawner2 extends SenterianRoomBase {
         this.setBlock(world, i + 12, j + 0, k + 15, JourneyBlocks.senterianFloor);
         this.setBlock(world, i + 12, j + 1, k + 0, JourneyBlocks.senterianCarvedRock);
         this.setBlock(world, i + 12, j + 1, k + 1, JourneyBlocks.journeyChest);
+        initTileEntity(world, i + 12, j + 1, k + 1, CHEST_INITIALIZER);
         this.setBlock(world, i + 12, j + 1, k + 2, Blocks.AIR);
         this.setBlock(world, i + 12, j + 1, k + 3, Blocks.AIR);
         this.setBlock(world, i + 12, j + 1, k + 4, Blocks.AIR);
@@ -1166,6 +1172,7 @@ public class SenterianRoomSpawner2 extends SenterianRoomBase {
         this.setBlock(world, i + 14, j + 0, k + 15, JourneyBlocks.senterianFloor);
         this.setBlock(world, i + 14, j + 1, k + 0, JourneyBlocks.senterianCarvedRock);
         this.setBlock(world, i + 14, j + 1, k + 1, Blocks.MOB_SPAWNER);
+        initTileEntity(world, i + 14, j + 1, k + 1, new BasicInitializers.Spawner(new ResourceLocation(mobs.get(rand.nextInt(mobs.size())))));
 
         this.setBlock(world, i + 14, j + 1, k + 2, Blocks.AIR);
         this.setBlock(world, i + 14, j + 1, k + 3, Blocks.AIR);
@@ -1310,15 +1317,6 @@ public class SenterianRoomSpawner2 extends SenterianRoomBase {
         this.setBlock(world, i + 15, j + 4, k + 14, JourneyBlocks.senterianFloor);
         this.setBlock(world, i + 15, j + 4, k + 15, JourneyBlocks.senterianFloor);
 
-        if (w.getTileEntity(new BlockPos(i + 14, j + 1, k + 1)) instanceof TileEntityMobSpawner) {
-            TileEntityMobSpawner spawner = (TileEntityMobSpawner) w.getTileEntity(new BlockPos(i + 14, j + 1, k + 1));
-            if (spawner != null) spawner.getSpawnerBaseLogic().setEntityId(new ResourceLocation(mobs.get(rand.nextInt(mobs.size()))));
-        }
-
-        if (w.getTileEntity(new BlockPos(i + 1, j + 1, k + 14)) instanceof TileEntityMobSpawner) {
-            TileEntityMobSpawner spawner = (TileEntityMobSpawner) w.getTileEntity(new BlockPos(i + 1, j + 1, k + 14));
-            if (spawner != null) spawner.getSpawnerBaseLogic().setEntityId(new ResourceLocation(mobs.get(rand.nextInt(mobs.size()))));
-        }
         return true;
     }
 }

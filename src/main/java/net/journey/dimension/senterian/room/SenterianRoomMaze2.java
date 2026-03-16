@@ -1,15 +1,25 @@
 package net.journey.dimension.senterian.room;
 
+import net.journey.api.world.gen.BasicInitializers;
 import net.journey.api.world.gen.TECompatibleChunkPrimer;
+import net.journey.init.JourneyLootTables;
 import net.journey.init.blocks.JourneyBlocks;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.ResourceLocation;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class SenterianRoomMaze2 extends SenterianRoomBase {
+	private static final TECompatibleChunkPrimer.TileEntityInitializer<?> CHEST_INITIALIZER = new BasicInitializers.JourneyChest(JourneyLootTables.SENTRY_BASE_CHEST_LOOT);
 
 	@Override
 	public boolean generate(TECompatibleChunkPrimer worldIn, Random r, int i, int j, int k) {
+		ArrayList<String> mobs = new ArrayList<String>();
+		mobs.add("journey:sentrylord");
+		mobs.add("journey:sentrystalker");
+		mobs.add("journey:sentrywalker");
+
 		this.setBlock(worldIn, i, j, k, JourneyBlocks.senterianFloor);
 		this.setBlock(worldIn, i, j, k + 1, JourneyBlocks.senterianFloor);
 		this.setBlock(worldIn, i, j, k + 2, JourneyBlocks.senterianFloor);
@@ -200,6 +210,7 @@ public class SenterianRoomMaze2 extends SenterianRoomBase {
 		this.setBlock(worldIn, i + 2, j + 1, k + 11, Blocks.AIR);
 		this.setBlock(worldIn, i + 2, j + 1, k + 12, JourneyBlocks.senterianBricks);
 		this.setBlock(worldIn, i + 2, j + 1, k + 13, JourneyBlocks.journeyChest);
+		initTileEntity(worldIn, i + 2, j + 1, k + 13, CHEST_INITIALIZER);
 		this.setBlock(worldIn, i + 2, j + 1, k + 14, Blocks.AIR);
 		this.setBlock(worldIn, i + 2, j + 1, k + 15, JourneyBlocks.senterianCarvedRock);
 		this.setBlock(worldIn, i + 2, j + 2, k, JourneyBlocks.senterianCarvedRock);
@@ -357,6 +368,7 @@ public class SenterianRoomMaze2 extends SenterianRoomBase {
 		this.setBlock(worldIn, i + 4, j + 1, k + 8, Blocks.AIR);
 		this.setBlock(worldIn, i + 4, j + 1, k + 9, JourneyBlocks.senterianBricks);
 		this.setBlock(worldIn, i + 4, j + 1, k + 10, Blocks.MOB_SPAWNER);
+		initTileEntity(worldIn, i + 4, j + 1, k + 10, new BasicInitializers.Spawner(new ResourceLocation(mobs.get(r.nextInt(mobs.size())))));
 		this.setBlock(worldIn, i + 4, j + 1, k + 11, Blocks.AIR);
 		this.setBlock(worldIn, i + 4, j + 1, k + 12, JourneyBlocks.senterianBricks);
 		this.setBlock(worldIn, i + 4, j + 1, k + 13, Blocks.AIR);
@@ -508,6 +520,7 @@ public class SenterianRoomMaze2 extends SenterianRoomBase {
 		this.setBlock(worldIn, i + 6, j, k + 15, JourneyBlocks.senterianFloor);
 		this.setBlock(worldIn, i + 6, j + 1, k, JourneyBlocks.senterianCarvedRock);
 		this.setBlock(worldIn, i + 6, j + 1, k + 1, JourneyBlocks.journeyChest);
+		initTileEntity(worldIn, i + 6, j + 1, k + 1, CHEST_INITIALIZER);
 		this.setBlock(worldIn, i + 6, j + 1, k + 2, JourneyBlocks.senterianBricks);
 		this.setBlock(worldIn, i + 6, j + 1, k + 3, JourneyBlocks.senterianBricks);
 		this.setBlock(worldIn, i + 6, j + 1, k + 4, Blocks.AIR);
@@ -834,6 +847,7 @@ public class SenterianRoomMaze2 extends SenterianRoomBase {
 		this.setBlock(worldIn, i + 10, j + 1, k + 5, Blocks.AIR);
 		this.setBlock(worldIn, i + 10, j + 1, k + 6, Blocks.AIR);
 		this.setBlock(worldIn, i + 10, j + 1, k + 7, Blocks.MOB_SPAWNER);
+		initTileEntity(worldIn, i + 10, j + 1, k + 7, new BasicInitializers.Spawner(new ResourceLocation(mobs.get(r.nextInt(mobs.size())))));
 		this.setBlock(worldIn, i + 10, j + 1, k + 8, JourneyBlocks.senterianBricks);
 		this.setBlock(worldIn, i + 10, j + 1, k + 9, Blocks.AIR);
 		this.setBlock(worldIn, i + 10, j + 1, k + 10, Blocks.AIR);
@@ -998,6 +1012,7 @@ public class SenterianRoomMaze2 extends SenterianRoomBase {
 		this.setBlock(worldIn, i + 12, j + 1, k + 9, Blocks.AIR);
 		this.setBlock(worldIn, i + 12, j + 1, k + 10, Blocks.AIR);
 		this.setBlock(worldIn, i + 12, j + 1, k + 11, JourneyBlocks.journeyChest);
+		initTileEntity(worldIn, i + 12, j + 1, k + 11, CHEST_INITIALIZER);
 		this.setBlock(worldIn, i + 12, j + 1, k + 12, JourneyBlocks.senterianBricks);
 		this.setBlock(worldIn, i + 12, j + 1, k + 13, JourneyBlocks.senterianBricks);
 		this.setBlock(worldIn, i + 12, j + 1, k + 14, Blocks.AIR);
