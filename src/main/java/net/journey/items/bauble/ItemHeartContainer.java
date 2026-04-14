@@ -33,12 +33,18 @@ public class ItemHeartContainer extends ItemBaubleBase implements IBauble {
 
     @Override
     public void onEquipped(ItemStack itemstack, EntityLivingBase player) {
-        player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).applyModifier(new AttributeModifier(HEALTH_MODIFIER, "Health Modifier", hearts, 0));
+        if (player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).getModifier(HEALTH_MODIFIER) == null) {
+            player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH)
+                    .applyModifier(new AttributeModifier(HEALTH_MODIFIER, "Health Modifier", hearts,0));
+        }
     }
 
     @Override
     public void onUnequipped(ItemStack itemstack, EntityLivingBase player) {
-        player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).removeModifier(new AttributeModifier(HEALTH_MODIFIER, "Health Modifier", hearts, 0));
+        if (player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).getModifier(HEALTH_MODIFIER) != null) {
+            player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH)
+                    .removeModifier(new AttributeModifier(HEALTH_MODIFIER, "Health Modifier", hearts,0));
+        }
     }
 
     @Override
