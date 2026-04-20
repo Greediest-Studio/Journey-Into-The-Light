@@ -17,10 +17,6 @@ public class ItemFruit extends ItemModFood {
     public BlockFruitCrop fruitblock;
     public Block log;
 
-    public ItemFruit(int food, float sat, boolean wolfFood) {
-        super(food, sat, wolfFood);
-    }
-
     public ItemFruit(int food, float sat, boolean wolfFood, BlockFruitCrop crop, Block log) {
         super(food, sat, wolfFood);
         this.fruitblock = crop;

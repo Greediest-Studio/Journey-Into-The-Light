@@ -175,9 +175,6 @@ public class JourneyRecipes {
 		GameRegistry.addSmelting(Blocks.GLASS, new ItemStack(JourneyBlocks.smoothGlass), 1f);
 		GameRegistry.addSmelting(JourneyItems.spawnerClump, new ItemStack(JourneyItems.spawnerBar), 1.0F);
 		GameRegistry.addSmelting(JourneyConsumables.flamingBeef, new ItemStack(JourneyConsumables.flamingBeefCooked), 0.5F);
-		GameRegistry.addSmelting(JourneyItems.ironDust, new ItemStack(Items.IRON_INGOT), 0.5F);
-		GameRegistry.addSmelting(JourneyItems.goldDust, new ItemStack(Items.GOLD_INGOT), 0.5F);
-		GameRegistry.addSmelting(JourneyItems.diamondDust, new ItemStack(Items.DIAMOND), 0.5F);
 		GameRegistry.addSmelting(JourneyItems.enderilliumDust, new ItemStack(JourneyItems.enderilliumShard), 1.5F);
 		GameRegistry.addSmelting(Items.ROTTEN_FLESH, new ItemStack(Items.LEATHER), 1.0F);
 		GameRegistry.addSmelting(Items.EGG, new ItemStack(JourneyConsumables.friedEgg), 0.5F);

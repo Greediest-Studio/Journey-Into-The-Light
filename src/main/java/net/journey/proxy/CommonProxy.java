@@ -82,7 +82,6 @@ public class CommonProxy {
         SlayerAPI.registerEventListener(new VanillaFixEvent());
         SlayerAPI.registerEventListener(new JourneyKnowledgeEventListener());
         SlayerAPI.registerEventListener(new BowZoomEvent());
-        MinecraftForge.addGrassSeed(new ItemStack(JourneyCrops.tomatoSeeds), 5);
         DimensionHelper.init();
         DimensionHelper.addSpawns();
 

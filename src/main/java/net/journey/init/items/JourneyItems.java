@@ -52,11 +52,9 @@ public class JourneyItems {
 	public static ToolMaterial gorbiteSwordMat = addToolMaterial(3120, 13F, 16.5F, true);
 	public static ToolMaterial orbaditeSwordMat = addToolMaterial(3120, 13F, 16.5F, true);
 
-	public static ToolMaterial sapphiretool = addToolMaterial(1461, 10F, 8F, true);
 	public static ToolMaterial lunium = addToolMaterial(1490, 12F, 8.5F, true);
 	public static ToolMaterial shadium = addToolMaterial(1521, 12F, 8.5F, true);
 	public static ToolMaterial hellstone = addToolMaterial(1432, 15F, 8.5F, true);
-	public static ToolMaterial nethic = addToolMaterial(481, 21F, 8.0F, true);
 	public static ToolMaterial celestium = addToolMaterial(1621, 18F, 11.5F, true);
 	public static ToolMaterial hellstoneMulti = addToolMaterial(3000, 10F, 6.5F, false);
 	public static ToolMaterial flairiumMulti = addToolMaterial(3000, 16F, 12.5F, false);
@@ -229,8 +227,6 @@ public class JourneyItems {
     public static Item gorbiteDust;
     public static Item orbaditeDust;
     public static Item diamondDust;
-    public static Item goldDust;
-    public static Item ironDust;
 
     public static Item hellstoneClump;
     public static Item shadiumClump;
@@ -246,7 +242,6 @@ public class JourneyItems {
     public static Item corbaPortalGem;
     public static Item terraniaPortalGem;
     public static Item cloudiaPortalGem;
-    //public static Item wastelandPortalGem;
 
     public static Item calciaOrb;
     public static Item netherBeastOrb;
@@ -282,7 +277,6 @@ public class JourneyItems {
 	public static Item charmOfVineStranding;
 	public static Item charmOfWaterBending;
 	public static Item cloudBuckler;
-	public static Item cursedTome;
 	public static Item deathCap;
 	public static Item demonicSkull;
 	public static Item essenceBuckler;
@@ -322,7 +316,6 @@ public class JourneyItems {
 	public static Item iceAmulet;
 	public static Item emptyAmulet;
 	public static Item skullOfDecay;
-	public static Item minersPearl;
 	public static Item magicThreadOfTethering;
 	public static Item iceFlake;
 	public static Item strengthTotem;
@@ -484,8 +477,6 @@ public class JourneyItems {
 		gorbiteDust = Registrar.regAndSetupItem("gorbiteDust", "Gorbite Dust", new JItem());
 		orbaditeDust = Registrar.regAndSetupItem("orbaditeDust", "Orbadite Dust", new JItem());
 		diamondDust = Registrar.regAndSetupItem("diamondDust", "Diamond Dust", new JItem());
-		goldDust = Registrar.regAndSetupItem("goldDust", "Gold Dust", new JItem());
-		goldDust = Registrar.regAndSetupItem("ironDust", "Iron Dust", new JItem());
 		bleedstoneDust = Registrar.regAndSetupItem("bleedstonedust", "Bleedstone Dust", new JItem());
 		smithstoneDust = Registrar.regAndSetupItem("smithstonedust", "Smithstone Dust", new JItem());
 
@@ -548,7 +539,6 @@ public class JourneyItems {
 		balmyTeardrop = Registrar.regAndSetupItem("balmy_teardrop", "Balmy Teardrop", new JItem());
 
 		cloudBuckler = Registrar.regAndSetupItem("cloud_buckler", "Cloud Buckler", new JItem());
-		cursedTome = Registrar.regAndSetupItem("cursed_tome", "Cursed Tome", new ItemCursedTomb(), JourneyTabs.WEAPONS);
 		deathCap = Registrar.regAndSetupItem("death_cap", "Death Cap", new ItemDeathCap(), JourneyTabs.UTIL);
 		demonicSkull = Registrar.regAndSetupItem("demonic_skull", "Demonic Skull", new JItem());
 		essenceBuckler = Registrar.regAndSetupItem("essence_buckler", "Essence Buckler", new JItem());
@@ -594,7 +584,6 @@ public class JourneyItems {
 		emptyAmulet = Registrar.regAndSetupItem("amulet_empty", "Empty Amulet", new JItem());
 
 		skullOfDecay = Registrar.regAndSetupItem("skull_of_decay", "Skull Of Decay", new ItemSkullOfDecay(), JourneyTabs.UTIL);
-		minersPearl = Registrar.regAndSetupItem("miners_pearl", "Miners Pearl", new ItemMinersPearl(), JourneyTabs.UTIL);
 		magicThreadOfTethering = Registrar.regAndSetupItem("magic_thread_of_tethering", "Magic Thread of Tethering", new ItemStringOfTethering(), JourneyTabs.UTIL);
 		iceFlake = Registrar.regAndSetupItem("iceflake", "Iceflake", new ItemIceflake(), JourneyTabs.UTIL);
 		strengthTotem = Registrar.regAndSetupItem("totem_strength", "Totem of Impeccable Strength", new ItemStrengthTotem(), JourneyTabs.UTIL);
