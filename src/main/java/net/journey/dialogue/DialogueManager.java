@@ -1,7 +1,5 @@
 package net.journey.dialogue;
 
-import net.journey.common.JRegistries;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayerMP;
 
 import java.util.HashMap;
@@ -11,22 +9,8 @@ public class DialogueManager {
 	private final DialogueNetHandler netHandler = new DialogueNetHandler();
 	private final HashMap<UUID, DialogueTracker> trackers = new HashMap<>();//FIXME move to map of lists of trackers
 
-	public void startDialogue(EntityPlayerMP player, EntityLivingBase npc, Dialogue dialogue) {
-		DialogueRegistry dialogueRegistry = JRegistries.DIALOGUE_REGISTRY;
-		dialogueRegistry.verifyRegistration(dialogue);
-
-		startDialogue(player, npc.getClass(), dialogue.getRootNode());
-	}
-
 	public DialogueNetHandler getNetHandler() {
 		return netHandler;
-	}
-
-	private void startDialogue(EntityPlayerMP player, Class<? extends EntityLivingBase> npcClass, DialogueNode node) {
-		DialogueTracker tracker = new DialogueTracker(player.getUniqueID(), npcClass, node);
-		trackers.put(player.getUniqueID(), tracker);
-
-		tracker.start();
 	}
 
 	void handleDialogueChosenOption(EntityPlayerMP player, int optionIndex) throws DialogueSystemException {

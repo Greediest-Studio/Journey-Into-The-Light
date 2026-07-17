@@ -3,7 +3,6 @@ package net.journey.proxy;
 import net.journey.JITL;
 import net.journey.client.handler.BossTickHandler;
 import net.journey.client.handler.GuiHandler;
-import net.journey.client.handler.KeyInputHandler;
 import net.journey.client.render.EntityRendering;
 import net.journey.client.render.RenderEssenceBar;
 import net.journey.client.render.particles.OreParticleFX;
@@ -52,7 +51,6 @@ public class ClientProxy extends CommonProxy {
         EntityRendering.init();
         SlayerAPI.registerEventListener(new BossTickHandler());
         SlayerAPI.registerEventListener(new PlayerStatsImpl());
-        KeyInputHandler.init();
         JBlockColors.init();
     }
 

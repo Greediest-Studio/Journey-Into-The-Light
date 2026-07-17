@@ -73,10 +73,6 @@ public class BossTickHandler {
         }
     }
 
-    public void drawCenteredString(FontRenderer fontRenderer, String text, int x, int y, int color) {
-        fontRenderer.drawStringWithShadow(text, (float) (x - fontRenderer.getStringWidth(text) / 2), (float) y, color);
-    }
-
     private ResourceLocation set(String name) {
         return new ResourceLocation(SlayerAPI.PREFIX + "textures/gui/bossBars/" + name + ".png");
     }

@@ -24,17 +24,6 @@ public class MathUtils {
 	}
 
 	/**
-	 * Coerces number in provided range.
-	 *
-	 * @param number number to coerce
-	 * @param min    minimum value, inclusive.
-	 * @param max    maximum value, inclusive.
-	 */
-	public static double coerceInRange(double number, double min, double max) {
-		return Math.min(Math.max(number, min), max);
-	}
-
-	/**
 	 * Calculates the value, that represents the part ({@code percentage}) of the {@code [start-to-end]} range, counting from the {@code start}.
 	 * Also works if {@code end} is less then {@code start}
 	 *
@@ -66,17 +55,6 @@ public class MathUtils {
 	 * @param end     end value (1)
 	 */
 	public static float calcPercentage(float current, float start, float end) {
-		return end - start != 0 ? (current - start) / (end - start) : 1;
-	}
-
-	/**
-	 * Returns the percentage value (from 0 to 1), which represents, what percentage of the {@code [start-to-end]} range {@code current} number takes.
-	 *
-	 * @param current number, that is in {@code [start-to-end]} range.
-	 * @param start   start value (0)
-	 * @param end     end value (1)
-	 */
-	public static double calcPercentage(double current, double start, double end) {
 		return end - start != 0 ? (current - start) / (end - start) : 1;
 	}
 
