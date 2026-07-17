@@ -13,7 +13,6 @@ import java.util.Random;
  * Already fixed postition to avoid overpopulation
  * Pass chunk start here (simiar to WorldGenMinable)
  */
-@Deprecated
 public class WorldGenModFlower extends WorldGenerator {
 
     private final boolean onSurface;

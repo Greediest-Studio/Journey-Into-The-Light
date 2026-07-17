@@ -116,12 +116,9 @@ public class JourneySounds {
 
     public static final SoundEvent EMPTY = registerSound("empty");
     public static final SoundEvent EUCA_1 = registerSound("euca_1");
-    public static final SoundEvent EUCA_2 = registerSound("euca_2");
-    public static final SoundEvent EUCA_3 = registerSound("euca_3");
     public static final SoundEvent DEPTHS_1 = registerSound("depths_1");
     public static final SoundEvent CORBA_1 = registerSound("corba_1");
     public static final SoundEvent CLOUDIA_1 = registerSound("cloudia_1");
-    public static final SoundEvent CLOUDIA_2 = registerSound("cloudia_2");
     public static final SoundEvent BOIL_1 = registerSound("boil_1");
     public static final SoundEvent TERRANIA_1 = registerSound("terrania_1");
     public static final SoundEvent FROZEN_1 = registerSound("frozen_1");

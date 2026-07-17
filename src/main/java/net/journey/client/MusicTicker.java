@@ -71,7 +71,7 @@ public class MusicTicker {
 			return RandHelper.chooseEqual(RandHelper.RANDOM, TrackType.DEPTHS_1);
 		}
 		if (dimension == DimensionHelper.EUCA_DIM) {
-			return RandHelper.chooseEqual(RandHelper.RANDOM, TrackType.EUCA_1, TrackType.EUCA_2, TrackType.EUCA_3);
+			return RandHelper.chooseEqual(RandHelper.RANDOM, TrackType.EUCA_1);
 		}
 		if (dimension == DimensionHelper.CORBA_DIM) {
 			return TrackType.CORBA_1;
@@ -83,7 +83,7 @@ public class MusicTicker {
 			return TrackType.BOIL_1;
 		}
 		if (dimension == DimensionHelper.CLOUDIA_DIM) {
-			return RandHelper.chooseEqual(RandHelper.RANDOM, TrackType.CLOUDIA_1, TrackType.CLOUDIA_2);
+			return RandHelper.chooseEqual(RandHelper.RANDOM, TrackType.CLOUDIA_1);
 		}
 		if (dimension == DimensionHelper.FROZEN_DIM) {
 			return TrackType.FROZEN_1;
@@ -110,12 +110,9 @@ public class MusicTicker {
 	public enum TrackType {
 		EMPTY(JourneySounds.EMPTY, 300, 700),
 		EUCA_1(JourneySounds.EUCA_1, 1200, 1500),
-		EUCA_2(JourneySounds.EUCA_2, 620, 900),
-		EUCA_3(JourneySounds.EUCA_3, 3300, 3600),
 		DEPTHS_1(JourneySounds.DEPTHS_1, 2400, 2700),
 		CORBA_1(JourneySounds.CORBA_1, 5100, 5400),
 		CLOUDIA_1(JourneySounds.CLOUDIA_1, 1000, 1200),
-		CLOUDIA_2(JourneySounds.CLOUDIA_2, 2500, 2800),
 		TERRANIA_1(JourneySounds.TERRANIA_1, 3300, 3600),
 		BOIL_1(JourneySounds.BOIL_1, 3140, 3440),
 		FROZEN_1(JourneySounds.FROZEN_1, 3500, 3800);
