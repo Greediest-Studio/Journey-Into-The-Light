@@ -17,10 +17,6 @@ public class WorldGenSorcererShrine extends WorldGenerator {
         return WorldGenAPI.checkRadius(w, new BlockPos(x, y, z), 11, JourneyBlocks.depthsGrass);
     }
 
-    /*private static WeightedRandomChestContent[] loot = {
-            new WeightedRandomChestContent(JourneyItems.depthsFlake, 0, 1, 5, 10),
-            new WeightedRandomChestContent(JourneyItems.scale, 0, 1, 10, 40),
-            new WeightedRandomChestContent(JourneyItems.beastlyStomach, 0, 1, 5, 40)};*/
     @Override
     public boolean generate(World world, Random rand, BlockPos pos) {
         int i = pos.getX(), j = pos.getY() - 1, k = pos.getZ();
