@@ -36,7 +36,6 @@ public class NetherEvent {
     @SubscribeEvent
     public void onPopulate(PopulateChunkEvent.Post event) {
         if (event.getWorld().provider.getDimensionType() == DimensionType.NETHER) {
-            Random random = event.getRand();
             World world = event.getWorld();
             Chunk chunk = world.getChunk(event.getChunkX(), event.getChunkZ());
             JNWorldGenerator.generate(world, chunk, world.rand);

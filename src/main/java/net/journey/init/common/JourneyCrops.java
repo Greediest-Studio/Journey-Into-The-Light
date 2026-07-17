@@ -17,7 +17,6 @@ import net.slayer.api.item.ItemModSeeds;
 public class JourneyCrops {
 
     public static BlockMod bleedheartFruit;
-    public static Block tomatoCrop;
     public static Block corveggieCrop;
     public static Block crackenCaneCrop;
     public static Block crakeBulbCrop;
@@ -31,7 +30,6 @@ public class JourneyCrops {
 
     public static Item bleedheart;
     public static Item glowshroomPowder;
-    public static Item tomatoSeeds;
     public static Item corveggieSeeds;
     public static Item crackenCaneSeeds;
     public static Item crakeBulbSeeds;
@@ -43,7 +41,6 @@ public class JourneyCrops {
     
     public static void init() {
         bleedheartFruit = (BlockFruitCrop) new BlockFruitCrop("bleedheartFruit", "Bleedheart Fruit", JourneyCrops.bleedheart, JourneyBlocks.sizzlerWoodLog).setCreativeTab(null);
-        tomatoCrop = new BlockTomatoCrop("tomatoCrop");
         corveggieCrop = new BlockCorveggieCrop("corveggiesCrop");
         crackenCaneCrop = new BlockCrackenCaneCrop("crackenCanesCrop");
         crakeBulbCrop = new BlockCrakeBulbCrop("crakeBulbCrop");
@@ -57,7 +54,6 @@ public class JourneyCrops {
 
         bleedheart = Registrar.regAndSetupItem("bleedheart", "Bleedheart Fruit", new ItemFruit(2, 0.1F, false, (BlockFruitCrop) JourneyCrops.bleedheartFruit, JourneyBlocks.sizzlerWoodLog).setPotionEffect(PotionEffects.setPotionEffect(PotionEffects.moveSlow, 100, 10), 1.0F), JourneyTabs.CROPS);
         glowshroomPowder = Registrar.regAndSetupItem("glowshroomPowder", "Glowshroom Powder", new ItemModSeeds(JourneyCrops.glowshroomCrop), JourneyTabs.CROPS);
-        tomatoSeeds = Registrar.regAndSetupItem("tomatoSeeds", "Tomato Seeds", new ItemModSeeds(JourneyCrops.tomatoCrop), JourneyTabs.CROPS);
         corveggieSeeds = Registrar.regAndSetupItem("corveggieSeeds", "Corveggie", new ItemModSeeds(JourneyCrops.corveggieCrop), JourneyTabs.CROPS);
         crackenCaneSeeds = Registrar.regAndSetupItem("crackenCaneSeeds", "Kracken Cane Seeds", new ItemModSeeds(JourneyCrops.crackenCaneCrop), JourneyTabs.CROPS);
         crakeBulbSeeds = Registrar.regAndSetupItem("crakeBulbSeeds", "Crake Bulb Seeds", new ItemModSeeds(JourneyCrops.crakeBulbCrop), JourneyTabs.CROPS);

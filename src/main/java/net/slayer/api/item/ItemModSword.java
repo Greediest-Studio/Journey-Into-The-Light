@@ -119,66 +119,8 @@ public class ItemModSword extends ItemSword {
 				default:
 					break;
 			}
-
-			if (target.world.isRemote) {
-				addParticles(target);
-			}
 		}
 		return super.hitEntity(stack, target, player);
-	}
-
-	@SideOnly(Side.CLIENT)
-	public void addParticles(EntityLivingBase hit) {
-		Random r = new Random();
-		Particle p = null;
-		switch(type) {
-		case FREEZE:
-			p = new EntityModSnowFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case POISON:
-			p = new EntityPoisionFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case FIRE:
-			JITL.proxy.spawnParticle(EnumParticlesClasses.MOD_LAVA, hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, false);
-			break;
-		case FIRE_HEALTH:
-			p = new EntityFloroWaterFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case FIRE_WITHER: 
-			p = new EntityFloroWaterFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case HEALTH:
-			p = new EntityHellstoneFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case NIGHTVISION_HEALTH:
-			p = new EntityFloroWaterFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case POISON_HEALTH:
-			p = new EntityFloroWaterFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case REGEN:
-			p = new EntityHellstoneFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case STUN:
-			p = new EntityFloroWaterFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case STUN_WITHER:
-			p = new EntityFloroWaterFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case WITHER:
-			p = new EntityFloroWaterFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		case NIGHTVISION:
-			p = new EntityFloroWaterFX(hit.world, hit.posX + r.nextFloat() - 0.5F, hit.posY + 0.5D + r.nextFloat(), hit.posZ + r.nextFloat() - 0.5F, 0.0D, 0.0D, 0.0D);
-			break;
-		default:
-			break;
-		}
-		if(p != null) {
-			for (int i = 0; i < 50; i++) {
-				FMLClientHandler.instance().getClient().effectRenderer.addEffect(p);
-			}
-		}
 	}
 
 	@Override

@@ -34,6 +34,5 @@ public class EntityTheHooded extends EntityModVillager {
 
     @Override
     public void addRecipies(MerchantRecipeList list) {
-        list.add(new JourneyMerchantRecipe(new ItemStack(JourneyItems.natureTablet, 15), new ItemStack(JourneyItems.collectorRock, 15), new ItemStack(JourneyCrops.tomatoSeeds, 15)));
     }
 }

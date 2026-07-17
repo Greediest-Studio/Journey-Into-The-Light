@@ -20,7 +20,6 @@ public class JourneyConsumables {
     public static Item ghastTentacle;
     public static Item friedEgg;
     public static Item floroPedal;
-    public static Item tomato;
     public static Item airMelon;
     public static Item glowshroom;
     public static Item terrashroom;
@@ -63,7 +62,6 @@ public class JourneyConsumables {
         ghastTentacle = Registrar.regAndSetupItem("ghastTentacle", "Ghast Tentacale", new ItemModFood(1, 0.6F, 10, true), JourneyTabs.CROPS);
         friedEgg = Registrar.regAndSetupItem("friedEgg", "Fried Egg", new ItemModFood(2, 0.6F, 10, false), JourneyTabs.CROPS);
         floroPedal = Registrar.regAndSetupItem("floroPedal", "Floro Pedal", new ItemModFood(3, 0.6F, 10, false).setPotionEffect(PotionEffects.setPotionEffect(PotionEffects.confusion, 100, 40), 1.0F), JourneyTabs.CROPS);
-        tomato = Registrar.regAndSetupItem("tomato", "Tomato", new ItemModFood(3, 0.6F, 10, false), JourneyTabs.CROPS);
         airMelon = Registrar.regAndSetupItem("airMelon", "Air Melon", new ItemModFood(10, 3.0F, 2, false).setPotionEffect(PotionEffects.setPotionEffect(PotionEffects.digSpeed, 100, 40), 1.0F), JourneyTabs.CROPS);
         glowshroom = Registrar.regAndSetupItem("glowshroom", "Glowshroom", new ItemModFood(4, 0.6F, 10, false).setPotionEffect(PotionEffects.setPotionEffect(PotionEffects.nightVision, 100, 1), 1.0F), JourneyTabs.CROPS);
         terrashroom = Registrar.regAndSetupItem("terrashroom", "Terrashroom", new ItemModFood(8, 0.6F, 10, false).setPotionEffect(PotionEffects.setPotionEffect(PotionEffects.nightVision, 100, 1), 1.0F), JourneyTabs.CROPS);

@@ -168,14 +168,7 @@ public class DimensionHelper {
     public static void init() {
 
         LogHelper.info("Registering Dimensions...");
-		/*if(Config.overrideNether = true) {
-			DimensionManager.unregisterDimension(-1);
-			DimensionManager.registerDimension(-1, DimensionType.register("Nether", "NETHER", -1, WorldProviderNetherJourney.class, true));
-		}
-		if(Config.overrideEnd = true) {
-			DimensionManager.unregisterDimension(1);
-			DimensionManager.registerDimension(1, DimensionType.register("End", "END", 1, WorldProviderEndJourney.class, true));
-		} */
+
         addDimBiome(EUCA_GOLD_BIOME, "biome_euca_gold", Type.MAGICAL, Type.MOUNTAIN);
         addDimBiome(EUCA_SILVER_BIOME, "biome_euca_silver", Type.MAGICAL, Type.MOUNTAIN);
         addDimBiome(EUCA_GOLDITE_GRAINS_BIOME, "biome_euca_goldite_grains", Type.MAGICAL, Type.MOUNTAIN);
