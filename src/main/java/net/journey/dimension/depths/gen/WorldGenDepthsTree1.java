@@ -10,267 +10,62 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenDepthsTree1 extends WorldGenerator {
 
+    private static boolean shouldPlaceLeaf(int dx, int dy, int dz) {
+        if (dx == 3 && dz == 3 && dy <= 4) {
+            return false;
+        }
+
+        if (dy == 2 || dy == 3) {
+            if (dx == 0 || dx == 6) {
+                return dz == 1 || dz == 3 || dz == 5;
+            }
+            if (dx == 1 || dx == 5) {
+                return dz == 0 || dz == 6;
+            }
+            if (dx == 3) {
+                return dz == 0 || dz == 6;
+            }
+            return false;
+        }
+
+        if (dy == 4) {
+            if (dx == 0 || dx == 6) {
+                return dz >= 1 && dz <= 5;
+            }
+            if (dx == 3) {
+                return dz != 3;
+            }
+            return true;
+        }
+
+        if (dx == 0 || dx == 6) {
+            return dz >= 1 && dz <= 5;
+        }
+        return true;
+    }
+
     @Override
     public boolean generate(World world, Random r, BlockPos pos) {
-        int i = pos.getX() - 6, j = pos.getY() - 1, k = pos.getZ() - 6;
+        int i = pos.getX() - 6;
+        int j = pos.getY() - 1;
+        int k = pos.getZ() - 6;
         IBlockState leaves = JourneyBlocks.depthsLeaves.getDefaultState();
         IBlockState log = JourneyBlocks.depthsLog.getDefaultState();
 
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 2, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 2, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 2, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 3, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 3, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 3, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 4, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 4, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 4, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 4, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 4, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 5, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 5, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 5, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 5, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 5, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 6, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 6, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 6, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 6, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 6, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 7, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 7, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 7, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 7, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 7, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 8, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 8, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 8, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 8, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i, j + 8, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 2, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 2, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 3, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 3, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 4, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 4, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 4, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 4, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 4, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 4, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 4, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 5, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 5, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 5, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 5, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 5, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 5, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 5, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 6, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 6, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 6, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 6, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 6, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 6, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 6, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 7, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 7, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 7, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 7, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 7, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 7, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 7, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 8, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 8, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 8, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 8, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 8, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 8, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 1, j + 8, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 4, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 4, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 4, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 4, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 4, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 4, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 4, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 5, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 5, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 5, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 5, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 5, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 5, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 5, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 6, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 6, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 6, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 6, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 6, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 6, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 6, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 7, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 7, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 7, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 7, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 7, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 7, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 7, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 8, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 8, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 8, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 8, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 8, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 8, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 2, j + 8, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j, k + 3), log);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 1, k + 3), log);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 2, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 2, k + 3), log);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 2, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 3, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 3, k + 3), log);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 3, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 4, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 4, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 4, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 4, k + 3), log);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 4, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 4, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 4, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 5, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 5, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 5, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 5, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 5, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 5, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 5, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 6, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 6, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 6, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 6, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 6, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 6, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 6, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 7, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 7, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 7, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 7, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 7, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 7, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 7, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 8, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 8, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 8, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 8, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 8, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 8, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + 8, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 4, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 4, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 4, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 4, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 4, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 4, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 4, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 5, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 5, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 5, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 5, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 5, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 5, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 5, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 6, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 6, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 6, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 6, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 6, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 6, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 6, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 7, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 7, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 7, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 7, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 7, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 7, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 7, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 8, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 8, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 8, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 8, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 8, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 8, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 4, j + 8, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 2, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 2, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 3, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 3, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 4, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 4, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 4, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 4, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 4, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 4, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 4, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 5, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 5, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 5, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 5, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 5, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 5, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 5, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 6, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 6, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 6, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 6, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 6, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 6, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 6, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 7, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 7, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 7, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 7, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 7, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 7, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 7, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 8, k), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 8, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 8, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 8, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 8, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 8, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 5, j + 8, k + 6), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 2, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 2, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 2, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 3, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 3, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 3, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 4, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 4, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 4, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 4, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 4, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 5, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 5, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 5, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 5, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 5, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 6, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 6, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 6, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 6, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 6, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 7, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 7, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 7, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 7, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 7, k + 5), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 8, k + 1), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 8, k + 2), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 8, k + 3), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 8, k + 4), leaves);
-        setBlockAndNotifyAdequately(world, new BlockPos(i + 6, j + 8, k + 5), leaves);
+        for (int dy = 0; dy <= 4; dy++) {
+            setBlockAndNotifyAdequately(world, new BlockPos(i + 3, j + dy, k + 3), log);
+        }
 
+        for (int dx = 0; dx <= 6; dx++) {
+            for (int dz = 0; dz <= 6; dz++) {
+                for (int dy = 2; dy <= 8; dy++) {
+                    if (shouldPlaceLeaf(dx, dy, dz)) {
+                        setBlockAndNotifyAdequately(world,
+                                new BlockPos(i + dx, j + dy, k + dz), leaves);
+                    }
+                }
+            }
+        }
         return true;
-
     }
 }
