@@ -214,15 +214,6 @@ public class JourneyBlocks {
     public static JBlockLog frozenLog;
     public static BlockMod frozenPlanks;
 
-    public static BlockMod withanDirt;
-    public static BlockMod withanRock;
-    public static BlockMod withanGrass;
-    public static BlockMod withanLeaves;
-    public static JBlockLog withanBark;
-    public static BlockMod withanRockReinforced;
-    public static BlockMod withanLamp;
-    public static BlockMod withanLight;
-
     public static BlockMod corbaCrackedBricks;
     public static BlockMod corbaDarkBricks;
     public static BlockMod corbaBricks;
@@ -297,9 +288,6 @@ public class JourneyBlocks {
     public static JBlockFlower crumblingPlant;
     public static JBlockFlower lavaBloom;
     public static JBlockTallGrass crispGrass;
-
-    public static JBlockPlant boilingBloom;
-    public static JBlockPlant boilingStem;
 
     public static BlockMod cloudiaDirt;
     public static BlockModGrass cloudiaGrass;
@@ -527,7 +515,6 @@ public class JourneyBlocks {
     public static BlockModFlower infernoPlant;
     public static BlockModFlower burntGrass;
 
-    public static BlockGrindstone grindstone;
     public static BlockCloudAltar cloudAltar;
     public static BlockMod blueGems;
     public static BlockMod redGems;
@@ -543,10 +530,8 @@ public class JourneyBlocks {
     public static BlockMod compactNetherBrick;
     public static BlockMod nethicLamp;
 
-    public static BlockMod knowledgeTable;
     public static BlockCrafting stoneCraftingTable;
     public static BlockSummoningTable summoningTable;
-    public static BlockMod bossAltar;
 
     public static BlockModSpawner observerSpawner;
     public static BlockModSpawner screamerSpawner;
@@ -1096,7 +1081,6 @@ public class JourneyBlocks {
         infernoPlant = new BlockModFlower("infernoPlant", "Inferno Plant");
         burntGrass = new BlockModFlower("burntGrass", "Burnt Grass", true);
 
-        grindstone = new BlockGrindstone("grindstone", "Grindstone");
         bossSpawner = new BlockBossSpawner("bossBlock", "Boss Spawner");
         cloudAltar = new BlockCloudAltar("cloudaltar", "Cloud Altar");
         blueGems = new BlockGemBlock("blueGems", "Blue Gems", false);

@@ -32,11 +32,7 @@ public class JourneySounds {
     public static final SoundEvent SORCERER_DEATH = registerSound("sorcerer_death");
     public static final SoundEvent SORCERER_HURT = registerSound("sorcerer_hurt");
     public static final SoundEvent SORCERER = registerSound("sorcerer");
-    public static final SoundEvent CHEST_OPEN_0 = registerSound("chest_open_0");
-    public static final SoundEvent CHEST_OPEN = registerSound("chest_open");
-    public static final SoundEvent CHEST_CLOSE = registerSound("chest_close");
     public static final SoundEvent CHEST_KEY_OPEN = registerSound("chest_key");
-    public static final SoundEvent SPIRIT_CRYSTAL_ACTIVATE = registerSound("spirit_crystal_activate");
     public static final SoundEvent TOTEM_ACTIVATE = registerSound("totem_activate");
 	public static final SoundEvent ROBOT = registerSound("robot");
     public static final SoundEvent ROBOT_HURT = registerSound("robot_hurt");
@@ -85,9 +81,6 @@ public class JourneySounds {
     public static final SoundEvent WRAITH = registerSound("wraith");
     public static final SoundEvent WRAITH_DEATH = registerSound("wraith_death");
     public static final SoundEvent WRAITH_HURT = registerSound("wraith_hurt");
-    public static final SoundEvent OVERSEER = registerSound("overseer");
-    public static final SoundEvent OVERSEER_HURT = registerSound("overseer_hurt");
-    public static final SoundEvent OVERSEER_DEATH = registerSound("overseer_death");
     public static final SoundEvent COIN_PICKUP = registerSound("coin_pickup");
 
     public static final SoundEvent STINKY_AMBIENT = registerSound("stinky_ambient");
@@ -107,19 +100,13 @@ public class JourneySounds {
     public static final SoundEvent LAVASNAKE_HURT = registerSound("lavasnake_hurt");
     public static final SoundEvent SENTRY_ALTAR_ACTIVATE = registerSound("sentry_altar_activate");
     public static final SoundEvent SENTRY_ALTAR_DEACTIVATE = registerSound("sentry_altar_deactivate");
-    public static final SoundEvent SENTRY_ALTAR_SMOKE = registerSound("sentry_altar_smoke");
     public static final SoundEvent SENTRY_AMBIENT_1 = registerSound("sentry_ambient_1");
-    public static final SoundEvent SENTRY_AMBIENT_2 = registerSound("sentry_ambient_2");
-    public static final SoundEvent SENTRY_AMBIENT_3 = registerSound("sentry_ambient_3");
-    public static final SoundEvent SENTRY_GHOST = registerSound("sentry_ghost");
-    public static final SoundEvent SENTRY_HURT_1 = registerSound("sentry_hurt_1");
     public static final SoundEvent SENTRY_HURT_2 = registerSound("sentry_hurt_2");
 
     public static final SoundEvent OBELISK_IDLE = registerSound("obelisk_idle");
     public static final SoundEvent OBELISK_OPEN = registerSound("obelisk_open");
 
     public static final SoundEvent SENTRY_HEART_BEATING = registerSound("sentry_heart_beating");
-    public static final SoundEvent SENTRY_HEART_HIT = registerSound("sentry_heart_hit");
     public static final SoundEvent SENTRY_HEART_DEATH = registerSound("sentry_heart_death");
     public static final SoundEvent SENTRY_DESTRUCTION_MOVING = registerSound("sentry_destruction_moving");
 
@@ -128,18 +115,10 @@ public class JourneySounds {
     public static final SoundEvent BLAZIER_DEATH = registerSound("blazier_death");
 
     public static final SoundEvent EMPTY = registerSound("empty");
-	public static final SoundEvent UNTITLED_DISC = registerSound("untitled_disk");
-	public static final SoundEvent RACE_TO_SHORE = registerSound("race_shore");
-    public static final SoundEvent DEEP_BLUE = registerSound("deep_blue");
-    public static final SoundEvent COMPETITION_BEGINS = registerSound("comp_begins");
-    public static final SoundEvent RACE_STAR = registerSound("race_star");
-    public static final SoundEvent BLUE_WATER = registerSound("blue_water");
-    public static final SoundEvent UNDERWATER_WORLD = registerSound("underwater_world");
     public static final SoundEvent EUCA_1 = registerSound("euca_1");
     public static final SoundEvent EUCA_2 = registerSound("euca_2");
     public static final SoundEvent EUCA_3 = registerSound("euca_3");
     public static final SoundEvent DEPTHS_1 = registerSound("depths_1");
-    public static final SoundEvent DEPTHS_2 = registerSound("depths_2");
     public static final SoundEvent CORBA_1 = registerSound("corba_1");
     public static final SoundEvent CLOUDIA_1 = registerSound("cloudia_1");
     public static final SoundEvent CLOUDIA_2 = registerSound("cloudia_2");

@@ -17,7 +17,6 @@ public class Textures {
 
     //Misc.
     public static final ResourceLocation basic = getProjectileTextureLocation("gray");
-    public static final ResourceLocation grindstone = addModel("blocks/grindstone");
     public static final ResourceLocation cloudaltar = addModel("blocks/cloudaltar");
     public static final ResourceLocation senterianAltar = addModel("blocks/senterianaltar");
     public static final ResourceLocation journeyChest = addModel("blocks/journeychest");

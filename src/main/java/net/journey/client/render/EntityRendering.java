@@ -340,29 +340,14 @@ public class EntityRendering {
         RenderingRegistry.registerEntityRenderingHandler(EntityTamedRoc.class, new RenderModMob(new ModelRoc(), Textures.tameRoc));
         RenderingRegistry.registerEntityRenderingHandler(EntityJungleTurtle.class, new RenderSizeable(new ModelJungleTurtle(), 0.5F, 1.5F, Textures.jungleTurtle));
         RenderingRegistry.registerEntityRenderingHandler(EntityJungleSpider.class, new RenderSizeable(new ModelJungleSpider(), 0.5F, 0.5F, Textures.jungleSpider));
-        //RenderingRegistry.registerEntityRenderingHandler(EntityWraith.class, new RenderBoss(new ModelWraith(), 0.5F, 1.0F, tex.wraith, stat.wraithBossID));
-
-        //SlayerAPI.registerItemRenderer(EssenceBlocks.netherBeastStatue, new ItemRendererStatue("netherBeastStatue"));
-        //SlayerAPI.registerItemRenderer(EssenceBlocks.witheringBeastStatue, new ItemRendererStatue("witheringBeastStatue"));
-        //SlayerAPI.registerItemRenderer(EssenceBlocks.enderChampionStatue, new ItemRendererStatue("enderChampionStatue"));
-        //SlayerAPI.registerItemRenderer(EssenceBlocks.wraithStatue, new ItemRendererStatue("wraithStatue"));
-        //SlayerAPI.registerItemRenderer(EssenceBlocks.calciaStatue, new ItemRendererStatue("calciaStatue"));
-        //SlayerAPI.registerItemRenderer(EssenceBlocks.eudorStatue, new ItemRendererStatue("eudorStatue"));
-
-        //Minecraft.getMinecraft().getRenderItem().getItemModelMesher().getModelManager().getBlockModelShapes().registerBuiltInBlocks(EssenceBlocks.calciaStatue);
-        //TileEntityItemStackRenderer.instance = new ModeledBlockInventoryRenderer(TileEntityItemStackRenderer.instance);
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBossSpawner.class, new BossSpawnerTESR());
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGrindstone.class, new GrindstoneRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityJourneyChest.class, new JourneyChestTESR());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySummoningTable.class, new SummoningTableRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySenterianPortal.class, new SenterianPortalRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCloudAltar.class, new CloudAltarRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySenterianAltar.class, new SenterianAltarRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityObelisk.class, new ObeliskRenderer());
-
-        //RenderingRegistry.registerBlockHandler(EssenceBlocks.celestiumOre.getRenderType(), new OreRenderer());
-        //RenderingRegistry.registerBlockHandler(EssenceBlocks.mossyEssenceStone.getRenderType(), new OtherBlockRenderer());
         
         RenderingRegistry.registerEntityRenderingHandler(EntitySentacoin.class, new RenderSentacoin());
         RenderingRegistry.registerEntityRenderingHandler(EntitySentacoinBag.class, new RenderSentacoinBag());

@@ -68,7 +68,7 @@ public class MusicTicker {
 		DimensionType dimension = getDimension();
 
 		if (dimension == DimensionHelper.DEPTHS_DIM) {
-			return RandHelper.chooseEqual(RandHelper.RANDOM, TrackType.DEPTHS_1, TrackType.DEPTHS_2);
+			return RandHelper.chooseEqual(RandHelper.RANDOM, TrackType.DEPTHS_1);
 		}
 		if (dimension == DimensionHelper.EUCA_DIM) {
 			return RandHelper.chooseEqual(RandHelper.RANDOM, TrackType.EUCA_1, TrackType.EUCA_2, TrackType.EUCA_3);
@@ -113,7 +113,6 @@ public class MusicTicker {
 		EUCA_2(JourneySounds.EUCA_2, 620, 900),
 		EUCA_3(JourneySounds.EUCA_3, 3300, 3600),
 		DEPTHS_1(JourneySounds.DEPTHS_1, 2400, 2700),
-		DEPTHS_2(JourneySounds.DEPTHS_2, 4300, 4600),
 		CORBA_1(JourneySounds.CORBA_1, 5100, 5400),
 		CLOUDIA_1(JourneySounds.CLOUDIA_1, 1000, 1200),
 		CLOUDIA_2(JourneySounds.CLOUDIA_2, 2500, 2800),
