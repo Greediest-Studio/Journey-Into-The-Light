@@ -4,7 +4,6 @@ import io.netty.buffer.Unpooled;
 import net.journey.api.capability.EssenceStorage;
 import net.journey.api.capability.JourneyPlayer;
 import net.journey.api.capability.PlayerOverlay;
-import net.journey.api.capability.PlayerStats;
 import net.journey.common.capability.innercaps.EssenceStorageImpl;
 import net.journey.common.capability.innercaps.PlayerOverlayImpl;
 import net.journey.common.capability.innercaps.PlayerStatsImpl;
@@ -46,11 +45,6 @@ public class JourneyPlayerImpl implements JourneyPlayer {
     @Override
     public EssenceStorage getEssenceStorage() {
         return essenceStorage;
-    }
-
-    @Override
-    public PlayerStats getPlayerStats() {
-        return playerStats;
     }
 
     @Override

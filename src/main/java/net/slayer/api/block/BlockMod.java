@@ -1,10 +1,7 @@
 package net.slayer.api.block;
 
 import net.journey.JITL;
-import net.journey.api.capability.JourneyPlayer;
-import net.journey.api.capability.PlayerStats;
 import net.journey.client.ItemDescription;
-import net.journey.common.capability.JCapabilityManager;
 import net.journey.common.knowledge.EnumKnowledgeType;
 import net.journey.enums.EnumParticlesClasses;
 import net.journey.init.JourneyTabs;
@@ -97,14 +94,6 @@ public class BlockMod extends Block {
     @Override
     public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
         super.onBlockHarvested(worldIn, pos, state, player);
-        if (!worldIn.isRemote) {
-            if (this.knowledgeType != null && this.knowledgeAmount > 0) {
-                JourneyPlayer journeyPlayer = JCapabilityManager.asJourneyPlayer(player);
-                PlayerStats stats = journeyPlayer.getPlayerStats();
-                stats.addKnowledge(this.knowledgeType, this.knowledgeAmount);
-                journeyPlayer.sendUpdates();
-            }
-        }
     }
 
     @Override

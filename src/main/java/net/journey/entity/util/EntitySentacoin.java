@@ -1,14 +1,12 @@
 package net.journey.entity.util;
 
 import net.journey.api.capability.JourneyPlayer;
-import net.journey.api.capability.PlayerStats;
 import net.journey.common.capability.JCapabilityManager;
 import net.journey.init.JourneySounds;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
@@ -117,9 +115,7 @@ public class EntitySentacoin extends Entity {
 	public void onCollideWithPlayer(EntityPlayer entityIn) {
 		if(!this.world.isRemote) {
 			JourneyPlayer journeyPlayer = JCapabilityManager.asJourneyPlayer(entityIn);
-			PlayerStats stats = journeyPlayer.getPlayerStats();
-			entityIn.onItemPickup(this, 1);
-			stats.addSentacoin(1);
+            entityIn.onItemPickup(this, 1);
 			this.playSound(JourneySounds.COIN_PICKUP, 1.0F, 1.0F + rand.nextFloat());
 			journeyPlayer.sendUpdates();
 			this.setDead();

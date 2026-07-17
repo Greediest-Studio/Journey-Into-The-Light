@@ -24,10 +24,4 @@ public class ChatHandler {
         chatcomponenttranslation.getStyle().setColor(chatformat);
         if (entityLiving != null) entityLiving.sendMessage(chatcomponenttranslation);
     }
-
-	/*@SideOnly(Side.SERVER)
-	public static void sendServerMessage(String string) {
-		TextComponentString translation = new TextComponentString(string);
-		MinecraftServer.getServer().sendMessage(translation);
-	}*/
 }

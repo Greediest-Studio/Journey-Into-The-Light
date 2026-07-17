@@ -1,9 +1,6 @@
 package net.journey.entity.base;
 
-import net.journey.api.capability.JourneyPlayer;
-import net.journey.api.capability.PlayerStats;
 import net.journey.api.entity.IJERCompatible;
-import net.journey.common.capability.JCapabilityManager;
 import net.journey.common.knowledge.EnumKnowledgeType;
 import net.journey.entity.MobStats;
 import net.minecraft.block.Block;
@@ -102,13 +99,6 @@ public abstract class JEntityMob extends EntityMob implements IJERCompatible {
 	@Override
 	public void onDeath(DamageSource cause) {
 		super.onDeath(cause);
-		if (cause.getTrueSource() instanceof EntityPlayer && knowledgeType != null && knowledgeAmount > 0) {
-			EntityPlayer player = (EntityPlayer) cause.getTrueSource();
-			JourneyPlayer journeyPlayer = JCapabilityManager.asJourneyPlayer(player);
-			PlayerStats stats = journeyPlayer.getPlayerStats();
-			stats.addKnowledge(this.knowledgeType, this.knowledgeAmount);
-			journeyPlayer.sendUpdates();
-		}
 	}
 
 	@Override

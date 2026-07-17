@@ -6,8 +6,6 @@ import net.minecraftforge.fml.relauncher.Side;
 public interface JourneyPlayer {
     EssenceStorage getEssenceStorage();
 
-    PlayerStats getPlayerStats();
-
     PlayerOverlay getPlayerOverlay();
 
     void onTick(Side side);

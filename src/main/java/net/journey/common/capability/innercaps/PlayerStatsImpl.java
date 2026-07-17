@@ -1,6 +1,5 @@
 package net.journey.common.capability.innercaps;
 
-import net.journey.api.capability.PlayerStats;
 import net.journey.common.capability.SerializableInnerCap;
 import net.journey.common.knowledge.EnumKnowledgeType;
 import net.minecraft.nbt.NBTTagCompound;
@@ -8,7 +7,7 @@ import net.minecraft.network.PacketBuffer;
 
 import java.util.HashMap;
 
-public class PlayerStatsImpl extends SerializableInnerCap<NBTTagCompound, PlayerStatsImpl> implements PlayerStats {
+public class PlayerStatsImpl extends SerializableInnerCap<NBTTagCompound, PlayerStatsImpl>{
 	private final HashMap<EnumKnowledgeType, KnowledgeStorageImpl> knowledgeMap;
 	private int sentacoinValue = 0;
 
@@ -20,41 +19,8 @@ public class PlayerStatsImpl extends SerializableInnerCap<NBTTagCompound, Player
 		}
 	}
 
-	@Override
-	public void addKnowledge(EnumKnowledgeType type, float amount) {
-		getKnowledge(type).add(amount);
-	}
-
-	@Override
-	public float removeKnowledge(EnumKnowledgeType type, float amount) {
-		return getKnowledge(type).remove(amount);
-	}
-
-	@Override
-	public KnowledgeStorageImpl getKnowledge(EnumKnowledgeType type) {
-		return knowledgeMap.get(type);
-	}
-
-	@Override
-	public void addSentacoin(int amount) {
-		sentacoinValue += amount;
-	}
-
-	@Override
-	public int getSentacoinValue() {
-		return sentacoinValue;
-	}
-
-	@Override
-	public boolean useCoins(int amount) {
-		if (sentacoinValue < amount)
-			return false;
-		sentacoinValue -= amount;
-		return true;
-	}
-	
 	public void onTick() {
-		
+
 	}
 
 	@Override

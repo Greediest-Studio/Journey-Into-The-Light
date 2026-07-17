@@ -9,12 +9,9 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
@@ -23,8 +20,6 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
-import net.minecraftforge.fml.common.registry.VillagerRegistry;
-import net.minecraftforge.fml.common.registry.VillagerRegistry.IVillageCreationHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
@@ -35,8 +30,7 @@ public class SlayerAPI {
     private static int entityId;
 
     public static final String PREFIX = JITL.MOD_ID + ":";
-    public static final boolean BETA = false;
-    private static final String SECTION_SIGN = "\u00a7";
+    private static final String SECTION_SIGN = "§";
     public static Logger logger = Logger.getLogger(JITL.MOD_ID);
 
     public static ToolMaterial addMeleeMaterial(int uses, float dam, float efficiency) {
@@ -56,10 +50,6 @@ public class SlayerAPI {
         double fixScale = 1 / scale;
         GL11.glScaled(fixScale, fixScale, fixScale);
         GL11.glPopMatrix();
-    }
-
-    public static void addVillageCreationHandler(IVillageCreationHandler v) {
-        VillagerRegistry.instance().registerVillageCreationHandler(v);
     }
 
     public static void registerEventListener(Object o) {
@@ -95,11 +85,6 @@ public class SlayerAPI {
                 .name(JITL.MOD_ID + "." + entityName));
     }
 
-    public static ArmorMaterial addArmorMaterial(String name, int durability, int[] oldArmor, int enchantability, float toughness) {
-        int duraNew = (int) Math.round(durability / 13.75);
-        return EnumHelper.addArmorMaterial(name, SlayerAPI.PREFIX + name, duraNew, oldArmor, enchantability, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, toughness);
-    }
-
     public static void addChatMessageWithColour(EntityPlayer p, String colour, String str) {
         p.sendMessage(new TextComponentString(SlayerAPI.Colour.YELLOW + "[" + SlayerAPI.Colour.GOLD + JITL.MOD_NAME + SlayerAPI.Colour.YELLOW + "] " + colour + str));
     }
@@ -125,20 +110,12 @@ public class SlayerAPI {
         FMLClientHandler.instance().getClient().ingameGUI.getChatGUI().printChatMessage(new TextComponentString(SlayerAPI.Colour.GREEN + message));
     }
 
-    public static void removeSmeltingRecipe(ItemStack removed) {
-        FurnaceRecipes.instance().getSmeltingList().remove(removed);
-    }
-
     public static Item toItem(Block block) {
         return Item.getItemFromBlock(block);
     }
 
     public static ItemStack toItemStack(Block block) {
         return new ItemStack(Item.getItemFromBlock(block));
-    }
-
-    public static ItemStack toItemStack(Item item) {
-        return new ItemStack(item);
     }
 
     public static boolean giveItemStackToPlayer(EntityPlayer player, Integer count, ItemStack itemstack) {
@@ -156,33 +133,6 @@ public class SlayerAPI {
         } else {
             return giveItemStackToPlayer((EntityPlayerMP) player, count, itemstack);
         }
-    }
-
-    public static void giveItemStackToPlayer(EntityPlayer player, ItemStack itemstack) {
-        giveItemStackToPlayer(player, 1, itemstack);
-    }
-
-    public static void decreaseExp(EntityPlayer player, float amount) {
-        if (player.experienceTotal - amount <= 0) {
-            player.experienceLevel = 0;
-            player.experience = 0;
-            player.experienceTotal = 0;
-            return;
-        }
-
-        player.experienceTotal -= amount;
-
-        if (player.experience * (float) player.xpBarCap() < amount) {
-            amount -= player.experience * (float) player.xpBarCap();
-            player.experience = 1.0f;
-            player.experienceLevel--;
-        }
-
-        while (player.xpBarCap() < amount) {
-            amount -= player.xpBarCap();
-            player.experienceLevel--;
-        }
-        player.experience -= amount / (float) player.xpBarCap();
     }
 
     public static boolean giveItemStackToPlayer(EntityPlayerMP player, Integer count, ItemStack itemstack) {
@@ -224,12 +174,4 @@ public class SlayerAPI {
         public static final String WHITE = SECTION_SIGN + "F";
     }
 
-    public static final class Format {
-        public static final String OBFUSCATED = SECTION_SIGN + "k";
-        public static final String BOLD = SECTION_SIGN + "l";
-        public static final String STRIKE = SECTION_SIGN + "m";
-        public static final String UNDERLINE = SECTION_SIGN + "n";
-        public static final String ITALIC = SECTION_SIGN + "o";
-        public static final String RESET = SECTION_SIGN + "r";
-    }
 }

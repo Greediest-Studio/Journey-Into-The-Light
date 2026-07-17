@@ -12,10 +12,6 @@ public class GuiOptionButton extends GuiButton {
 		super(buttonId, x, y, 276, 20, I18n.format(optionTextKey));
 	}
 
-	public GuiOptionButton(String optionTextKey, int buttonId, int x, int y, int widthIn, int heightIn) {
-		super(buttonId, x, y, widthIn, heightIn, I18n.format(optionTextKey));
-	}
-
 	@Override
 	public void drawButton(Minecraft mc, int mouseX, int mouseY, float partialTicks) {
 		if (this.visible) {
