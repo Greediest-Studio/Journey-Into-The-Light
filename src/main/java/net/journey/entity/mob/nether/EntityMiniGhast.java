@@ -83,11 +83,11 @@ public class EntityMiniGhast extends JEntityFlyingMob {
 
     @SideOnly(Side.CLIENT)
     public boolean isAttacking() {
-        return this.dataManager.get(ATTACKING).booleanValue();
+        return this.dataManager.get(ATTACKING);
     }
 
     public void setAttacking(boolean attacking) {
-        this.dataManager.set(ATTACKING, Boolean.valueOf(attacking));
+        this.dataManager.set(ATTACKING, attacking);
     }
 
     public int getFireballStrength() {
@@ -110,7 +110,7 @@ public class EntityMiniGhast extends JEntityFlyingMob {
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.dataManager.register(ATTACKING, Boolean.valueOf(false));
+        this.dataManager.register(ATTACKING, Boolean.FALSE);
     }
 
     @Override

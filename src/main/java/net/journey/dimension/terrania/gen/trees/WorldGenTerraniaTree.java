@@ -104,7 +104,7 @@ public class WorldGenTerraniaTree extends JWorldGenHugeTrees {
 
     private void placeVine(World w, Random r, BlockPos pos, PropertyBool bool) {
         if (r.nextInt(3) > 0 && w.isAirBlock(pos)) {
-            this.setBlockAndNotifyAdequately(w, pos, JourneyBlocks.terraniaVine.getDefaultState().withProperty(bool, Boolean.valueOf(true)));
+            this.setBlockAndNotifyAdequately(w, pos, JourneyBlocks.terraniaVine.getDefaultState().withProperty(bool, Boolean.TRUE));
         }
     }
 

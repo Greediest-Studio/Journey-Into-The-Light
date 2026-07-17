@@ -23,7 +23,7 @@ public class BlockAncientCatalyst extends BlockMod {
             "???", 
             "v?v").where(
             '?', BlockWorldState.hasState(BlockStateMatcher.ANY)).where(
-            'v', BlockWorldState.hasState(BlockStateMatcher.forBlock(JourneyBlocks.ANCIENT_SOCKET).where(BlockAncientSocket.INSERT, Predicates.equalTo(Boolean.valueOf(true))))).build();
+            'v', BlockWorldState.hasState(BlockStateMatcher.forBlock(JourneyBlocks.ANCIENT_SOCKET).where(BlockAncientSocket.INSERT, Predicates.equalTo(Boolean.TRUE)))).build();
         }
         return pattern;
     }

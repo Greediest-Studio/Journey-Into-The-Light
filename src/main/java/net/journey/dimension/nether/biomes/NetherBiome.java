@@ -27,7 +27,7 @@ public class NetherBiome {
         edge = this;
         edgeSize = 0;
         sl = 0;
-        subbiomes = new ArrayList<NetherBiome>();
+        subbiomes = new ArrayList<>();
     }
 
     public void genSurfColumn(Chunk chunk, BlockPos pos, Random random) {

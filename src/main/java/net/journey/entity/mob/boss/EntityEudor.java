@@ -60,9 +60,9 @@ public class EntityEudor extends EntityEssenceBoss {
         if (isInv()) {
             for (int i = 0; i < 5; i++)
                 this.world.spawnParticle(EnumParticleTypes.ENCHANTMENT_TABLE, this.posX + (this.rand.nextDouble() - 0.5D) * this.width, this.posY + this.rand.nextDouble() * this.height - 0.25D, this.posZ + (this.rand.nextDouble() - 0.5D) * this.width, (this.rand.nextDouble() - 0.5D) * 2.0D, -this.rand.nextDouble(), (this.rand.nextDouble() - 0.5D) * 2.0D);
-            Entity entity = attackingPlayer;
+            EntityPlayer entity = attackingPlayer;
             if (entity != null)
-                ((EntityPlayer) entity).addPotionEffect(new PotionEffect(PotionEffects.setPotionEffect(PotionEffects.blindness, 60, 5)));
+                entity.addPotionEffect(new PotionEffect(PotionEffects.setPotionEffect(PotionEffects.blindness, 60, 5)));
         }
     }
 

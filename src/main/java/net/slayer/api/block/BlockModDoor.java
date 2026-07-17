@@ -40,7 +40,7 @@ public class BlockModDoor extends BlockDoor {
             state = iblockstate.cycleProperty(OPEN);
             worldIn.setBlockState(blockpos, state, 10);
             worldIn.markBlockRangeForRenderUpdate(blockpos, pos);
-            worldIn.playEvent(player, state.getValue(OPEN).booleanValue() ? 1005 : 1011, pos, 0);
+            worldIn.playEvent(player, state.getValue(OPEN) ? 1005 : 1011, pos, 0);
             return true;
         }
     }

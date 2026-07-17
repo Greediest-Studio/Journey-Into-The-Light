@@ -1,14 +1,11 @@
 package net.journey.dimension.terrania.gen.dungeon;
 
 import net.journey.init.blocks.JourneyBlocks;
-import net.minecraft.block.BlockVine;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import net.slayer.api.block.BlockModVine;
-import net.slayer.api.worldgen.WorldGenAPI;
 
 import java.util.Random;
 
@@ -21,7 +18,7 @@ public class WorldGenMushroomDungeon extends WorldGenerator {
 	 */
     private void placeVine(World w, Random r, BlockPos pos, PropertyBool bool) {
         if (r.nextInt(3) > 0 && w.isAirBlock(pos)) {
-            this.setBlockAndNotifyAdequately(w, pos, Blocks.AIR.getDefaultState().withProperty(bool, Boolean.valueOf(true)));
+            this.setBlockAndNotifyAdequately(w, pos, Blocks.AIR.getDefaultState().withProperty(bool, Boolean.TRUE));
         }
     }
     

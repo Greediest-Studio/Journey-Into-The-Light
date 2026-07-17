@@ -130,11 +130,11 @@ public class JBlockTNT extends BlockMod {
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return (Boolean)state.getValue(EXPLODE) ? 1 : 0;
+        return state.getValue(EXPLODE) ? 1 : 0;
     }
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, new IProperty[]{EXPLODE});
+        return new BlockStateContainer(this, EXPLODE);
     }
 }

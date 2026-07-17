@@ -26,7 +26,7 @@ public class WorldGenDepthsPillar extends WorldGenerator {
         int x = pos.getX() - 3, y = pos.getY(), z = pos.getZ() - 1;
         if (locationIsValidSpawn(w, x, y, z)) return true;
 
-        ArrayList<ItemStack> chestGen = new ArrayList<ItemStack>();
+        ArrayList<ItemStack> chestGen = new ArrayList<>();
 
         chestGen.add(new ItemStack(JourneyItems.caveCrystal, 16));
         chestGen.add(new ItemStack(JourneyItems.depthsPortalGem, 12));

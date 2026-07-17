@@ -68,9 +68,9 @@ public class ItemLoot extends JItem {
 			world.spawnEntity(item);
 			player.getHeldItem(hand).shrink(1);
 			JourneySounds.playSound(JourneySounds.WRAPPER, world, player);
-			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, player.getHeldItemMainhand());
+			return new ActionResult<>(EnumActionResult.SUCCESS, player.getHeldItemMainhand());
 		}
-		return new ActionResult<ItemStack>(EnumActionResult.FAIL, player.getHeldItemMainhand());
+		return new ActionResult<>(EnumActionResult.FAIL, player.getHeldItemMainhand());
 	}
 
 	@Override

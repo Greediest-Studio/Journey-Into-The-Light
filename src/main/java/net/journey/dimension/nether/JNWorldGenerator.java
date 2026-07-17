@@ -188,7 +188,7 @@ public class JNWorldGenerator {
 
     public static void smoothChunk(Chunk chunk) {
         if (hasCleaningPass) {
-            List<BlockPos> pos = new ArrayList<BlockPos>();
+            List<BlockPos> pos = new ArrayList<>();
             for (int y = 32; y < 110; y++) {
                 for (int x = 1; x < 15; x++)
                     for (int z = 1; z < 15; z++)

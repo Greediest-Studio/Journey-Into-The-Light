@@ -67,7 +67,7 @@ public class ModelLeafBlower extends ModelBase {
         stick4.render(f5);
         stick3.render(f5);
         leaves.render(f5);
-        for (int i = 0; i < sticks.length; i++) this.sticks[i].render(f5);
+        for (ModelRenderer stick : sticks) stick.render(f5);
     }
 
     @Override

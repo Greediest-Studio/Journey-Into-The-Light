@@ -331,7 +331,7 @@ public class ItemModBow extends ItemBow {
 					: new ActionResult(EnumActionResult.FAIL, itemstack);
 		} else {
 			playerIn.setActiveHand(handIn);
-			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemstack);
+			return new ActionResult<>(EnumActionResult.SUCCESS, itemstack);
 		}
 	}
 

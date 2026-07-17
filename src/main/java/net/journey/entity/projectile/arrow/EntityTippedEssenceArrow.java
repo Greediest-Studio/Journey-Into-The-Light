@@ -76,26 +76,26 @@ public class EntityTippedEssenceArrow extends EntityEssenceArrow {
         } else if (stack.getItem() == Items.ARROW) {
             this.potion = PotionTypes.EMPTY;
             this.customPotionEffects.clear();
-            this.dataManager.set(COLOR, Integer.valueOf(-1));
+            this.dataManager.set(COLOR, -1);
         }
     }
 
     private void refreshColor() {
         this.fixedColor = false;
-        this.dataManager.set(COLOR, Integer.valueOf(PotionUtils
-                .getPotionColorFromEffectList(PotionUtils.mergeEffects(this.potion, this.customPotionEffects))));
+        this.dataManager.set(COLOR, PotionUtils
+                .getPotionColorFromEffectList(PotionUtils.mergeEffects(this.potion, this.customPotionEffects)));
     }
 
     public void addEffect(PotionEffect effect) {
         this.customPotionEffects.add(effect);
-        this.getDataManager().set(COLOR, Integer.valueOf(PotionUtils
-                .getPotionColorFromEffectList(PotionUtils.mergeEffects(this.potion, this.customPotionEffects))));
+        this.getDataManager().set(COLOR, PotionUtils
+                .getPotionColorFromEffectList(PotionUtils.mergeEffects(this.potion, this.customPotionEffects)));
     }
 
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.dataManager.register(COLOR, Integer.valueOf(-1));
+        this.dataManager.register(COLOR, -1);
     }
 
     @Override
@@ -115,7 +115,7 @@ public class EntityTippedEssenceArrow extends EntityEssenceArrow {
             this.world.setEntityState(this, (byte) 0);
             this.potion = PotionTypes.EMPTY;
             this.customPotionEffects.clear();
-            this.dataManager.set(COLOR, Integer.valueOf(-1));
+            this.dataManager.set(COLOR, -1);
         }
     }
 
@@ -137,12 +137,12 @@ public class EntityTippedEssenceArrow extends EntityEssenceArrow {
     }
 
     public int getColor() {
-        return this.dataManager.get(COLOR).intValue();
+        return this.dataManager.get(COLOR);
     }
 
     private void setFixedColor(int color) {
         this.fixedColor = true;
-        this.dataManager.set(COLOR, Integer.valueOf(color));
+        this.dataManager.set(COLOR, color);
     }
 
     @Override

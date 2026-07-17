@@ -222,7 +222,7 @@ public class ModTeleporter extends Teleporter {
         int i = MathHelper.floor(entityIn.posX);
         int j = MathHelper.floor(entityIn.posZ);
         boolean flag1 = true;
-        Object object = BlockPos.ORIGIN;
+        BlockPos object = BlockPos.ORIGIN;
         long k = ChunkPos.asLong(i, j);
 
         if (destinationCoordinateCache.containsKey(k)) {
@@ -264,27 +264,27 @@ public class ModTeleporter extends Teleporter {
         if (d0 >= 0.0D) {
             if (flag1) {
                 destinationCoordinateCache.put(k,
-                        new Teleporter.PortalPosition((BlockPos) object, world.getTotalWorldTime()));
+                        new Teleporter.PortalPosition(object, world.getTotalWorldTime()));
             }
 
-            double d4 = ((BlockPos) object).getX() + 0.5D;
-            double d5 = ((BlockPos) object).getY() + 0.5D;
-            double d6 = ((BlockPos) object).getZ() + 0.5D;
+            double d4 = object.getX() + 0.5D;
+            double d5 = object.getY() + 0.5D;
+            double d6 = object.getZ() + 0.5D;
             EnumFacing enumfacing = null;
 
-            if (world.getBlockState(((BlockPos) object).west()).getBlock() == portal) {
+            if (world.getBlockState(object.west()).getBlock() == portal) {
                 enumfacing = EnumFacing.NORTH;
             }
 
-            if (world.getBlockState(((BlockPos) object).east()).getBlock() == portal) {
+            if (world.getBlockState(object.east()).getBlock() == portal) {
                 enumfacing = EnumFacing.SOUTH;
             }
 
-            if (world.getBlockState(((BlockPos) object).north()).getBlock() == portal) {
+            if (world.getBlockState(object.north()).getBlock() == portal) {
                 enumfacing = EnumFacing.EAST;
             }
 
-            if (world.getBlockState(((BlockPos) object).south()).getBlock() == portal) {
+            if (world.getBlockState(object.south()).getBlock() == portal) {
                 enumfacing = EnumFacing.WEST;
             }
 
@@ -293,15 +293,15 @@ public class ModTeleporter extends Teleporter {
 
             if (enumfacing != null) {
                 EnumFacing enumfacing2 = enumfacing.rotateYCCW();
-                BlockPos blockpos2 = ((BlockPos) object).offset(enumfacing);
+                BlockPos blockpos2 = object.offset(enumfacing);
                 boolean flag2 = func_180265_a(blockpos2);
                 boolean flag3 = func_180265_a(blockpos2.offset(enumfacing2));
 
                 if (flag3 && flag2) {
-                    object = ((BlockPos) object).offset(enumfacing2);
+                    object = object.offset(enumfacing2);
                     enumfacing = enumfacing.getOpposite();
                     enumfacing2 = enumfacing2.getOpposite();
-                    BlockPos blockpos3 = ((BlockPos) object).offset(enumfacing);
+                    BlockPos blockpos3 = object.offset(enumfacing);
                     flag2 = func_180265_a(blockpos3);
                     flag3 = func_180265_a(blockpos3.offset(enumfacing2));
                 }
@@ -317,9 +317,9 @@ public class ModTeleporter extends Teleporter {
                     f1 = 0.0F;
                 }
 
-                d4 = ((BlockPos) object).getX() + 1.0D;
-                d5 = ((BlockPos) object).getY() + 0.5D;
-                d6 = ((BlockPos) object).getZ() + 0.5D;
+                d4 = object.getX() + 1.0D;
+                d5 = object.getY() + 0.5D;
+                d6 = object.getZ() + 0.5D;
                 d4 += enumfacing2.getXOffset() * f6 + enumfacing.getXOffset() * f1;
                 d6 += enumfacing2.getZOffset() * f6 + enumfacing.getZOffset() * f1;
                 float f2 = 0.0F;
@@ -399,15 +399,8 @@ public class ModTeleporter extends Teleporter {
     public void removeStalePortalLocations(long worldTime) {
         if (worldTime % 100L == 0L) {
             long i = worldTime - 300L;
-            ObjectIterator<Teleporter.PortalPosition> objectiterator = destinationCoordinateCache.values().iterator();
 
-            while (objectiterator.hasNext()) {
-                Teleporter.PortalPosition teleporter$portalposition = objectiterator.next();
-
-                if (teleporter$portalposition == null || teleporter$portalposition.lastUpdateTime < i) {
-                    objectiterator.remove();
-                }
-            }
+            destinationCoordinateCache.values().removeIf(teleporter$portalposition -> teleporter$portalposition == null || teleporter$portalposition.lastUpdateTime < i);
         }
     }
 }

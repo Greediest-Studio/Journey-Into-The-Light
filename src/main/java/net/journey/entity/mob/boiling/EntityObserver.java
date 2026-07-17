@@ -69,7 +69,7 @@ public class EntityObserver extends JEntityMob {
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.dataManager.register(ON_FIRE, Byte.valueOf((byte) 0));
+        this.dataManager.register(ON_FIRE, (byte) 0);
     }
 
     @Override
@@ -140,14 +140,14 @@ public class EntityObserver extends JEntityMob {
     }
 
     public boolean isFlying() {
-        return (this.dataManager.get(ON_FIRE).byteValue() & 1) != 0;
+        return (this.dataManager.get(ON_FIRE) & 1) != 0;
     }
 
     public void setFlying(boolean b) {
-        byte b0 = this.dataManager.get(ON_FIRE).byteValue();
+        byte b0 = this.dataManager.get(ON_FIRE);
         if (b) b0 = (byte) (b0 | 1);
         else b0 &= -2;
-        this.dataManager.set(ON_FIRE, Byte.valueOf(b0));
+        this.dataManager.set(ON_FIRE, b0);
     }
 
     class AIFireballAttack extends EntityAIBase {

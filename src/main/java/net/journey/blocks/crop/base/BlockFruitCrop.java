@@ -55,7 +55,7 @@ public class BlockFruitCrop extends BlockMod implements IGrowable {
     public BlockFruitCrop(String name, String finalName) {
         super(EnumMaterialTypes.SLIME, name, finalName, 0.5F);
         this.setCreativeTab(null);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(AGE, Integer.valueOf(0)));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(AGE, 0));
         this.setTickRandomly(true);
     }
 
@@ -64,7 +64,7 @@ public class BlockFruitCrop extends BlockMod implements IGrowable {
         this.fruitItem = fruitItem;
         this.sustainableBlock = sustainableBlock;
         this.setCreativeTab(null);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(AGE, Integer.valueOf(0)));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(AGE, 0));
         this.setTickRandomly(true);
     }
 
@@ -73,10 +73,10 @@ public class BlockFruitCrop extends BlockMod implements IGrowable {
         if (!this.canBlockStay(worldIn, pos, state)) {
             this.dropBlock(worldIn, pos, state);
         } else {
-            int i = state.getValue(AGE).intValue();
+            int i = state.getValue(AGE);
 
             if (i < 2 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(worldIn, pos, state, rand.nextInt(5) == 0)) {
-                worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(i + 1)), 2);
+                worldIn.setBlockState(pos, state.withProperty(AGE, i + 1), 2);
                 net.minecraftforge.common.ForgeHooks.onCropsGrowPost(worldIn, pos, state, worldIn.getBlockState(pos));
             }
         }
@@ -100,7 +100,7 @@ public class BlockFruitCrop extends BlockMod implements IGrowable {
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        int i = state.getValue(AGE).intValue();
+        int i = state.getValue(AGE);
 
         switch (state.getValue(FACING)) {
             case SOUTH:
@@ -136,7 +136,7 @@ public class BlockFruitCrop extends BlockMod implements IGrowable {
         if (!facing.getAxis().isHorizontal()) {
             facing = EnumFacing.NORTH;
         }
-        return this.getDefaultState().withProperty(FACING, facing.getOpposite()).withProperty(AGE, Integer.valueOf(0));
+        return this.getDefaultState().withProperty(FACING, facing.getOpposite()).withProperty(AGE, 0);
     }
 
     @Override
@@ -164,7 +164,7 @@ public class BlockFruitCrop extends BlockMod implements IGrowable {
     @Override
     public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
         List<ItemStack> dropped = super.getDrops(world, pos, state, fortune);
-        int i = state.getValue(AGE).intValue();
+        int i = state.getValue(AGE);
         int j = 1;
 
         if (i >= 2) {
@@ -178,7 +178,7 @@ public class BlockFruitCrop extends BlockMod implements IGrowable {
 
     @Override
     public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
-        return state.getValue(AGE).intValue() < 2;
+        return state.getValue(AGE) < 2;
     }
 
     @Override
@@ -188,7 +188,7 @@ public class BlockFruitCrop extends BlockMod implements IGrowable {
 
     @Override
     public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-        worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(state.getValue(AGE).intValue() + 1)), 2);
+        worldIn.setBlockState(pos, state.withProperty(AGE, state.getValue(AGE) + 1), 2);
     }
 
     @Override
@@ -199,14 +199,14 @@ public class BlockFruitCrop extends BlockMod implements IGrowable {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(FACING, EnumFacing.byHorizontalIndex(meta)).withProperty(AGE, Integer.valueOf((meta & 15) >> 2));
+        return this.getDefaultState().withProperty(FACING, EnumFacing.byHorizontalIndex(meta)).withProperty(AGE, (meta & 15) >> 2);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
         int i = 0;
         i = i | state.getValue(FACING).getHorizontalIndex();
-        i = i | state.getValue(AGE).intValue() << 2;
+        i = i | state.getValue(AGE) << 2;
         return i;
     }
 

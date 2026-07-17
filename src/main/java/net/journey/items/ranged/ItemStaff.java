@@ -63,13 +63,13 @@ public class ItemStaff extends JItem implements IUsesEssence {
                     shoot.shoot(player, player.rotationPitch, player.rotationYaw, 0.0F, 2.5F, 0.2F);
                     world.spawnEntity(shoot);
                     stack.damageItem(1, player);
-                    return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
+                    return new ActionResult<>(EnumActionResult.SUCCESS, stack);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }
-        return new ActionResult<ItemStack>(EnumActionResult.FAIL, stack);
+        return new ActionResult<>(EnumActionResult.FAIL, stack);
     }
 
     @Override

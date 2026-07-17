@@ -120,13 +120,12 @@ public class ChunkGeneratorCloudia implements IChunkGenerator {
 		List<BlockPos> chunkTileEntityPositions = (List<BlockPos>) chunkTileEntityMap.get(chunkpos);
 		if (chunkTileEntityPositions != null) {
 			Chunk chunk = this.world.getChunk(chunkX, chunkZ);
-			for (int i = 0; i < chunkTileEntityPositions.size(); i++) {
-				BlockPos chunkPosition = chunkTileEntityPositions.get(i);
-				IBlockState state = chunk.getBlockState(chunkPosition.getX(), chunkPosition.getY(),
-						chunkPosition.getZ());
-				TileEntity te = state.getBlock().createTileEntity(this.world, state);
-				this.world.setTileEntity(chunkPosition.add(x, 0, z), te);
-			}
+            for (BlockPos chunkPosition : chunkTileEntityPositions) {
+                IBlockState state = chunk.getBlockState(chunkPosition.getX(), chunkPosition.getY(),
+                        chunkPosition.getZ());
+                TileEntity te = state.getBlock().createTileEntity(this.world, state);
+                this.world.setTileEntity(chunkPosition.add(x, 0, z), te);
+            }
 			chunkTileEntityMap.remove(chunkpos);
 		}
 

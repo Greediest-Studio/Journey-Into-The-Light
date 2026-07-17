@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
 
 public class EntityNatureMage extends JEntityMob implements IRangedAttackMob {
 
-    private final EntityAIAttackRangedBow<EntityNatureMage> aiArrowAttack = new EntityAIAttackRangedBow<EntityNatureMage>(this, 1.0D, 20, 15.0F);
+    private final EntityAIAttackRangedBow<EntityNatureMage> aiArrowAttack = new EntityAIAttackRangedBow<>(this, 1.0D, 20, 15.0F);
 
     public EntityNatureMage(World par1World) {
         super(par1World);

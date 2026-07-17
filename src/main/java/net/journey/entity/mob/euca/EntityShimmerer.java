@@ -90,11 +90,11 @@ public class EntityShimmerer extends JEntityFlyingMob {
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.dataManager.register(FIRE, Boolean.valueOf(false));
+        this.dataManager.register(FIRE, Boolean.FALSE);
     }
 
     public void setFire(boolean b) {
-        this.dataManager.set(FIRE, Boolean.valueOf(b));
+        this.dataManager.set(FIRE, b);
     }
 
     private class AIRandomFly extends EntityAIBase {

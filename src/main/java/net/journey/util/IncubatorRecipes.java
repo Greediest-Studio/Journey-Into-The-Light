@@ -39,7 +39,7 @@ public class IncubatorRecipes {
     public void addSmeltingRecipe(ItemStack input, ItemStack stack, float experience) {
         if (getSmeltingResult(input) != ItemStack.EMPTY) { net.minecraftforge.fml.common.FMLLog.log.info("Ignored incubator recipe with conflicting input: {} = {}", input, stack); return; }
         this.smeltingList.put(input, stack);
-        this.experienceList.put(stack, Float.valueOf(experience));
+        this.experienceList.put(stack, experience);
     }
 
     public ItemStack getSmeltingResult(ItemStack stack) {
@@ -64,7 +64,7 @@ public class IncubatorRecipes {
         if (ret != -1) return ret;
         for (Entry<ItemStack, Float> entry : this.experienceList.entrySet()) {
             if (this.compareItemStacks(stack, entry.getKey())) {
-                return entry.getValue().floatValue();
+                return entry.getValue();
             }
         }
         return 0.0F;

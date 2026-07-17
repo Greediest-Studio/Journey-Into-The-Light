@@ -220,7 +220,7 @@ public class BlockModLeaves extends BlockMod implements IShearable {
 
     @Override
     public ArrayList<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
-        ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
+        ArrayList<ItemStack> ret = new ArrayList<>();
         ret.add(new ItemStack(this, 1, 0));
         return ret;
     }

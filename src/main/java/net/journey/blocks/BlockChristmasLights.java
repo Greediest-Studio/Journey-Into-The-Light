@@ -36,7 +36,7 @@ public class BlockChristmasLights extends BlockMod implements IShearable {
     }
 
     public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
-        ArrayList<ItemStack> stack = new ArrayList<ItemStack>();
+        ArrayList<ItemStack> stack = new ArrayList<>();
         stack.add(new ItemStack(this));
         return stack;
     }

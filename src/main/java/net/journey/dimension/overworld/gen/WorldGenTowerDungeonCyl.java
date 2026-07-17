@@ -31,7 +31,7 @@ public class WorldGenTowerDungeonCyl extends WorldGenerator {
 		int levels = 4;
 		int height = levels * 4;
 
-		ArrayList<String> mobNames = new ArrayList<String>();
+		ArrayList<String> mobNames = new ArrayList<>();
 
 
 		BlockModStairs stair = JourneyBlocks.dungeonBrickStairs;

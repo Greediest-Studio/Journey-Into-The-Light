@@ -10,6 +10,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -26,7 +27,6 @@ public class WorldGenAPI {
         BlockPos.getAllInBoxMutable(x, y + 1, z, x, y + 5, z).forEach(pos -> {
             if (!w.isAirBlock(pos)) {
                 result.set(false);
-                return;
             }
         });
 
@@ -132,8 +132,7 @@ public class WorldGenAPI {
     }
 
     public static void addOreWorldSphere(World w, int size, int x, int y, int z, Block stone, Block dirt, Block grass, int chance, Block... ores) {
-        ArrayList<Block> block = new ArrayList<Block>();
-        for (Block b : ores) block.add(b);
+        ArrayList<Block> block = new ArrayList<>(Arrays.asList(ores));
         int XLength = x - size;
         int XHeight = x + size;
         int ZLength = z - size;
@@ -193,7 +192,6 @@ public class WorldGenAPI {
                     IBlockState state = w.getBlockState(mutableBlockPos);
                     if (state.getBlock() != block) {
                         result.set(false);
-                        return;
                     }
                 });
 

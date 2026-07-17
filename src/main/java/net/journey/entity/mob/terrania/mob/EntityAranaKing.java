@@ -75,7 +75,7 @@ public class EntityAranaKing extends JEntityMob {
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.dataManager.register(CLIMBING, Byte.valueOf((byte) 0));
+        this.dataManager.register(CLIMBING, (byte) 0);
     }
 
     @Override
@@ -135,11 +135,11 @@ public class EntityAranaKing extends JEntityMob {
     }
 
     public boolean isBesideClimbableBlock() {
-        return (this.dataManager.get(CLIMBING).byteValue() & 1) != 0;
+        return (this.dataManager.get(CLIMBING) & 1) != 0;
     }
 
     public void setBesideClimbableBlock(boolean climbing) {
-        byte b0 = this.dataManager.get(CLIMBING).byteValue();
+        byte b0 = this.dataManager.get(CLIMBING);
 
         if (climbing) {
             b0 = (byte) (b0 | 1);
@@ -147,7 +147,7 @@ public class EntityAranaKing extends JEntityMob {
             b0 = (byte) (b0 & -2);
         }
 
-        this.dataManager.set(CLIMBING, Byte.valueOf(b0));
+        this.dataManager.set(CLIMBING, b0);
     }
 
     @Nullable

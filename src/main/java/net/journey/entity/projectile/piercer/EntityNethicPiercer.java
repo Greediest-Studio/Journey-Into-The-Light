@@ -32,7 +32,6 @@ public class EntityNethicPiercer extends EntityThrowable {
             par1.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.thrower), this.damage);
             if (!this.world.isRemote)
                 this.setDead();
-            return;
         }
     }
 

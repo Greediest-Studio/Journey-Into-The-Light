@@ -30,6 +30,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.slayer.api.EnumMaterialTypes;
 
 import javax.annotation.Nullable;
+import java.util.Collections;
 import java.util.Random;
 
 public class BlockModVine extends BlockMod implements net.minecraftforge.common.IShearable {
@@ -48,7 +49,7 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
 
     public BlockModVine(String name, String finalName, float hardness) {
         super(EnumMaterialTypes.TALL_PLANTS, name, finalName, hardness, JourneyTabs.DECORATION);
-	    this.setDefaultState(this.blockState.getBaseState().withProperty(UP, Boolean.valueOf(false)).withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)));
+	    this.setDefaultState(this.blockState.getBaseState().withProperty(UP, Boolean.FALSE).withProperty(NORTH, Boolean.FALSE).withProperty(EAST, Boolean.FALSE).withProperty(SOUTH, Boolean.FALSE).withProperty(WEST, Boolean.FALSE));
         this.setTickRandomly(true);
         this.setCreativeTab(JourneyTabs.DECORATION);
     }
@@ -78,7 +79,7 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
         int i = 0;
 
         for (PropertyBool propertybool : ALL_FACES) {
-            if (state.getValue(propertybool).booleanValue()) {
+            if (state.getValue(propertybool)) {
                 ++i;
             }
         }
@@ -103,27 +104,27 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
         int i = 0;
         AxisAlignedBB axisalignedbb = FULL_BLOCK_AABB;
 
-        if (state.getValue(UP).booleanValue()) {
+        if (state.getValue(UP)) {
             axisalignedbb = UP_AABB;
             ++i;
         }
 
-        if (state.getValue(NORTH).booleanValue()) {
+        if (state.getValue(NORTH)) {
             axisalignedbb = NORTH_AABB;
             ++i;
         }
 
-        if (state.getValue(EAST).booleanValue()) {
+        if (state.getValue(EAST)) {
             axisalignedbb = EAST_AABB;
             ++i;
         }
 
-        if (state.getValue(SOUTH).booleanValue()) {
+        if (state.getValue(SOUTH)) {
             axisalignedbb = SOUTH_AABB;
             ++i;
         }
 
-        if (state.getValue(WEST).booleanValue()) {
+        if (state.getValue(WEST)) {
             axisalignedbb = WEST_AABB;
             ++i;
         }
@@ -134,7 +135,7 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
     @Override
     public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
         BlockPos blockpos = pos.up();
-        return state.withProperty(UP, Boolean.valueOf(worldIn.getBlockState(blockpos).getBlockFaceShape(worldIn, blockpos, EnumFacing.DOWN) == BlockFaceShape.SOLID));
+        return state.withProperty(UP, worldIn.getBlockState(blockpos).getBlockFaceShape(worldIn, blockpos, EnumFacing.DOWN) == BlockFaceShape.SOLID);
     }
 
     @Override
@@ -173,11 +174,11 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
         for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL) {
             PropertyBool propertybool = getPropertyFor(enumfacing);
 
-            if (state.getValue(propertybool).booleanValue() && !this.canAttachTo(worldIn, pos, enumfacing.getOpposite())) {
+            if (state.getValue(propertybool) && !this.canAttachTo(worldIn, pos, enumfacing.getOpposite())) {
                 IBlockState iblockstate1 = worldIn.getBlockState(pos.up());
 
-                if (iblockstate1.getBlock() != this || !iblockstate1.getValue(propertybool).booleanValue()) {
-                    state = state.withProperty(propertybool, Boolean.valueOf(false));
+                if (iblockstate1.getBlock() != this || !iblockstate1.getValue(propertybool)) {
+                    state = state.withProperty(propertybool, Boolean.FALSE);
                 }
             }
         }
@@ -233,16 +234,16 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
 
                     for (EnumFacing enumfacing2 : EnumFacing.Plane.HORIZONTAL) {
                         if (rand.nextBoolean() && this.canAttachTo(worldIn, blockpos2, enumfacing2.getOpposite())) {
-                            iblockstate2 = iblockstate2.withProperty(getPropertyFor(enumfacing2), Boolean.valueOf(true));
+                            iblockstate2 = iblockstate2.withProperty(getPropertyFor(enumfacing2), Boolean.TRUE);
                         } else {
-                            iblockstate2 = iblockstate2.withProperty(getPropertyFor(enumfacing2), Boolean.valueOf(false));
+                            iblockstate2 = iblockstate2.withProperty(getPropertyFor(enumfacing2), Boolean.FALSE);
                         }
                     }
 
-                    if (iblockstate2.getValue(NORTH).booleanValue() || iblockstate2.getValue(EAST).booleanValue() || iblockstate2.getValue(SOUTH).booleanValue() || iblockstate2.getValue(WEST).booleanValue()) {
+                    if (iblockstate2.getValue(NORTH) || iblockstate2.getValue(EAST) || iblockstate2.getValue(SOUTH) || iblockstate2.getValue(WEST)) {
                         worldIn.setBlockState(blockpos2, iblockstate2, 2);
                     }
-                } else if (enumfacing1.getAxis().isHorizontal() && !state.getValue(getPropertyFor(enumfacing1)).booleanValue()) {
+                } else if (enumfacing1.getAxis().isHorizontal() && !state.getValue(getPropertyFor(enumfacing1))) {
                     if (!flag) {
                         BlockPos blockpos4 = pos.offset(enumfacing1);
                         IBlockState iblockstate3 = worldIn.getBlockState(blockpos4);
@@ -251,22 +252,22 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
                         if (block1.isAir(iblockstate3, worldIn, blockpos4)) {
                             EnumFacing enumfacing3 = enumfacing1.rotateY();
                             EnumFacing enumfacing4 = enumfacing1.rotateYCCW();
-                            boolean flag1 = state.getValue(getPropertyFor(enumfacing3)).booleanValue();
-                            boolean flag2 = state.getValue(getPropertyFor(enumfacing4)).booleanValue();
+                            boolean flag1 = state.getValue(getPropertyFor(enumfacing3));
+                            boolean flag2 = state.getValue(getPropertyFor(enumfacing4));
                             BlockPos blockpos = blockpos4.offset(enumfacing3);
                             BlockPos blockpos1 = blockpos4.offset(enumfacing4);
 
                             if (flag1 && this.canAttachTo(worldIn, blockpos.offset(enumfacing3), enumfacing3)) {
-                                worldIn.setBlockState(blockpos4, this.getDefaultState().withProperty(getPropertyFor(enumfacing3), Boolean.valueOf(true)), 2);
+                                worldIn.setBlockState(blockpos4, this.getDefaultState().withProperty(getPropertyFor(enumfacing3), Boolean.TRUE), 2);
                             } else if (flag2 && this.canAttachTo(worldIn, blockpos1.offset(enumfacing4), enumfacing4)) {
-                                worldIn.setBlockState(blockpos4, this.getDefaultState().withProperty(getPropertyFor(enumfacing4), Boolean.valueOf(true)), 2);
+                                worldIn.setBlockState(blockpos4, this.getDefaultState().withProperty(getPropertyFor(enumfacing4), Boolean.TRUE), 2);
                             } else if (flag1 && worldIn.isAirBlock(blockpos) && this.canAttachTo(worldIn, blockpos, enumfacing1)) {
-                                worldIn.setBlockState(blockpos, this.getDefaultState().withProperty(getPropertyFor(enumfacing1.getOpposite()), Boolean.valueOf(true)), 2);
+                                worldIn.setBlockState(blockpos, this.getDefaultState().withProperty(getPropertyFor(enumfacing1.getOpposite()), Boolean.TRUE), 2);
                             } else if (flag2 && worldIn.isAirBlock(blockpos1) && this.canAttachTo(worldIn, blockpos1, enumfacing1)) {
-                                worldIn.setBlockState(blockpos1, this.getDefaultState().withProperty(getPropertyFor(enumfacing1.getOpposite()), Boolean.valueOf(true)), 2);
+                                worldIn.setBlockState(blockpos1, this.getDefaultState().withProperty(getPropertyFor(enumfacing1.getOpposite()), Boolean.TRUE), 2);
                             }
                         } else if (iblockstate3.getBlockFaceShape(worldIn, blockpos4, enumfacing1) == BlockFaceShape.SOLID) {
-                            worldIn.setBlockState(pos, state.withProperty(getPropertyFor(enumfacing1), Boolean.valueOf(true)), 2);
+                            worldIn.setBlockState(pos, state.withProperty(getPropertyFor(enumfacing1), Boolean.TRUE), 2);
                         }
                     }
                 } else {
@@ -279,11 +280,11 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
 
                             for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL) {
                                 if (rand.nextBoolean()) {
-                                    iblockstate1 = iblockstate1.withProperty(getPropertyFor(enumfacing), Boolean.valueOf(false));
+                                    iblockstate1 = iblockstate1.withProperty(getPropertyFor(enumfacing), Boolean.FALSE);
                                 }
                             }
 
-                            if (iblockstate1.getValue(NORTH).booleanValue() || iblockstate1.getValue(EAST).booleanValue() || iblockstate1.getValue(SOUTH).booleanValue() || iblockstate1.getValue(WEST).booleanValue()) {
+                            if (iblockstate1.getValue(NORTH) || iblockstate1.getValue(EAST) || iblockstate1.getValue(SOUTH) || iblockstate1.getValue(WEST)) {
                                 worldIn.setBlockState(blockpos3, iblockstate1, 2);
                             }
                         } else if (iblockstate.getBlock() == this) {
@@ -292,12 +293,12 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
                             for (EnumFacing enumfacing5 : EnumFacing.Plane.HORIZONTAL) {
                                 PropertyBool propertybool = getPropertyFor(enumfacing5);
 
-                                if (rand.nextBoolean() && state.getValue(propertybool).booleanValue()) {
-                                    iblockstate4 = iblockstate4.withProperty(propertybool, Boolean.valueOf(true));
+                                if (rand.nextBoolean() && state.getValue(propertybool)) {
+                                    iblockstate4 = iblockstate4.withProperty(propertybool, Boolean.TRUE);
                                 }
                             }
 
-                            if (iblockstate4.getValue(NORTH).booleanValue() || iblockstate4.getValue(EAST).booleanValue() || iblockstate4.getValue(SOUTH).booleanValue() || iblockstate4.getValue(WEST).booleanValue()) {
+                            if (iblockstate4.getValue(NORTH) || iblockstate4.getValue(EAST) || iblockstate4.getValue(SOUTH) || iblockstate4.getValue(WEST)) {
                                 worldIn.setBlockState(blockpos3, iblockstate4, 2);
                             }
                         }
@@ -310,11 +311,11 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
     @Override
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY,
                                             float hitZ, int meta, EntityLivingBase placer) {
-        IBlockState iblockstate = this.getDefaultState().withProperty(UP, Boolean.valueOf(false))
-                .withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false))
-                .withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false));
+        IBlockState iblockstate = this.getDefaultState().withProperty(UP, Boolean.FALSE)
+                .withProperty(NORTH, Boolean.FALSE).withProperty(EAST, Boolean.FALSE)
+                .withProperty(SOUTH, Boolean.FALSE).withProperty(WEST, Boolean.FALSE);
         return facing.getAxis().isHorizontal()
-                ? iblockstate.withProperty(getPropertyFor(facing.getOpposite()), Boolean.valueOf(true)) : iblockstate;
+                ? iblockstate.withProperty(getPropertyFor(facing.getOpposite()), Boolean.TRUE) : iblockstate;
     }
 
     @Override
@@ -339,7 +340,7 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(SOUTH, (meta & 1) > 0).withProperty(WEST, Boolean.valueOf((meta & 2) > 0)).withProperty(NORTH, Boolean.valueOf((meta & 4) > 0)).withProperty(EAST, Boolean.valueOf((meta & 8) > 0));
+        return this.getDefaultState().withProperty(SOUTH, (meta & 1) > 0).withProperty(WEST, (meta & 2) > 0).withProperty(NORTH, (meta & 4) > 0).withProperty(EAST, (meta & 8) > 0);
     }
 
     @Override
@@ -352,19 +353,19 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
     public int getMetaFromState(IBlockState state) {
         int i = 0;
 
-        if (state.getValue(SOUTH).booleanValue()) {
+        if (state.getValue(SOUTH)) {
             i |= 1;
         }
 
-        if (state.getValue(WEST).booleanValue()) {
+        if (state.getValue(WEST)) {
             i |= 2;
         }
 
-        if (state.getValue(NORTH).booleanValue()) {
+        if (state.getValue(NORTH)) {
             i |= 4;
         }
 
-        if (state.getValue(EAST).booleanValue()) {
+        if (state.getValue(EAST)) {
             i |= 8;
         }
 
@@ -414,7 +415,7 @@ public class BlockModVine extends BlockMod implements net.minecraftforge.common.
 
     @Override
     public java.util.List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
-        return java.util.Arrays.asList(new ItemStack(this, 1));
+        return Collections.singletonList(new ItemStack(this, 1));
     }
 
     @Override

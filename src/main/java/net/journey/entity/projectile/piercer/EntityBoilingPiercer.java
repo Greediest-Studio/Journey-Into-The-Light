@@ -32,7 +32,6 @@ public class EntityBoilingPiercer extends EntityThrowable {
             this.playSound(JourneySounds.KNIFE, 1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));
             if (!this.world.isRemote)
                 this.setDead();
-            return;
         }
     }
 

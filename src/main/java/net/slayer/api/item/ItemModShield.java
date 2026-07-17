@@ -73,12 +73,12 @@ public class ItemModShield extends JItem {
             try {
                 player.addPotionEffect(new PotionEffects().setPotionEffect(PotionEffects.fireResistance, 240, 0));
                 itemstack.damageItem(1, player);
-                return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemstack);
+                return new ActionResult<>(EnumActionResult.SUCCESS, itemstack);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        return new ActionResult<ItemStack>(EnumActionResult.FAIL, itemstack);
+        return new ActionResult<>(EnumActionResult.FAIL, itemstack);
     }
 
     @Override

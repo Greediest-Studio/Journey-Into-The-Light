@@ -24,8 +24,7 @@ public class WorldGenDepthsLights extends WorldGenerator {
                     int j = 0;
                     EnumFacing[] aenumfacing = EnumFacing.values();
                     int k = aenumfacing.length;
-                    for (int l = 0; l < k; l++) {
-                        EnumFacing enumfacing = aenumfacing[l];
+                    for (EnumFacing enumfacing : aenumfacing) {
                         if (w.getBlockState(blockpos1.offset(enumfacing)).getBlock() == JourneyBlocks.depthsLights) j++;
                         if (j > 1) break;
                     }
@@ -53,8 +52,7 @@ public class WorldGenDepthsLights extends WorldGenerator {
                         int j = 0;
                         EnumFacing[] aenumfacing = EnumFacing.values();
                         int k = aenumfacing.length;
-                        for (int l = 0; l < k; l++) {
-                            EnumFacing enumfacing = aenumfacing[l];
+                        for (EnumFacing enumfacing : aenumfacing) {
                             if (w.getBlockState(blockpos1.offset(enumfacing)).getBlock() == JourneyBlocks.depthsLights)
                                 j++;
                             if (j > 1) break;

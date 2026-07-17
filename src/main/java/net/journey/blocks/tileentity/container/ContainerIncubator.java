@@ -48,25 +48,23 @@ public class ContainerIncubator extends Container {
 	public void detectAndSendChanges() {
 		super.detectAndSendChanges();
 
-		for (int i = 0; i < this.listeners.size(); ++i) {
-			IContainerListener icontainerlistener = this.listeners.get(i);
+        for (IContainerListener icontainerlistener : this.listeners) {
+            if (this.cookTime != this.tileIncubator.getField(2)) {
+                icontainerlistener.sendWindowProperty(this, 2, this.tileIncubator.getField(2));
+            }
 
-			if (this.cookTime != this.tileIncubator.getField(2)) {
-				icontainerlistener.sendWindowProperty(this, 2, this.tileIncubator.getField(2));
-			}
+            if (this.IncubatorBurnTime != this.tileIncubator.getField(0)) {
+                icontainerlistener.sendWindowProperty(this, 0, this.tileIncubator.getField(0));
+            }
 
-			if (this.IncubatorBurnTime != this.tileIncubator.getField(0)) {
-				icontainerlistener.sendWindowProperty(this, 0, this.tileIncubator.getField(0));
-			}
+            if (this.currentItemBurnTime != this.tileIncubator.getField(1)) {
+                icontainerlistener.sendWindowProperty(this, 1, this.tileIncubator.getField(1));
+            }
 
-			if (this.currentItemBurnTime != this.tileIncubator.getField(1)) {
-				icontainerlistener.sendWindowProperty(this, 1, this.tileIncubator.getField(1));
-			}
-
-			if (this.totalCookTime != this.tileIncubator.getField(3)) {
-				icontainerlistener.sendWindowProperty(this, 3, this.tileIncubator.getField(3));
-			}
-		}
+            if (this.totalCookTime != this.tileIncubator.getField(3)) {
+                icontainerlistener.sendWindowProperty(this, 3, this.tileIncubator.getField(3));
+            }
+        }
 		this.cookTime = this.tileIncubator.getField(2);
 		this.IncubatorBurnTime = this.tileIncubator.getField(0);
 		this.currentItemBurnTime = this.tileIncubator.getField(1);

@@ -38,7 +38,7 @@ public class WorldGenTowerDungeon extends WorldGenerator {
         WorldGenAPI.addRectangle(1, 2, 3, w, x, y + 1, z + 4, Blocks.AIR);
         WorldGenAPI.addRectangle(1, 2, 3, w, x + 14, y + 1, z + 4, Blocks.AIR);
 
-        ArrayList<String> mobNames = new ArrayList<String>();
+        ArrayList<String> mobNames = new ArrayList<>();
 
         mobNames.add("minecraft:spider");
         mobNames.add("minecraft:creeper");

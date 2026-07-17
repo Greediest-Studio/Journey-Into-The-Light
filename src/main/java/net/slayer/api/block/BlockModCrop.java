@@ -30,7 +30,7 @@ public abstract class BlockModCrop extends BlockBush implements IGrowable {
     public String name;
 
     public BlockModCrop(String name) {
-        this.setDefaultState(this.blockState.getBaseState().withProperty(getAge(), Integer.valueOf(0)));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(getAge(), 0));
         this.setTickRandomly(true);
         float f = 0.5F;
         this.setCreativeTab(null);
@@ -86,12 +86,12 @@ public abstract class BlockModCrop extends BlockBush implements IGrowable {
     }
 
     protected int getAge(IBlockState state) {
-        return state.getValue(this.getAge()).intValue();
+        return state.getValue(this.getAge());
     }
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        return CROPS_AABB[state.getValue(this.getAge()).intValue()];
+        return CROPS_AABB[state.getValue(this.getAge())];
     }
 
     @Override
@@ -109,11 +109,11 @@ public abstract class BlockModCrop extends BlockBush implements IGrowable {
         if (!worldIn.isAreaLoaded(pos, 1))
             return;// Forge: prevent loading unloaded chunks when checking neighbor's light
         if (worldIn.getLightFromNeighbors(pos.up()) >= 9) {
-            int i = state.getValue(getAge()).intValue();
+            int i = state.getValue(getAge());
             if (i < getStages()) {
                 float f = getGrowthChance(this, worldIn, pos);
                 if (rand.nextInt((int) (25.0F / f) + 1) == 0) {
-                    worldIn.setBlockState(pos, state.withProperty(getAge(), Integer.valueOf(i + 1)), 2);
+                    worldIn.setBlockState(pos, state.withProperty(getAge(), i + 1), 2);
                 }
             }
         }
@@ -122,7 +122,7 @@ public abstract class BlockModCrop extends BlockBush implements IGrowable {
     public void grow(World worldIn, BlockPos pos, IBlockState state) {
         int i = this.getAge(state) + this.getBonemealAgeIncrease(worldIn);
         if (i > getStages()) i = getStages();
-        worldIn.setBlockState(pos, state.withProperty(getAge(), Integer.valueOf(i)), 2);
+        worldIn.setBlockState(pos, state.withProperty(getAge(), i), 2);
     }
 
     @Override
@@ -142,11 +142,11 @@ public abstract class BlockModCrop extends BlockBush implements IGrowable {
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return state.getValue(getAge()).intValue() == getStages() ? this.getCrop() : this.getSeed();
+        return state.getValue(getAge()) == getStages() ? this.getCrop() : this.getSeed();
     }
 
     public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
-        return state.getValue(getAge()).intValue() < getStages();
+        return state.getValue(getAge()) < getStages();
     }
 
     public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
@@ -165,12 +165,12 @@ public abstract class BlockModCrop extends BlockBush implements IGrowable {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(getAge(), Integer.valueOf(meta));
+        return this.getDefaultState().withProperty(getAge(), meta);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return state.getValue(getAge()).intValue();
+        return state.getValue(getAge());
     }
 
     @Override
@@ -181,7 +181,7 @@ public abstract class BlockModCrop extends BlockBush implements IGrowable {
     @Override
     public java.util.List<ItemStack> getDrops(net.minecraft.world.IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
         java.util.List<ItemStack> ret = super.getDrops(world, pos, state, fortune);
-        int age = state.getValue(getAge()).intValue();
+        int age = state.getValue(getAge());
         Random rand = world instanceof World ? ((World) world).rand : new Random();
         if (age >= getStages()) {
             int k = 3 + fortune;

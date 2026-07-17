@@ -52,7 +52,7 @@ public class ModelPurplian extends ModelBase {
     @Override
     public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
         this.head.render(f5);
-        for (int i = 0; i < sticks.length; i++) this.sticks[i].render(f5);
+        for (ModelRenderer modelRenderer : sticks) modelRenderer.render(f5);
         this.stick.render(f5);
         this.stick0.render(f5);
         this.stick1.render(f5);

@@ -60,10 +60,6 @@ public class LangGeneratorFacade {
 		SideExecutor.runWhenOn(Side.CLIENT, () -> addLangEntry(LangSection.CREATIVE_TABS, creativeTab, enName));
 	}
 
-	/**
-	 * @param nameSuffix represents full or base localized name that may contain %material% mark which will be replaced with provided material name.
-	 */
-
 	public static void save() {
 		if (exists()) generator.save();
 	}

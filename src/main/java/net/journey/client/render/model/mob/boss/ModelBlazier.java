@@ -40,7 +40,7 @@ public class ModelBlazier extends ModelBase {
         setRotationAngles(f, f1, f2, f3, f4, f5, entity);
         head.render(f5);
         body.render(f5);
-        for (int i = 0; i < sticks.length; i++) this.sticks[i].render(f5);
+        for (ModelRenderer stick : sticks) stick.render(f5);
     }
 
     private void setRotation(ModelRenderer model, float x, float y, float z) {

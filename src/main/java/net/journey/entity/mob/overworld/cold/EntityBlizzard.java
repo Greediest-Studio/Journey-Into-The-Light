@@ -48,7 +48,7 @@ public class EntityBlizzard extends JEntityMob {
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.dataManager.register(ON_FIRE, Byte.valueOf((byte) 0));
+        this.dataManager.register(ON_FIRE, (byte) 0);
     }
 
     @Override
@@ -152,7 +152,7 @@ public class EntityBlizzard extends JEntityMob {
     }
 
     public boolean func_70845_n() {
-        return (this.dataManager.get(ON_FIRE).byteValue() & 1) != 0;
+        return (this.dataManager.get(ON_FIRE) & 1) != 0;
     }
 
     @Override

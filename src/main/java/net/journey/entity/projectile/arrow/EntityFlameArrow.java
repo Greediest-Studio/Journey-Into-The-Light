@@ -110,7 +110,7 @@ public class EntityFlameArrow extends EntityArrow implements IProjectile {
 
     @Override
     protected void entityInit() {
-        this.dataManager.register(CRITICAL, Byte.valueOf((byte) 0));
+        this.dataManager.register(CRITICAL, (byte) 0);
     }
 
     @Override
@@ -381,18 +381,18 @@ public class EntityFlameArrow extends EntityArrow implements IProjectile {
 
     @Override
     public boolean getIsCritical() {
-        byte b0 = this.dataManager.get(CRITICAL).byteValue();
+        byte b0 = this.dataManager.get(CRITICAL);
         return (b0 & 1) != 0;
     }
 
     @Override
     public void setIsCritical(boolean c) {
-        byte b0 = this.dataManager.get(CRITICAL).byteValue();
+        byte b0 = this.dataManager.get(CRITICAL);
 
         if (c) {
-            this.dataManager.set(CRITICAL, Byte.valueOf((byte) (b0 | 1)));
+            this.dataManager.set(CRITICAL, (byte) (b0 | 1));
         } else {
-            this.dataManager.set(CRITICAL, Byte.valueOf((byte) (b0 & -2)));
+            this.dataManager.set(CRITICAL, (byte) (b0 & -2));
         }
     }
 

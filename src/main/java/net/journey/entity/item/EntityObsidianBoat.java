@@ -86,13 +86,13 @@ public class EntityObsidianBoat extends Entity {
 
     @Override
     protected void entityInit() {
-        this.dataManager.register(TIME_SINCE_HIT, Integer.valueOf(0));
-        this.dataManager.register(FORWARD_DIRECTION, Integer.valueOf(1));
-        this.dataManager.register(DAMAGE_TAKEN, Float.valueOf(0.0F));
-        this.dataManager.register(BOAT_TYPE, Integer.valueOf(EntityObsidianBoat.Type.OAK.ordinal()));
+        this.dataManager.register(TIME_SINCE_HIT, 0);
+        this.dataManager.register(FORWARD_DIRECTION, 1);
+        this.dataManager.register(DAMAGE_TAKEN, 0.0F);
+        this.dataManager.register(BOAT_TYPE, Type.OAK.ordinal());
 
         for (DataParameter<Boolean> dataparameter : DATA_ID_PADDLE) {
-            this.dataManager.register(dataparameter, Boolean.valueOf(false));
+            this.dataManager.register(dataparameter, Boolean.FALSE);
         }
     }
 
@@ -278,9 +278,7 @@ public class EntityObsidianBoat extends Entity {
         if (!list.isEmpty()) {
             boolean flag = !this.world.isRemote && !(this.getControllingPassenger() instanceof EntityPlayer);
 
-            for (int j = 0; j < list.size(); ++j) {
-                Entity entity = list.get(j);
-
+            for (Entity entity : list) {
                 if (!entity.isPassenger(this)) {
                     if (flag && this.getPassengers().size() < 2 && !entity.isRiding() && entity.width < this.width && entity instanceof EntityLivingBase && !(entity instanceof EntityPlayer)) {
                         entity.startRiding(this);
@@ -322,8 +320,8 @@ public class EntityObsidianBoat extends Entity {
     }
 
     public void setPaddleState(boolean left, boolean right) {
-        this.dataManager.set(DATA_ID_PADDLE[0], Boolean.valueOf(left));
-        this.dataManager.set(DATA_ID_PADDLE[1], Boolean.valueOf(right));
+        this.dataManager.set(DATA_ID_PADDLE[0], left);
+        this.dataManager.set(DATA_ID_PADDLE[1], right);
     }
 
     @SideOnly(Side.CLIENT)
@@ -501,7 +499,7 @@ public class EntityObsidianBoat extends Entity {
                         IBlockState iblockstate = this.world.getBlockState(blockpos$pooledmutableblockpos);
 
                         if (iblockstate.getMaterial() == Material.LAVA && d0 < (double) BlockLiquid.getLiquidHeight(iblockstate, this.world, blockpos$pooledmutableblockpos)) {
-                            if (iblockstate.getValue(BlockLiquid.LEVEL).intValue() != 0) {
+                            if (iblockstate.getValue(BlockLiquid.LEVEL) != 0) {
                                 EntityObsidianBoat.Status entityboat$status = EntityObsidianBoat.Status.UNDER_FLOWING_LAVA;
                                 return entityboat$status;
                             }
@@ -707,39 +705,39 @@ public class EntityObsidianBoat extends Entity {
     }
 
     public boolean getPaddleState(int side) {
-        return this.dataManager.get(DATA_ID_PADDLE[side]).booleanValue() && this.getControllingPassenger() != null;
+        return this.dataManager.get(DATA_ID_PADDLE[side]) && this.getControllingPassenger() != null;
     }
 
     public float getDamageTaken() {
-        return this.dataManager.get(DAMAGE_TAKEN).floatValue();
+        return this.dataManager.get(DAMAGE_TAKEN);
     }
 
     public void setDamageTaken(float damageTaken) {
-        this.dataManager.set(DAMAGE_TAKEN, Float.valueOf(damageTaken));
+        this.dataManager.set(DAMAGE_TAKEN, damageTaken);
     }
 
     public int getTimeSinceHit() {
-        return this.dataManager.get(TIME_SINCE_HIT).intValue();
+        return this.dataManager.get(TIME_SINCE_HIT);
     }
 
     public void setTimeSinceHit(int timeSinceHit) {
-        this.dataManager.set(TIME_SINCE_HIT, Integer.valueOf(timeSinceHit));
+        this.dataManager.set(TIME_SINCE_HIT, timeSinceHit);
     }
 
     public int getForwardDirection() {
-        return this.dataManager.get(FORWARD_DIRECTION).intValue();
+        return this.dataManager.get(FORWARD_DIRECTION);
     }
 
     public void setForwardDirection(int forwardDirection) {
-        this.dataManager.set(FORWARD_DIRECTION, Integer.valueOf(forwardDirection));
+        this.dataManager.set(FORWARD_DIRECTION, forwardDirection);
     }
 
     public EntityObsidianBoat.Type getBoatType() {
-        return EntityObsidianBoat.Type.byId(this.dataManager.get(BOAT_TYPE).intValue());
+        return EntityObsidianBoat.Type.byId(this.dataManager.get(BOAT_TYPE));
     }
 
     public void setBoatType(EntityObsidianBoat.Type boatType) {
-        this.dataManager.set(BOAT_TYPE, Integer.valueOf(boatType.ordinal()));
+        this.dataManager.set(BOAT_TYPE, boatType.ordinal());
     }
 
     @Override

@@ -123,9 +123,9 @@ public class EntityBoom extends JEntityMob {
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.dataManager.register(STATE, Integer.valueOf(-1));
-        this.dataManager.register(POWERED, Boolean.valueOf(false));
-        this.dataManager.register(IGNITED, Boolean.valueOf(false));
+        this.dataManager.register(STATE, -1);
+        this.dataManager.register(POWERED, Boolean.FALSE);
+        this.dataManager.register(IGNITED, Boolean.FALSE);
     }
 
     @Override
@@ -141,7 +141,7 @@ public class EntityBoom extends JEntityMob {
     public void writeEntityToNBT(NBTTagCompound nbt) {
         super.writeEntityToNBT(nbt);
 
-        if (this.dataManager.get(POWERED).booleanValue()) {
+        if (this.dataManager.get(POWERED)) {
             nbt.setBoolean("powered", true);
         }
 
@@ -153,7 +153,7 @@ public class EntityBoom extends JEntityMob {
     @Override
     public void readEntityFromNBT(NBTTagCompound nbt) {
         super.readEntityFromNBT(nbt);
-        this.dataManager.set(POWERED, Boolean.valueOf(nbt.getBoolean("powered")));
+        this.dataManager.set(POWERED, nbt.getBoolean("powered"));
 
         if (nbt.hasKey("Fuse", 99)) {
             this.fuseTime = nbt.getShort("Fuse");
@@ -204,7 +204,7 @@ public class EntityBoom extends JEntityMob {
     }
 
     public boolean getPowered() {
-        return this.dataManager.get(POWERED).booleanValue();
+        return this.dataManager.get(POWERED);
     }
 
     @SideOnly(Side.CLIENT)
@@ -213,17 +213,17 @@ public class EntityBoom extends JEntityMob {
     }
 
     public int getBoomBoomState() {
-        return this.dataManager.get(STATE).intValue();
+        return this.dataManager.get(STATE);
     }
 
     public void setBoomBoomState(int state) {
-        this.dataManager.set(STATE, Integer.valueOf(state));
+        this.dataManager.set(STATE, state);
     }
 
     @Override
     public void onStruckByLightning(EntityLightningBolt e) {
         super.onStruckByLightning(e);
-        this.dataManager.set(POWERED, Boolean.valueOf(true));
+        this.dataManager.set(POWERED, Boolean.TRUE);
     }
 
     @Override
@@ -259,10 +259,10 @@ public class EntityBoom extends JEntityMob {
     }
 
     public boolean hasIgnited() {
-        return this.dataManager.get(IGNITED).booleanValue();
+        return this.dataManager.get(IGNITED);
     }
 
     public void ignite() {
-        this.dataManager.set(IGNITED, Boolean.valueOf(true));
+        this.dataManager.set(IGNITED, Boolean.TRUE);
     }
 }

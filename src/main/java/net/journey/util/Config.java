@@ -187,7 +187,7 @@ public class Config {
         goldLootBagRarity = cfg.get("Loot Pouches", "Chance for living mobs to drop gold loot pouches", 150).getInt();
         diamondLootBagRarity = cfg.get("Loot Pouches", "Chance for living mobs to drop diamond loot pouches", 200).getInt();
 
-        List<Boolean> items = new ArrayList<Boolean>();
+        List<Boolean> items = new ArrayList<>();
         biomeSizeXZ = cfg.getInt("BiomeSizeXZ", "Nether", 512, 1, 4096, "The horizontal Nether biome size");
         biomeSizeY = cfg.getInt("BiomeSizeY", "Nether", 32, 1, 4096, "The vertical Nether biome size");
         hasCleaningPass = cfg.getBoolean("SecondPass", "Nether", false, "Enable second pass for smooth Nether terrain?");

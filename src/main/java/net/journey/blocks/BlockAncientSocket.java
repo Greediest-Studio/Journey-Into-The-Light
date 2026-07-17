@@ -48,7 +48,7 @@ public class BlockAncientSocket extends BlockMod {
 
     @Override
     public ArrayList<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-        ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
+        ArrayList<ItemStack> drops = new ArrayList<>();
         if ((state.getValue(INSERT))) {
             drops.add(new ItemStack(insert, 1));
         }

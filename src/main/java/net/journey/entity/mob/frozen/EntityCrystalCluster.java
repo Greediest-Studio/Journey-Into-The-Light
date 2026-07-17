@@ -91,11 +91,11 @@ public class EntityCrystalCluster extends JEntityFlyingMob {
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.dataManager.register(IS_FIRE, Boolean.valueOf(false));
+        this.dataManager.register(IS_FIRE, Boolean.FALSE);
     }
 
     public void setFire(boolean b) {
-        this.dataManager.set(IS_FIRE, Boolean.valueOf(b));
+        this.dataManager.set(IS_FIRE, b);
     }
 
     private class AIRandomFly extends EntityAIBase {

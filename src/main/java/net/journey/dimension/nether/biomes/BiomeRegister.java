@@ -19,7 +19,7 @@ public class BiomeRegister {
     public static NetherBiome BIOME_HEAT_SANDS;
 
     public static void registerBiomes() {
-        List<NetherBiome> biomes = new ArrayList<NetherBiome>();
+        List<NetherBiome> biomes = new ArrayList<>();
         BIOME_EMPTY_NETHER = registerBiome(new NetherBiome("Empty Nether"), biomes);
         BIOME_FOREST = registerBiome(new NetherBiomeForest("Blood Forest"), biomes);
         BIOME_EARTHEN = registerBiome(new NetherBiomeEarthen("Earthen Seep"), biomes);

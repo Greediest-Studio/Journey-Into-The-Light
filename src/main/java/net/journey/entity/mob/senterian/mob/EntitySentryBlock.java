@@ -99,14 +99,14 @@ public class EntitySentryBlock extends JEntityMob {
         super.entityInit();
         this.dataManager.register(ATTACHED_FACE, EnumFacing.DOWN);
         this.dataManager.register(ATTACHED_BLOCK_POS, Optional.absent());
-        this.dataManager.register(PEEK_TICK, Byte.valueOf((byte) 0));
+        this.dataManager.register(PEEK_TICK, (byte) 0);
     }
 
     @Override
     public void readEntityFromNBT(NBTTagCompound compound) {
         super.readEntityFromNBT(compound);
         this.dataManager.set(ATTACHED_FACE, EnumFacing.byIndex(compound.getByte("AttachFace")));
-        this.dataManager.set(PEEK_TICK, Byte.valueOf(compound.getByte("Peek")));
+        this.dataManager.set(PEEK_TICK, compound.getByte("Peek"));
 
         if (compound.hasKey("APX")) {
             int i = compound.getInteger("APX");
@@ -122,7 +122,7 @@ public class EntitySentryBlock extends JEntityMob {
     public void writeEntityToNBT(NBTTagCompound compound) {
         super.writeEntityToNBT(compound);
         compound.setByte("AttachFace", (byte) this.dataManager.get(ATTACHED_FACE).getIndex());
-        compound.setByte("Peek", this.dataManager.get(PEEK_TICK).byteValue());
+        compound.setByte("Peek", this.dataManager.get(PEEK_TICK));
         BlockPos blockpos = this.getAttachmentPos();
 
         if (blockpos != null) {
@@ -297,7 +297,7 @@ public class EntitySentryBlock extends JEntityMob {
 
             if (!optional1.equals(optional)) {
                 this.dataManager.set(ATTACHED_BLOCK_POS, optional1);
-                this.dataManager.set(PEEK_TICK, Byte.valueOf((byte) 0));
+                this.dataManager.set(PEEK_TICK, (byte) 0);
                 this.isAirBorne = true;
             }
         }
@@ -330,7 +330,7 @@ public class EntitySentryBlock extends JEntityMob {
                     if (flag) {
                         this.playSound(SoundEvents.ENTITY_SHULKER_TELEPORT, 1.0F, 1.0F);
                         this.dataManager.set(ATTACHED_BLOCK_POS, Optional.of(blockpos1));
-                        this.dataManager.set(PEEK_TICK, Byte.valueOf((byte) 0));
+                        this.dataManager.set(PEEK_TICK, (byte) 0);
                         this.setAttackTarget(null);
                         return true;
                     }
@@ -430,7 +430,7 @@ public class EntitySentryBlock extends JEntityMob {
     }
 
     public int getPeekTick() {
-        return this.dataManager.get(PEEK_TICK).byteValue();
+        return this.dataManager.get(PEEK_TICK);
     }
 
     public void updateArmorModifier(int a) {
@@ -444,7 +444,7 @@ public class EntitySentryBlock extends JEntityMob {
                 this.playSound(SoundEvents.ENTITY_SHULKER_OPEN, 1.0F, 1.0F);
             }
         }
-        this.dataManager.set(PEEK_TICK, Byte.valueOf((byte) a));
+        this.dataManager.set(PEEK_TICK, (byte) a);
     }
 
     @SideOnly(Side.CLIENT)

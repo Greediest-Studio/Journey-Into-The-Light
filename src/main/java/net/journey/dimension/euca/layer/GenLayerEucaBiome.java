@@ -13,7 +13,7 @@ public class GenLayerEucaBiome extends GenLayer {
 
     public GenLayerEucaBiome(long l) {
 	    super(l);
-	    ArrayList<BiomeEntry> eucaBiomes = new ArrayList<BiomeEntry>();
+	    ArrayList<BiomeEntry> eucaBiomes = new ArrayList<>();
 	    eucaBiomes.add(new BiomeEntry(DimensionHelper.EUCA_GOLD_BIOME, Config.eucaBiome));
 	    eucaBiomes.add(new BiomeEntry(DimensionHelper.EUCA_SILVER_BIOME, Config.eucaSilverBiome));
     }

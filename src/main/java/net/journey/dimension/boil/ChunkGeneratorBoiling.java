@@ -96,7 +96,7 @@ public class ChunkGeneratorBoiling implements IChunkGenerator {
         this.mobSpawnerNoise = new NoiseGeneratorOctaves(this.rand, 8);
         this.da = new double[825];
         this.parabolicField = new float[25];
-        trees = new ArrayList<WorldGenerator>(3);
+        trees = new ArrayList<>(3);
         trees.add(new WorldGenBoilTree1());
         trees.add(new WorldGenBoilTree2());
         trees.add(new WorldGenBoilTree3());

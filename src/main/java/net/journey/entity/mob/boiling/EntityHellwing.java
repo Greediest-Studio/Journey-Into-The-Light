@@ -109,7 +109,7 @@ public class EntityHellwing extends JEntityMob {
 	@Override
 	protected void entityInit() {
 		super.entityInit();
-		this.dataManager.register(HELLWING_FLAGS, Byte.valueOf((byte) 0));
+		this.dataManager.register(HELLWING_FLAGS, (byte) 0);
 	}
 
 	public static void registerFixesHellwing(DataFixer fixer) {
@@ -160,12 +160,12 @@ public class EntityHellwing extends JEntityMob {
 	}
 
 	private boolean getHellwingFlag(int mask) {
-		int i = this.dataManager.get(HELLWING_FLAGS).byteValue();
+		int i = this.dataManager.get(HELLWING_FLAGS);
 		return (i & mask) != 0;
 	}
 
 	private void setHellwingFlag(int mask, boolean value) {
-		int i = this.dataManager.get(HELLWING_FLAGS).byteValue();
+		int i = this.dataManager.get(HELLWING_FLAGS);
 
 		if (value) {
 			i = i | mask;
@@ -173,7 +173,7 @@ public class EntityHellwing extends JEntityMob {
 			i = i & ~mask;
 		}
 
-		this.dataManager.set(HELLWING_FLAGS, Byte.valueOf((byte) (i & 255)));
+		this.dataManager.set(HELLWING_FLAGS, (byte) (i & 255));
 	}
 
 	public boolean isCharging() {

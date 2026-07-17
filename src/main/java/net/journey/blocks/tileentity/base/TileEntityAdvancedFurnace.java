@@ -14,6 +14,8 @@ import net.minecraft.util.ITickable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.Arrays;
+
 public abstract class TileEntityAdvancedFurnace extends TileEntity implements ISidedInventory, ITickable {
 
     private static final int[] slotsTop = new int[]{0};
@@ -132,9 +134,7 @@ public abstract class TileEntityAdvancedFurnace extends TileEntity implements IS
 
     @Override
     public void clear() {
-        for (int i = 0; i < this.furnaceItemStacks.length; ++i) {
-            this.furnaceItemStacks[i] = null;
-        }
+        Arrays.fill(this.furnaceItemStacks, null);
     }
 
     @Override

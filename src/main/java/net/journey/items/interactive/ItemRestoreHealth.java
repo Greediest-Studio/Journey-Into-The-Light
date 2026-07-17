@@ -46,7 +46,7 @@ public class ItemRestoreHealth extends JItem {
 				player.heal(amount);
 			}
 		}
-		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
+		return new ActionResult<>(EnumActionResult.SUCCESS, stack);
 	}
 
 	@Override

@@ -20,7 +20,6 @@ import net.slayer.api.entity.EntityEssenceBoss;
 import org.jetbrains.annotations.Nullable;
 
 public class EntitySentryHeart extends EntityEssenceBoss {
-	private boolean isActivated;
 
 	public final int sleep = 0, alert = 1;
 	public int stage;
@@ -86,11 +85,8 @@ public class EntitySentryHeart extends EntityEssenceBoss {
         	stage = sleep;
         else if (blockpattern$patternhelper != null) {
         	stage = alert;
-        	this.isActivated = true;
-        	if (this.isActivated = true) {
-                BlockPos blockpos = blockpattern$patternhelper.getFrontTopLeft().add(-1, 0, -1);
-                world.setBlockState(blockpos.add(0, 1, 0), Blocks.OBSIDIAN.getDefaultState(), 2);
-        	}
+			BlockPos blockpos = blockpattern$patternhelper.getFrontTopLeft().add(-1, 0, -1);
+			world.setBlockState(blockpos.add(0, 1, 0), Blocks.OBSIDIAN.getDefaultState(), 2);
         }
     }
     

@@ -15,7 +15,7 @@ public class SenterianRoomMaze2 extends SenterianRoomBase {
 
 	@Override
 	public boolean generate(TECompatibleChunkPrimer worldIn, Random r, int i, int j, int k) {
-		ArrayList<String> mobs = new ArrayList<String>();
+		ArrayList<String> mobs = new ArrayList<>();
 		mobs.add("journey:sentrylord");
 		mobs.add("journey:sentrystalker");
 		mobs.add("journey:sentrywalker");
