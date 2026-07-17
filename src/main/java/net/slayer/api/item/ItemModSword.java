@@ -1,30 +1,21 @@
 package net.slayer.api.item;
 
-import net.journey.JITL;
 import net.journey.client.ItemDescription;
-import net.journey.client.render.particles.EntityFloroWaterFX;
-import net.journey.client.render.particles.EntityHellstoneFX;
-import net.journey.client.render.particles.EntityModSnowFX;
-import net.journey.client.render.particles.EntityPoisionFX;
-import net.journey.enums.EnumParticlesClasses;
 import net.journey.enums.EnumSwordType;
 import net.journey.util.JourneyToolMaterial;
 import net.journey.util.LangHelper;
 import net.journey.util.PotionEffects;
-import net.minecraft.client.particle.Particle;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.slayer.api.SlayerAPI;
 
 import java.util.List;
-import java.util.Random;
 
 public class ItemModSword extends ItemSword {
 

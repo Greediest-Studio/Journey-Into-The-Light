@@ -47,20 +47,12 @@ public class LangHelper {
 		return damage + " " + getFormattedText("journey.rangedDamage");
 	}
 
-	public static String unbreakable() {
-		return getFormattedText("journey.unbreakable");
-	}
-
 	public static String setWitherSword(int time) {
 		return getFormattedText("journey.hit") + " " + getFormattedText("journey.wither") + " " + time + " " + getFormattedText("journey.seconds");
 	}
 
 	public static String setBossSpawner(String boss) {
 		return getFormattedText("journey.bossSpawn") + ": " + boss;
-	}
-
-	public static String setPetSpawner(String pet) {
-		return getFormattedText("journey.petSpawn") + ": " + pet;
 	}
 
 	/**
