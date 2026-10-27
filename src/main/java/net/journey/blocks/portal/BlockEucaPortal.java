@@ -107,18 +107,18 @@ public class BlockEucaPortal extends JBlockPortal {
 
     @Override
     public boolean makePortal(World worldIn, BlockPos p) {
-        EntityLightningBolt bolt = new EntityLightningBolt(worldIn, p.getX(), p.getY(), p.getZ(), false);
         PortalSize size = new PortalSize(JourneyBlocks.eucaPortalFrame, JourneyBlocks.eucaPortal, worldIn, p, EnumFacing.Axis.X);
 	    if (size.isValid() && size.getPortalBlockCount() == 0) {
 		    size.placePortalBlocks();
+		    EntityLightningBolt bolt = new EntityLightningBolt(worldIn, p.getX(), p.getY(), p.getZ(), false);
 		    worldIn.addWeatherEffect(bolt);
 		    worldIn.createExplosion(bolt, p.getX(), p.getY(), p.getZ(), 0.0F, true);
 		    return true;
 	    } else {
-		    EntityLightningBolt bolt1 = new EntityLightningBolt(worldIn, p.getX(), p.getY(), p.getZ(), false);
 		    size = size.spin(EnumFacing.Axis.Z);
 		    if (size.isValid() && size.getPortalBlockCount() == 0) {
 			    size.placePortalBlocks();
+			    EntityLightningBolt bolt1 = new EntityLightningBolt(worldIn, p.getX(), p.getY(), p.getZ(), false);
 			    worldIn.addWeatherEffect(bolt1);
 			    worldIn.createExplosion(bolt1, p.getX(), p.getY(), p.getZ(), 0.0F, true);
 			    return true;

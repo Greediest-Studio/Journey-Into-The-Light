@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class BlockModFire extends BlockMod {
 
-    public static final AxisAlignedBB BLOCK_AABB = new AxisAlignedBB(1F, 0.0F, 1F, 0F, 0.1F, 0F);
+    public static final AxisAlignedBB BLOCK_AABB = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 
     public BlockModFire(String name, String finalN) {
         super(name, finalN);
@@ -49,6 +49,11 @@ public class BlockModFire extends BlockMod {
     }
 
     @Override
+    public boolean isNormalCube(IBlockState state) {
+        return false;
+    }
+
+    @Override
     public int quantityDropped(Random random) {
         return 0;
     }
@@ -60,7 +65,7 @@ public class BlockModFire extends BlockMod {
 
     @Override
     public boolean isCollidable() {
-        return false;
+        return true;
     }
 
     @Override
@@ -70,39 +75,23 @@ public class BlockModFire extends BlockMod {
     }
 
     @Override
-    public void onBlockAdded(World world, BlockPos pos, IBlockState s) {
-        if (!JourneyBlocks.eucaPortal.makePortal(world, pos)) {
-            if (!world.getBlockState(pos.down()).isTopSolid())
-                world.setBlockToAir(pos);
-            else
-                world.scheduleUpdate(pos, this, this.tickRate(world) + world.rand.nextInt(10));
+    public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
+        if (world.isRemote) {
+            return;
         }
-        if (!JourneyBlocks.boilPortal.makePortal(world, pos)) {
-            if (!world.getBlockState(pos.down()).isTopSolid())
-                world.setBlockToAir(pos);
-            else
-                world.scheduleUpdate(pos, this, this.tickRate(world) + world.rand.nextInt(10));
+
+        if (JourneyBlocks.eucaPortal.makePortal(world, pos)
+                || JourneyBlocks.boilPortal.makePortal(world, pos)
+                || JourneyBlocks.frozenPortal.makePortal(world, pos)
+                || JourneyBlocks.cloudiaPortal.makePortal(world, pos)
+                || JourneyBlocks.terraniaPortal.makePortal(world, pos)) {
+            return;
         }
-        if (!JourneyBlocks.frozenPortal.makePortal(world, pos)) {
-            if (!world.getBlockState(pos.down()).isTopSolid())
-                world.setBlockToAir(pos);
-            else
-                world.scheduleUpdate(pos, this, this.tickRate(world) + world.rand.nextInt(10));
-        }
-        if (!JourneyBlocks.cloudiaPortal.makePortal(world, pos)) {
-            if (!world.getBlockState(pos.down()).isTopSolid())
-                world.setBlockToAir(pos);
-            else
-                world.scheduleUpdate(pos, this, this.tickRate(world) + world.rand.nextInt(10));
-        }
-        if (!JourneyBlocks.terraniaPortal.makePortal(world, pos)) {
-            if (!world.getBlockState(pos.down()).isTopSolid())
-                world.setBlockToAir(pos);
-            else
-                world.scheduleUpdate(pos, this, this.tickRate(world) + world.rand.nextInt(10));
-        }
-        if (world.isAirBlock(pos.down())) {
+
+        if (!world.getBlockState(pos.down()).isTopSolid()) {
             world.setBlockToAir(pos);
+        } else {
+            world.scheduleUpdate(pos, this, this.tickRate(world) + world.rand.nextInt(10));
         }
     }
 

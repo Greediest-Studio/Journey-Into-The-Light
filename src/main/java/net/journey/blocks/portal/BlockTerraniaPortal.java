@@ -136,10 +136,10 @@ public class BlockTerraniaPortal extends JBlockPortal {
 
     @Override
     public boolean makePortal(World worldIn, BlockPos p) {
-        EntityLightningBolt bolt = new EntityLightningBolt(worldIn, p.getX(), p.getY(), p.getZ(), false);
         PortalSize size = new PortalSize(JourneyBlocks.terraniaPortalFrame, JourneyBlocks.terraniaPortal, worldIn, p, EnumFacing.Axis.X);
 	    if (size.isValid() && size.getPortalBlockCount() == 0) {
 		    size.placePortalBlocks();
+		    EntityLightningBolt bolt = new EntityLightningBolt(worldIn, p.getX(), p.getY(), p.getZ(), false);
 		    worldIn.addWeatherEffect(bolt);
 		    worldIn.createExplosion(bolt, p.getX(), p.getY(), p.getZ(), 0.0F, true);
 		    return true;
@@ -147,6 +147,7 @@ public class BlockTerraniaPortal extends JBlockPortal {
 		    size = size.spin(EnumFacing.Axis.Z);
 		    if (size.isValid() && size.getPortalBlockCount() == 0) {
 			    size.placePortalBlocks();
+			    EntityLightningBolt bolt = new EntityLightningBolt(worldIn, p.getX(), p.getY(), p.getZ(), false);
 			    worldIn.addWeatherEffect(bolt);
 			    worldIn.createExplosion(bolt, p.getX(), p.getY(), p.getZ(), 0.0F, true);
 			    return true;
